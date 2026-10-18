@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { CountryVisualData } from '@/types/country';
 import { Volume2, RefreshCw, MapPin, Coins, Calendar, Sparkles } from 'lucide-react';
-import { SpanishTooltip } from './SpanishTooltip';
 
 interface HeroSectionProps {
   country: CountryVisualData;
@@ -14,13 +13,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ country }) => {
   const [scrollY, setScrollY] = useState(0);
   const [currentPhraseIdx, setCurrentPhraseIdx] = useState(0);
 
-  // Short phrases with translation right next to it
-  const phrases = [
-    { es: '¡Buen provecho!', en: 'Enjoy your meal!', pron: 'bwehn proh-VEH-choh' },
-    { es: 'Una mesa, por favor.', en: 'A table, please.', pron: 'OO-nah MEH-sah, por fah-VOR' },
-    { es: 'La cuenta, por favor.', en: 'The check, please.', pron: 'lah KWEHN-tah, por fah-VOR' },
-    { es: '¡Muchas gracias!', en: 'Thank you very much!', pron: 'MOO-chahs GRAH-thyahs' },
-  ];
+  const phrases = country.daily_phrases.map(({ es, en, pronunciation }) => ({
+    es,
+    en,
+    pron: pronunciation,
+  }));
 
   const phrase = phrases[currentPhraseIdx];
 
@@ -95,25 +92,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ country }) => {
             {/* Line 1: Subtitle stamp */}
             <div className="reveal-line-1 flex items-center gap-3">
               <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-saffron font-display">
-                Reino de España · Iberian Peninsula
+                {country.name_es} · Travel & Culture
               </span>
             </div>
 
             {/* Line 2: Large Confident Heading */}
             <h1 className="reveal-line-2 font-display text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-cream leading-[0.95]">
-              ESPAÑA{' '}
+              {country.name_es}{' '}
               <span className="text-saffron font-handwriting text-3xl sm:text-5xl font-normal">
-                · Spain
+                · {country.name}
               </span>
             </h1>
 
             {/* Line 3: English travel summary with embedded Spanish keywords & tooltips */}
             <p className="reveal-line-3 text-sm sm:text-lg text-cream/90 font-body max-w-2xl leading-relaxed">
-              An exploration of Spain through its historic{' '}
-              <SpanishTooltip word="ciudades" meaning="cities" /> and sunlit{' '}
-              <SpanishTooltip word="plazas" meaning="town squares" />, afternoon{' '}
-              <SpanishTooltip word="siestas" meaning="rest periods" />, and the evening ritual of{' '}
-              <SpanishTooltip word="tapas" meaning="small savory sharing plates" />.
+              Explore {country.name} through its historic landmarks, local festivals, regional food traditions, and living culture.
             </p>
 
             {/* Quick Badges stamped in */}
@@ -128,7 +121,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ country }) => {
               </span>
               <span className="animate-stamp inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cream/95 text-ink font-semibold shadow-xs">
                 <Calendar className="w-3.5 h-3.5 text-terracotta" />
-                Best Season: <strong>Spring & Autumn</strong>
+                Best Season: <strong>{country.best_time_to_visit}</strong>
               </span>
             </div>
           </div>

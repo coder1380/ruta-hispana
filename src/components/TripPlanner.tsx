@@ -22,10 +22,14 @@ import {
 
 interface TripPlannerProps {
   studentName?: string;
+  countryId: string;
+  countryName: string;
 }
 
 export const TripPlanner: React.FC<TripPlannerProps> = ({
   studentName = 'Priya Sharma',
+  countryId,
+  countryName,
 }) => {
   const [days, setDays] = useState<number>(3);
   const [budgetInr, setBudgetInr] = useState<number>(45000);
@@ -72,7 +76,7 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          countryId: 'spain',
+          countryId,
           days,
           budgetInr,
           interests: selectedInterests,
@@ -129,7 +133,7 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({
 
           <div className="text-right hidden sm:block">
             <span className="font-handwriting text-xl text-[#943A1E] block">
-              Grounded in spain.json facts
+              Grounded in {countryName} data
             </span>
             <span className="text-xs text-[#57524E]">Strict JSON output · Zero tech clutter</span>
           </div>

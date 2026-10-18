@@ -20,7 +20,12 @@ interface ChatMessage {
   isFallback?: boolean;
 }
 
-export const GuideChatbot: React.FC = () => {
+interface GuideChatbotProps {
+  countryId: string;
+  countryName: string;
+}
+
+export const GuideChatbot: React.FC<GuideChatbotProps> = ({ countryId, countryName }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -29,8 +34,8 @@ export const GuideChatbot: React.FC = () => {
       id: 'welcome',
       role: 'assistant',
       content:
-        'Hello! I am **Mateo**, your local travel guide for Spain. Ask me about regional **costumbres** (customs), historic Moorish **palacios** (palaces), finding vegetarian **tapas** (savory small dishes), or navigating daily schedules in sunny **plazas** (town squares).',
-      source: 'spain.json Guide Persona',
+        `Hello! I am **Mateo**, your local travel guide for ${countryName}. Ask me about its regions, landmarks, festivals, food, and living traditions.`,
+      source: `${countryName} Guide`,
       isFallback: false,
     },
   ]);
@@ -70,7 +75,7 @@ export const GuideChatbot: React.FC = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          countryId: 'spain',
+          countryId,
           message: userMsg.content,
           history: messages.slice(-4).map((m) => ({ role: m.role, content: m.content })),
         }),
@@ -91,8 +96,8 @@ export const GuideChatbot: React.FC = () => {
           id: `assistant-fallback-${Date.now()}`,
           role: 'assistant',
           content:
-            'Spain offers incredible variety across every province. Take time for **el tapeo** (hopping between tapas bars) in lively central **plazas** (squares), and remember that dinner starts late after 8:30 PM!',
-          source: 'spain.json (Offline Guide)',
+            `I can't reach the guide service right now. You can still explore the verified landmarks, festivals, and food listed for ${countryName}.`,
+          source: `${countryName} (Offline Guide)`,
           isFallback: true,
         };
         setMessages((prev) => [...prev, fallbackMsg]);
@@ -102,8 +107,8 @@ export const GuideChatbot: React.FC = () => {
         id: `assistant-err-${Date.now()}`,
         role: 'assistant',
         content:
-          'Spain is celebrated for its regional identities and hearty food. Try ordering a warm slice of **tortilla de patatas** (potato omelet) accompanied by a cold **bebida** (beverage) at any neighborhood counter!',
-        source: 'spain.json (Offline Guide)',
+          `I can't reach the guide service right now. Please try again, or browse the regional highlights and food guide for ${countryName}.`,
+        source: `${countryName} (Offline Guide)`,
         isFallback: true,
       };
       setMessages((prev) => [...prev, fallbackMsg]);
@@ -153,8 +158,8 @@ export const GuideChatbot: React.FC = () => {
                 id: 'reset',
                 role: 'assistant',
                 content:
-                  'Hello again! Ask any question about Spanish **ciudades** (cities), delicious **comida** (food), or local **costumbres** (customs).',
-                source: 'spain.json Guide Persona',
+                  `Hello again! Ask any question about ${countryName}, its regions, food, festivals, or local traditions.`,
+                source: `${countryName} Guide`,
               },
             ])
           }

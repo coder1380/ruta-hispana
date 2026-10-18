@@ -1,4 +1,5 @@
-import { getCountryData } from '@/lib/countries';
+import { Suspense } from 'react';
+import { getAllCountries, getCountryData } from '@/lib/countries';
 import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/HeroSection';
 import { MapSection } from '@/components/MapSection';
@@ -11,12 +12,22 @@ import { WavyDivider } from '@/components/WavyDivider';
 import { MarqueeStrip } from '@/components/MarqueeStrip';
 import { Footer } from '@/components/Footer';
 
-export default function Home() {
-  const country = getCountryData('spain');
+async function CountryHome({
+  searchParams,
+}: {
+  searchParams: Promise<{ country?: string | string[] }>;
+}) {
+  const countries = getAllCountries();
+  const { country: requestedCountry } = await searchParams;
+  const selectedCountryId = Array.isArray(requestedCountry) ? requestedCountry[0] : requestedCountry;
+  const countryId = selectedCountryId && countries.some((option) => option.id === selectedCountryId)
+    ? selectedCountryId
+    : 'spain';
+  const country = getCountryData(countryId);
 
   return (
     <div className="flex flex-col min-h-screen bg-cream text-ink font-body">
-      <Navbar currentCountry={country.id} />
+      <Navbar currentCountry={country} countries={countries} />
 
       <main className="flex-1">
         {/* 1. Hero Banner: Parallax Photo, Line-by-Line Reveal, Phrase Card */}
@@ -26,7 +37,7 @@ export default function Home() {
         <WavyDivider fillColor="#EBDDC0" bgColor="#F5ECD9" />
 
         {/* 2. Cartografía: Leaflet Map with OpenStreetMap warm tiles, dropping pins, pulsing circles */}
-        <MapSection regions={country.regions} landmarks={country.lugares} />
+        <MapSection countryName={country.name_es} regions={country.regions} landmarks={country.lugares} />
 
         {/* Looping Marquee Vocabulary Strip */}
         <MarqueeStrip theme="sand" />
@@ -36,6 +47,7 @@ export default function Home() {
 
         {/* 3. Lugares · Places: 7 landmarks with hover tilt & zoom, max 12-word captions + Palabras strip */}
         <LugaresSection
+          countryName={country.name}
           lugares={country.lugares}
           palabras={country.lugares_palabras}
           studentName="Liam Vance"
@@ -78,11 +90,29 @@ export default function Home() {
         <WavyDivider fillColor="#EBDDC0" bgColor="#F5ECD9" />
 
         {/* 7. Travel Tools: Quiet secondary drawer for Trip Planner and Mateo */}
-        <TravelToolsSection />
+        <TravelToolsSection countryId={country.id} countryName={country.name} />
       </main>
 
       {/* Footer with Photo Credits & Cartography Attribution */}
       <Footer photoCredits={country.photo_credits} />
     </div>
+  );
+}
+
+export default function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ country?: string | string[] }>;
+}) {
+  return (
+    <Suspense
+      fallback={
+        <main className="flex min-h-screen items-center justify-center bg-cream text-ink font-body">
+          Loading country guide…
+        </main>
+      }
+    >
+      <CountryHome searchParams={searchParams} />
+    </Suspense>
   );
 }

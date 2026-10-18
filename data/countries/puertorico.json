@@ -1,0 +1,435 @@
+{
+  "id": "puerto-rico",
+  "name": "Puerto Rico",
+  "name_es": "Puerto Rico",
+  "capital": "San Juan",
+  "currency": "United States Dollar (US$ / USD)",
+  "best_time_to_visit": "December–April for generally drier weather; June–November is the Atlantic hurricane season",
+  "hero_image": "/images/puerto-rico/hero-puerto-rico.jpg",
+  "hero_credit": "San Juan National Historic Site, Old San Juan (Photo: Diego F. Parra / Pexels)",
+  "status": "Caribbean island and unincorporated territory of the United States; Spanish and English are official languages",
+  "daily_phrases": [
+    {
+      "es": "¡Buenos días! ¿Cómo está?",
+      "en": "Good morning! How are you?",
+      "pronunciation": "BWEH-nohs DEE-ahs, KOH-moh ehs-TAH"
+    },
+    {
+      "es": "¿Dónde está la parada de autobús?",
+      "en": "Where is the bus stop?",
+      "pronunciation": "DOHN-deh ehs-TAH lah pah-RAH-dah deh ow-toh-BOOS"
+    },
+    {
+      "es": "Soy vegetariano/a. ¿Este plato no lleva carne?",
+      "en": "I am vegetarian. Does this dish contain no meat?",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh/nah, EHS-teh PLAH-toh noh YEH-vah KAR-neh"
+    },
+    {
+      "es": "La cuenta, por favor. Muchas gracias.",
+      "en": "The bill, please. Thank you very much.",
+      "pronunciation": "lah KWEHN-tah por fah-VOR, MOO-chahs GRAH-syahs"
+    }
+  ],
+  "regions": [
+    {
+      "id": "san-juan",
+      "name": "San Juan Metropolitan Area",
+      "name_es": "Área Metropolitana de San Juan",
+      "capital": "San Juan",
+      "coordinates": [
+        18.4655,
+        -66.1057
+      ],
+      "famous_place": "Old San Juan and Castillo San Felipe del Morro",
+      "signature_festival": "Fiestas de la Calle San Sebastián (January)",
+      "signature_dish": "Mofongo"
+    },
+    {
+      "id": "west-coast",
+      "name": "West Coast",
+      "name_es": "Costa Oeste",
+      "capital": "Mayagüez",
+      "coordinates": [
+        18.2011,
+        -67.1397
+      ],
+      "famous_place": "Rincón beaches and the Cabo Rojo salt flats",
+      "signature_festival": "Local patron-saint festivals; dates vary",
+      "signature_dish": "Pescado frito (fried fish)"
+    },
+    {
+      "id": "south-coast",
+      "name": "South Coast",
+      "name_es": "Costa Sur",
+      "capital": "Ponce",
+      "coordinates": [
+        18.0111,
+        -66.6141
+      ],
+      "famous_place": "Parque de Bombas and Ponce's historic centre",
+      "signature_festival": "Carnaval Ponceño (usually February or March)",
+      "signature_dish": "Arroz con gandules"
+    },
+    {
+      "id": "east-coast",
+      "name": "East Coast",
+      "name_es": "Costa Este",
+      "capital": "Fajardo",
+      "coordinates": [
+        18.3258,
+        -65.6524
+      ],
+      "famous_place": "El Yunque National Forest and nearby bioluminescent bays",
+      "signature_festival": "Local patron-saint festivals; dates vary",
+      "signature_dish": "Pasteles"
+    },
+    {
+      "id": "central-mountains",
+      "name": "Central Mountains",
+      "name_es": "La Cordillera Central",
+      "capital": "Jayuya",
+      "coordinates": [
+        18.2186,
+        -66.5916
+      ],
+      "famous_place": "Taíno heritage sites and mountain coffee country",
+      "signature_festival": "Festival Indígena de Jayuya (November; dates vary)",
+      "signature_dish": "Pastelón de amarillos"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "old-san-juan",
+      "name": "Old San Juan",
+      "city": "San Juan",
+      "caption": "Cobblestone streets, colourful colonial buildings, plazas, and sea-facing fortifications.",
+      "image": "/images/puerto-rico/old-san-juan.webp",
+      "credit": "Add verified photographer and image-source credit",
+      "coordinates": [
+        18.4655,
+        -66.1057
+      ]
+    },
+    {
+      "id": "el-morro",
+      "name": "Castillo San Felipe del Morro",
+      "city": "San Juan",
+      "caption": "A centuries-old coastal fortress guarding the entrance to San Juan Bay.",
+      "image": "/images/puerto-rico/el-morro.jpg",
+      "credit": "Add verified photographer and image-source credit",
+      "coordinates": [
+        18.4709,
+        -66.1232
+      ]
+    },
+    {
+      "id": "el-yunque",
+      "name": "El Yunque National Forest",
+      "city": "Río Grande area",
+      "caption": "Tropical rainforest known for hiking trails, waterfalls, and rich biodiversity.",
+      "image": "/images/puerto-rico/el-yunque.jpeg",
+      "credit": "Add verified photographer and image-source credit",
+      "coordinates": [
+        18.2747,
+        -65.8007
+      ]
+    },
+    {
+      "id": "parque-de-bombas",
+      "name": "Parque de Bombas",
+      "city": "Ponce",
+      "caption": "A distinctive red-and-black historic firehouse and city landmark.",
+      "image": "/images/puerto-rico/parque-de-bombas.jpg",
+      "credit": "Add verified photographer and image-source credit",
+      "coordinates": [
+        18.0111,
+        -66.6141
+      ]
+    },
+    {
+      "id": "mosquito-bay",
+      "name": "Mosquito Bay",
+      "city": "Vieques",
+      "caption": "A famous bioluminescent bay where microorganisms can make the water glow at night.",
+      "image": "/images/puerto-rico/mosquito-bay.jpg",
+      "credit": "Add verified photographer and image-source credit",
+      "coordinates": [
+        18.0975,
+        -65.4401
+      ]
+    },
+    {
+      "id": "los-morrillos",
+      "name": "Los Morrillos Lighthouse",
+      "city": "Cabo Rojo",
+      "caption": "A white lighthouse above dramatic limestone cliffs and turquoise coastal water.",
+      "image": "/images/puerto-rico/los-morrillos.jpg",
+      "credit": "Add verified photographer and image-source credit",
+      "coordinates": [
+        17.9389,
+        -67.1878
+      ]
+    },
+    {
+      "id": "caguana",
+      "name": "Caguana Indigenous Ceremonial Park",
+      "city": "Utuado",
+      "caption": "An archaeological site preserving plazas and stone features associated with Taíno heritage.",
+      "image": "/images/puerto-rico/caguana.jpg",
+      "credit": "Add verified photographer and image-source credit",
+      "coordinates": [
+        18.2947,
+        -66.7583
+      ]
+    }
+  ],
+  "lugares_palabras": [
+    {
+      "word": "el fuerte",
+      "meaning": "fort or fortress",
+      "pronunciation": "el FWEHR-teh"
+    },
+    {
+      "word": "el adoquín",
+      "meaning": "cobblestone",
+      "pronunciation": "el ah-doh-KEEN"
+    },
+    {
+      "word": "la bahía",
+      "meaning": "bay",
+      "pronunciation": "lah bah-EE-ah"
+    },
+    {
+      "word": "la selva tropical",
+      "meaning": "tropical rainforest",
+      "pronunciation": "lah SEHL-vah troh-pee-KAHL"
+    },
+    {
+      "word": "el faro",
+      "meaning": "lighthouse",
+      "pronunciation": "el FAH-roh"
+    }
+  ],
+  "fiestas": [
+    {
+      "id": "san-sebastian",
+      "name": "Fiestas de la Calle San Sebastián",
+      "month": "January",
+      "town_region": "Old San Juan",
+      "caption": "A major street festival with live music, dancing, artisan stalls, and crowds filling the old city.",
+      "image": "/images/puerto-rico/fiestas-san-sebastian.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "ponce-carnival",
+      "name": "Carnaval Ponceño",
+      "month": "Usually February or March; dates vary",
+      "town_region": "Ponce",
+      "caption": "A carnival known for colourful costumes, parades, music, and distinctive vejigante characters.",
+      "image": "/images/puerto-rico/carnaval-ponceno.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "noche-san-juan",
+      "name": "Noche de San Juan",
+      "month": "June 23",
+      "town_region": "Beaches across Puerto Rico",
+      "caption": "People gather at the shore on the eve of Saint John’s Day; some follow a tradition of jumping backwards into the sea.",
+      "image": "/images/puerto-rico/noche-san-juan.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "festival-indigena",
+      "name": "Festival Indígena de Jayuya",
+      "month": "November; dates vary",
+      "town_region": "Jayuya",
+      "caption": "A festival celebrating Taíno heritage through cultural activities, crafts, and educational events.",
+      "image": "/images/puerto-rico/festival-indigena.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "mascaras-hatillo",
+      "name": "Festival de las Máscaras de Hatillo",
+      "month": "December 28",
+      "town_region": "Hatillo",
+      "caption": "A colourful parade featuring elaborate masks, costumes, and decorated vehicles.",
+      "image": "/images/puerto-rico/festival-mascaras-hatillo.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "three-kings",
+      "name": "Día de los Reyes Magos",
+      "month": "January 6",
+      "town_region": "Across Puerto Rico",
+      "caption": "Three Kings Day is celebrated with family gatherings, community events, and gifts for children.",
+      "image": "/images/puerto-rico/dia-reyes.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    }
+  ],
+  "fiestas_palabras": [
+    {
+      "word": "la comparsa",
+      "meaning": "a group performing in a carnival parade",
+      "pronunciation": "lah kohm-PAHR-sah"
+    },
+    {
+      "word": "la máscara",
+      "meaning": "mask",
+      "pronunciation": "lah MAHS-kah-rah"
+    },
+    {
+      "word": "el vejigante",
+      "meaning": "a colourful masked character in Puerto Rican festival traditions",
+      "pronunciation": "el veh-hee-GAHN-teh"
+    },
+    {
+      "word": "el desfile",
+      "meaning": "parade",
+      "pronunciation": "el dehs-FEE-leh"
+    },
+    {
+      "word": "los Reyes Magos",
+      "meaning": "the Three Wise Men / Three Kings",
+      "pronunciation": "lohs REH-yehs MAH-gohs"
+    }
+  ],
+  "comida": [
+    {
+      "id": "mofongo",
+      "name_es": "Mofongo",
+      "caption": "Mashed fried green plantains with garlic and seasonings; versions may contain meat, seafood, broth, or other fillings, so ask before ordering.",
+      "veg_friendly": true,
+      "image": "/images/puerto-rico/mofongo.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "arroz-gandules",
+      "name_es": "Arroz con Gandules",
+      "caption": "Rice with pigeon peas and sofrito; traditional versions may include pork, so request a meat-free preparation.",
+      "veg_friendly": false,
+      "image": "/images/puerto-rico/arroz-con-gandules.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "pasteles",
+      "name_es": "Pasteles",
+      "caption": "Seasoned root-vegetable and plantain dough wrapped in banana leaves; traditional fillings often contain pork.",
+      "veg_friendly": false,
+      "image": "/images/puerto-rico/pasteles.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "tostones",
+      "name_es": "Tostones",
+      "caption": "Twice-fried green plantain slices, commonly served as a side or snack; check that they are fried in vegetable oil.",
+      "veg_friendly": true,
+      "image": "/images/puerto-rico/tostones.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "alcapurrias",
+      "name_es": "Alcapurrias",
+      "caption": "Fried fritters made from green banana or root-vegetable dough; common fillings include beef or crab.",
+      "veg_friendly": false,
+      "image": "/images/puerto-rico/alcapurrias.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "tembleque",
+      "name_es": "Tembleque",
+      "caption": "A creamy coconut-milk pudding flavoured with cinnamon, often served as a dessert.",
+      "veg_friendly": true,
+      "image": "/images/puerto-rico/tembleque.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    }
+  ],
+  "comida_palabras": [
+    {
+      "word": "el plátano",
+      "meaning": "plantain",
+      "pronunciation": "el PLAH-tah-noh"
+    },
+    {
+      "word": "el sofrito",
+      "meaning": "a seasoned aromatic base used in many dishes",
+      "pronunciation": "el soh-FREE-toh"
+    },
+    {
+      "word": "los gandules",
+      "meaning": "pigeon peas",
+      "pronunciation": "lohs gahn-DOO-lehs"
+    },
+    {
+      "word": "el ajo",
+      "meaning": "garlic",
+      "pronunciation": "el AH-hoh"
+    },
+    {
+      "word": "el coco",
+      "meaning": "coconut",
+      "pronunciation": "el KOH-koh"
+    }
+  ],
+  "cultura": [
+    {
+      "id": "bomba",
+      "name": "La Bomba",
+      "origin": "Puerto Rico",
+      "description": "An Afro-Puerto Rican music and dance tradition in which dancers interact with the rhythm played by drummers.\nIt grew from the experiences and creativity of African-descended communities on the island.",
+      "image": "/images/puerto-rico/bomba.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "plena",
+      "name": "La Plena",
+      "origin": "Puerto Rico",
+      "description": "A popular musical tradition sometimes described as a sung newspaper because its lyrics can tell stories about everyday events.\nHand drums called panderetas are central to its sound.",
+      "image": "/images/puerto-rico/plena.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "salsa",
+      "name": "La Salsa",
+      "origin": "Caribbean, with important Puerto Rican contributions",
+      "description": "A lively dance-music style shaped by Caribbean and Latin American traditions.\nPuerto Rican musicians and communities have played a major role in salsa’s development and worldwide popularity.",
+      "image": "/images/puerto-rico/salsa.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    },
+    {
+      "id": "vejigante-masks",
+      "name": "Las Máscaras de Vejigante",
+      "origin": "Especially associated with Loíza and Ponce",
+      "description": "Bright, expressive masks appear in traditional festivals and parades.\nTheir styles differ by locality and reflect layered African, Spanish, and Caribbean influences.",
+      "image": "/images/puerto-rico/vejigante.jpg",
+      "credit": "Add verified photographer and image-source credit"
+    }
+  ],
+  "cultura_palabras": [
+    {
+      "word": "el tambor",
+      "meaning": "drum",
+      "pronunciation": "el tahm-BOR"
+    },
+    {
+      "word": "el ritmo",
+      "meaning": "rhythm",
+      "pronunciation": "el REET-moh"
+    },
+    {
+      "word": "la danza",
+      "meaning": "dance",
+      "pronunciation": "lah DAHN-sah"
+    },
+    {
+      "word": "la herencia",
+      "meaning": "heritage",
+      "pronunciation": "lah eh-REHN-syah"
+    },
+    {
+      "word": "la artesanía",
+      "meaning": "craftsmanship / handmade crafts",
+      "pronunciation": "lah ar-teh-sah-NEE-ah"
+    }
+  ],
+  "photo_credits": []
+}

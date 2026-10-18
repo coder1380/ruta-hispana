@@ -7,12 +7,14 @@ import { PalabrasStrip } from './PalabrasStrip';
 import { MapPin } from 'lucide-react';
 
 interface LugaresSectionProps {
+  countryName: string;
   lugares: LandmarkItem[];
   palabras: SpanishWordItem[];
   studentName?: string;
 }
 
 export const LugaresSection: React.FC<LugaresSectionProps> = ({
+  countryName,
   lugares,
   palabras,
   studentName = 'Liam Vance',
@@ -30,7 +32,7 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
               Lugares · Famous Places
             </h2>
             <p className="mt-2 text-sm sm:text-base text-ink/80 max-w-2xl font-body">
-              Seven defining architectural treasures across Spain, each captured in a single field photo.
+              {lugares.length} defining places across {countryName}, each captured in a field photo.
             </p>
           </div>
 

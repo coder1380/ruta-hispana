@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCountryData } from '@/lib/countries';
+import { CountryData } from '@/types/country';
 import {
   getGeminiClient,
   getCachedResponse,
@@ -17,26 +18,38 @@ export interface ChatMessage {
  * Intelligent local fallback responses when live AI is unavailable.
  * Follows the strict rule: English only, 3-5 easy bold Spanish words with bracketed meanings, no full Spanish sentences.
  */
-function getOfflineGuideResponse(message: string): string {
+function getOfflineGuideResponse(message: string, country: CountryData): string {
   const lower = message.toLowerCase();
+  const dishes = country.comida ?? [];
+  const regions = country.regions ?? [];
+  const firstDish = dishes[0];
+  const vegetarianDish = dishes.find((dish) => dish.veg_friendly);
+  const firstRegion = regions[0];
 
-  if (lower.includes('food') || lower.includes('eat') || lower.includes('tapas') || lower.includes('paella')) {
-    return `In Spain, dining is a deeply social celebration. You should begin your evening with **el tapeo** (hopping between tapas bars) around 8:30 PM. Order a slice of golden **tortilla de patatas** (potato omelet) and authentic **paella** (saffron rice dish). Remember to ask for a cold **caña** (small draft beer) or refreshing **horchata** (tiger nut milk) while enjoying your meal!`;
+  if (lower.includes('food') || lower.includes('eat') || lower.includes('dish') || lower.includes('meal')) {
+    return firstDish
+      ? `A dish to explore in ${country.name} is **${firstDish.name_es}** (${firstDish.caption}). Ask locally about ingredients and preparation, especially if you have dietary requirements.`
+      : `Explore the local food traditions of ${country.name}, and ask restaurants about ingredients and preparation.`;
   }
 
   if (lower.includes('veg') || lower.includes('vegan') || lower.includes('vegetarian')) {
-    return `Vegetarian travelers will find great options once they know the right dishes. Look for blistered **pimientos de Padrón** (green peppers from Galicia), crispy **patatas bravas** (spicy potatoes), and thick **tortilla** (egg and potato omelet). Always tell your waiter you want your dish without **jamón** (cured ham) or **carne** (meat).`;
+    return vegetarianDish
+      ? `The dataset marks **${vegetarianDish.name_es}** as vegetarian-friendly, but its preparation can vary. Confirm that it contains no meat, seafood, or animal broth.`
+      : `The dataset does not identify a vegetarian dish for ${country.name}. Ask restaurants directly about meat, seafood, and animal broth before ordering.`;
   }
 
   if (lower.includes('budget') || lower.includes('inr') || lower.includes('cost') || lower.includes('money')) {
-    return `A standard daily budget in Spain ranges between **₹7,000 and ₹11,000** per day (about 80 to 125 **euros** [currency of Spain]). This easily covers high-speed **trenes** (trains), boutique hotels, museum tickets, and a three-course **menú del día** (daily set lunch menu) at a neighborhood tavern.`;
+    return `Costs in ${country.name} vary by season, location, and travel style. Use the trip planner to set an INR budget, then check current prices for transport, accommodation, meals, and attractions.`;
   }
 
   if (lower.includes('hello') || lower.includes('hi') || lower.includes('hola')) {
-    return `Welcome to **Ruta Hispana**! I am your cultural **guía** (guide) for discovering Spain. Whether you are curious about colorful street **fiestas** (festivals), ancient Moorish **palacios** (palaces), or lively central **plazas** (town squares), I am here to help you plan your journey. Which corner of Spain would you like to explore today?`;
+    return `Welcome to **Ruta Hispana**! I am your cultural **guía** (guide) for discovering ${country.name}. Ask about its **regiones** (regions), **fiestas** (festivals), or **comida** (food), and I can help you explore the local highlights.`;
   }
 
-  return `Spain is a fascinating country composed of autonomous **regiones** (regions), each with unique customs and culinary heritage. From the sunlit **playas** (beaches) and historical **castillos** (castles) to vibrant town **mercados** (markets), every destination has its own distinct rhythm. What specific question can I answer for your trip?`;
+  const regionalHighlight = firstRegion
+    ? `${firstRegion.name} is represented with ${firstRegion.famous_place}, ${firstRegion.signature_festival}, and ${firstRegion.signature_dish} in the country guide.`
+    : `The country guide includes verified highlights for ${country.name}.`;
+  return `${country.name} has a range of **regiones** (regions), each with its own **costumbres** (customs) and **cultura** (culture). ${regionalHighlight} What would you like to explore?`;
 }
 
 export async function POST(req: NextRequest) {
@@ -66,18 +79,18 @@ export async function POST(req: NextRequest) {
     }
 
     if (!client) {
-      const fallbackReply = getOfflineGuideResponse(message);
+      const fallbackReply = getOfflineGuideResponse(message, country);
       const resData = {
         reply: fallbackReply,
         isFallback: true,
-        source: 'spain.json (Offline Guide)',
+        source: `${country.id}.json (Offline Guide)`,
         message: 'Operating in local guide mode (GEMINI_API_KEY not configured).',
       };
       setCachedResponse(cacheKey, resData);
       return NextResponse.json(resData);
     }
 
-    const prompt = `You are "Mateo", the knowledgeable and friendly local guide for "Ruta Hispana" (an educational travel exploration of Spain).
+    const prompt = `You are "Mateo", the knowledgeable and friendly local guide for "Ruta Hispana", an educational travel exploration of ${country.name}.
 
 VERIFIED GROUND TRUTH CONTEXT FOR ${country.name}:
 ${formatCountryContext(country)}
@@ -104,7 +117,7 @@ Guide (Mateo):
         contents: prompt,
       });
 
-      const reply = response.text || getOfflineGuideResponse(message);
+      const reply = response.text || getOfflineGuideResponse(message, country);
 
       const result = {
         reply,
@@ -116,11 +129,11 @@ Guide (Mateo):
       return NextResponse.json(result);
     } catch (apiError: any) {
       console.warn('[Gemini Chat API] Rate limit or error, using local fallback:', apiError?.message || apiError);
-      const fallbackReply = getOfflineGuideResponse(message);
+      const fallbackReply = getOfflineGuideResponse(message, country);
       const resData = {
         reply: fallbackReply,
         isFallback: true,
-        source: 'spain.json (Fallback Guide)',
+        source: `${country.id}.json (Fallback Guide)`,
         message: 'Live AI is temporarily rate-limited. Enjoy this verified answer from local guidance!',
       };
       setCachedResponse(cacheKey, resData);
@@ -128,7 +141,7 @@ Guide (Mateo):
     }
   } catch (error: any) {
     console.error('[Chat Route Handler] Error caught; returning resilient fallback:', error);
-    const reply = getOfflineGuideResponse('general');
+    const reply = getOfflineGuideResponse('general', getCountryData('spain'));
     return NextResponse.json({
       reply,
       isFallback: true,

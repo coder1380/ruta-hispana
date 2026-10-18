@@ -2,12 +2,14 @@
 
 import React, { useState } from 'react';
 import { Compass, Globe, ChevronDown, Menu, X } from 'lucide-react';
+import { CountryData } from '@/types/country';
 
 interface NavbarProps {
-  currentCountry?: string;
+  currentCountry: Pick<CountryData, 'id' | 'name' | 'name_es'>;
+  countries: Pick<CountryData, 'id' | 'name' | 'name_es'>[];
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ currentCountry = 'spain' }) => {
+export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
 
@@ -35,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry = 'spain' }) => {
                   Ruta <span className="text-terracotta">Hispana</span>
                 </span>
                 <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-terracotta/10 text-terracotta border border-terracotta/20">
-                  ESPAÑA
+                  {currentCountry.name_es.toUpperCase()}
                 </span>
               </div>
               <p className="text-[10px] text-ink/70 font-body hidden sm:block">
@@ -65,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry = 'spain' }) => {
               aria-label="Country information"
             >
               <Globe className="w-3.5 h-3.5 text-terracotta" />
-              <span>España · Spain</span>
+              <span>{currentCountry.name_es} · {currentCountry.name}</span>
               <ChevronDown className="w-3 h-3 text-ink/60" />
             </button>
 
@@ -74,15 +76,26 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry = 'spain' }) => {
                 <p className="text-[10px] font-bold text-terracotta uppercase tracking-wider mb-1 font-display">
                   Capítulo Activo
                 </p>
-                <div className="flex items-center justify-between p-2 rounded-lg bg-sand/60 border border-sand mb-2">
-                  <span className="text-xs font-bold text-ink">🇪🇸 España (Spain)</span>
-                  <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-terracotta text-cream">
-                    Active
-                  </span>
+                <div className="space-y-1">
+                  {countries.map((country) => (
+                    <a
+                      key={country.id}
+                      href={country.id === 'spain' ? '/' : `/?country=${encodeURIComponent(country.id)}`}
+                      className={`flex items-center justify-between p-2 rounded-lg border transition-colors ${
+                        country.id === currentCountry.id
+                          ? 'bg-sand/60 border-sand'
+                          : 'border-transparent hover:bg-sand/40'
+                      }`}
+                    >
+                      <span className="text-xs font-bold text-ink">{country.name_es} ({country.name})</span>
+                      {country.id === currentCountry.id && (
+                        <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-terracotta text-cream">
+                          Active
+                        </span>
+                      )}
+                    </a>
+                  ))}
                 </div>
-                <p className="text-[11px] text-ink/70 leading-relaxed">
-                  Country-agnostic architecture: teammates can drop <code className="bg-sand px-1 rounded text-terracotta">mexico.json</code> into <code className="bg-sand px-1 rounded">/data/countries/</code>.
-                </p>
               </div>
             )}
           </div>

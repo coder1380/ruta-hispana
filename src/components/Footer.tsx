@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
               </span>
             </div>
             <p className="text-xs text-cream/70 max-w-sm leading-relaxed">
-              University Spanish Coursework: <em>Creative Exploration of the Hispanic World</em>. An interactive travel journal exploring Spain&apos;s regions, architectural icons, street celebrations, and culinary heritage.
+              University Spanish Coursework: <em>Creative Exploration of the Hispanic World</em>. An interactive travel journal exploring Hispanic regions, architectural icons, street celebrations, and culinary heritage.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
               Modular Architecture
             </h4>
             <p className="text-xs text-cream/70 leading-relaxed">
-              Ground-truth facts loaded from <code className="bg-cream/10 px-1 py-0.5 rounded text-cream">/data/countries/spain.json</code>. Team members can add Mexico, Colombia, or Argentina by adding a matching JSON file.
+              Country facts are loaded from <code className="bg-cream/10 px-1 py-0.5 rounded text-cream">/data/countries/</code>. Add a country JSON file to make it available in the country menu.
             </p>
           </div>
         </div>

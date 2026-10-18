@@ -37,9 +37,9 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
         if (!isMounted || !mapContainerRef.current) return;
 
         const map = L.map(mapContainerRef.current, {
-          center: [40.2, -3.7],
+          center: regions[0]?.coordinates ?? [0, 0],
           zoom: 6,
-          minZoom: 5,
+          minZoom: 2,
           maxZoom: 10,
           scrollWheelZoom: false,
           zoomControl: true,
@@ -53,6 +53,10 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
         }).addTo(map);
 
         mapInstanceRef.current = map;
+        if (regions.length > 0) {
+          const bounds = L.latLngBounds(regions.map((region) => region.coordinates));
+          map.fitBounds(bounds, { padding: [30, 30], maxZoom: 7 });
+        }
 
         // 1. Regional Zones with gentle pulsing circles
         regions.forEach((reg) => {

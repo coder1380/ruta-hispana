@@ -5,6 +5,10 @@ import spainData from '../../data/countries/spain.json';
 
 const COUNTRIES_DIR = path.join(process.cwd(), 'data', 'countries');
 
+function normalizeCountryId(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
 /**
  * Country-agnostic loader:
  * Teammates can drop in any new country JSON (e.g., mexico.json, argentina.json, peru.json)
@@ -12,10 +16,19 @@ const COUNTRIES_DIR = path.join(process.cwd(), 'data', 'countries');
  */
 export function getCountryData(id: string = 'spain'): CountryData {
   try {
-    const filePath = path.join(COUNTRIES_DIR, `${id.toLowerCase()}.json`);
-    if (fs.existsSync(filePath)) {
-      const fileContent = fs.readFileSync(filePath, 'utf-8');
-      return JSON.parse(fileContent) as CountryData;
+    const requestedId = normalizeCountryId(id);
+    const files = fs.readdirSync(COUNTRIES_DIR).filter((file) => file.endsWith('.json'));
+
+    for (const file of files) {
+      const filePath = path.join(COUNTRIES_DIR, file);
+      const data = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as CountryData;
+      const fileId = file.replace(/\.json$/i, '');
+      if (
+        normalizeCountryId(fileId) === requestedId ||
+        normalizeCountryId(data.id || '') === requestedId
+      ) {
+        return data;
+      }
     }
   } catch (error) {
     console.error(`[Country Loader] Error reading ${id}.json:`, error);
@@ -39,7 +52,8 @@ export function getAllCountries(): { id: string; name: string; name_es: string }
             name: data.name || file.replace('.json', ''),
             name_es: data.name_es || data.name || file.replace('.json', ''),
           };
-        });
+        })
+        .sort((a, b) => a.id === 'spain' ? -1 : b.id === 'spain' ? 1 : a.name.localeCompare(b.name));
     }
   } catch (error) {
     console.error('[Country Loader] Error listing countries:', error);

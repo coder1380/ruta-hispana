@@ -5,7 +5,12 @@ import { TripPlanner } from './TripPlanner';
 import { GuideChatbot } from './GuideChatbot';
 import { Sparkles, Calendar, MessageSquare, ChevronDown, ChevronUp } from 'lucide-react';
 
-export const TravelToolsSection: React.FC = () => {
+interface TravelToolsSectionProps {
+  countryId: string;
+  countryName: string;
+}
+
+export const TravelToolsSection: React.FC<TravelToolsSectionProps> = ({ countryId, countryName }) => {
   const [activeTab, setActiveTab] = useState<'planner' | 'chat'>('planner');
   const [isOpen, setIsOpen] = useState(false);
 
@@ -73,9 +78,9 @@ export const TravelToolsSection: React.FC = () => {
               {/* Tool Component */}
               <div className="bg-sand/30 rounded-xl border border-sand overflow-hidden">
                 {activeTab === 'planner' ? (
-                  <TripPlanner studentName="Priya Sharma" />
+                  <TripPlanner studentName="Priya Sharma" countryId={countryId} countryName={countryName} />
                 ) : (
-                  <GuideChatbot />
+                  <GuideChatbot countryId={countryId} countryName={countryName} />
                 )}
               </div>
             </div>

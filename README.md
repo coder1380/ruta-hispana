@@ -77,10 +77,11 @@ ruta-hispana/
 
 ## How Teammates Can Add New Countries
 
-The application is built to be **country-agnostic**:
-1. Duplicate `data/countries/spain.json` and rename it to your target country (e.g., `mexico.json`, `argentina.json`, `peru.json`).
-2. Populate the fields matching the schema (`name`, `name_es`, `region_groups`, `famous_foods`, `festivals`, `landmarks`, etc.).
-3. The country loader in `src/lib/countries.ts` will automatically load your country!
+The application supports multiple country datasets:
+1. Add a JSON file to `data/countries/` using the shape of `spain.json` as a reference.
+2. Include an `id`, `name`, and `name_es` that identify the country, along with the sections used by the page (`regions`, `lugares`, `fiestas`, `comida`, and `cultura`).
+3. Add any referenced image files under `public/` at the paths in the JSON.
+4. Restart the development server if it was already running, then choose the country from the menu in the page header. Spain remains the default at `/`; other country pages use `/?country=<id>`.
 
 ---
 

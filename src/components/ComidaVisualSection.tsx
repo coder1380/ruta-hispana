@@ -46,7 +46,7 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
               Comida · Culinary Craft
             </h2>
             <p className="mt-2 text-sm sm:text-base text-ink/80 max-w-2xl font-body">
-              Olive oil, sea salt, gentle heat. Six quintessential plates. Hover or tap each tile to flip and reveal notes.
+              Discover local ingredients and signature dishes. Hover or tap each tile to flip and reveal notes.
             </p>
           </div>
 

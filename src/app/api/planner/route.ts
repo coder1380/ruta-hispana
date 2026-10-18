@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCountryData } from '@/lib/countries';
+import { CountryData } from '@/types/country';
 import {
   getGeminiClient,
   getCachedResponse,
@@ -44,37 +45,60 @@ export interface TripPlanResult {
  * when offline or when API rate limits are hit.
  */
 function buildFallbackItinerary(
+  country: CountryData,
   days: number,
   budgetInr: number,
   interests: string[],
   isVegetarian: boolean
 ): TripPlanResult {
-  const spain = getCountryData('spain');
   const safeDays = Math.min(Math.max(days, 1), 7);
   const interestLabel = interests.length > 0 ? interests.join(' & ') : 'Culture & Gastronomy';
+  const regions = country.regions ?? [];
+  const places = country.lugares ?? [];
+  const availableFood = country.comida ?? [];
+  const vegetarianFood = availableFood.filter((item) => item.veg_friendly);
+  const locations = Array.from(
+    { length: Math.max(regions.length, places.length, 1) },
+    (_, index) => {
+      const region = regions.length ? regions[index % regions.length] : undefined;
+      const place = places.length ? places[index % places.length] : undefined;
+      const city = place?.city || region?.capital || country.capital;
 
-  const locations = [
-    { city: 'Madrid', region: 'Madrid', morning: 'Explore the historic **Plaza Mayor** (main square) and walk through Puerta del Sol.', afternoon: 'Visit the renowned **Museo del Prado** (Prado art museum) to view Velázquez and Goya.', evening: 'Stroll around Parque del Buen Retiro and relax at a sunny terrace for early **tapas** (savory appetizers).' },
-    { city: 'Barcelona', region: 'Catalonia', morning: 'Marvel at Antoni Gaudí’s awe-inspiring **Sagrada Família** (Holy Family basilica).', afternoon: 'Wander through the gothic stone arches of the **Barrio Gótico** (Gothic quarter).', evening: 'Catch sunset along the **playa** (beach) of Barceloneta and enjoy maritime breezes.' },
-    { city: 'Seville', region: 'Andalusia', morning: 'Visit the majestic Plaza de España and admire the grand **azulejos** (ceramic painted tiles).', afternoon: 'Tour the royal Real Alcázar palace with fragrant orange courtyards.', evening: 'Experience authentic emotional **flamenco** (traditional passionate dance) in the Triana neighborhood.' },
-    { city: 'Valencia', region: 'Valencia', morning: 'Walk through the futuristic **Ciudad de las Artes** (City of Arts and Sciences).', afternoon: 'Explore the bustling Mercado Central and taste fresh seasonal produce.', evening: 'Savor genuine paella cooked over orange wood near the Albufera nature reserve.' },
-    { city: 'Granada', region: 'Andalusia', morning: 'Climb up to the breathtaking **Alhambra** (red Moorish fortress and palace).', afternoon: 'Wander the winding whitewashed alleys of the Albayzín quarter.', evening: 'Enjoy complimentary tapas served with every refreshment in traditional taverns.' },
-    { city: 'San Sebastián', region: 'Basque Country', morning: 'Walk around the pristine shell-shaped crescent of **La Concha** (seashell bay).', afternoon: 'Hop between lively taverns in the Old Town tasting gourmet **pintxos** (skewered delicacies).', evening: 'Take the funicular to Monte Igueldo for panoramic coastal views.' },
-    { city: 'Córdoba', region: 'Andalusia', morning: 'Step inside the mesmerizing **Mezquita** (historic mosque-cathedral with striped arches).', afternoon: 'Photograph flower-filled courtyards in the Calleja de las Flores.', evening: 'Cross the Roman Bridge as evening lights illuminate the Guadalquivir river.' },
-  ];
+      return {
+        city,
+        morning: place
+          ? `Visit ${place.name} in ${place.city}.`
+          : `Explore ${region?.name || city} and its local highlights.`,
+        afternoon: region
+          ? `Discover ${region.name}; notable sights include ${region.famous_place}.`
+          : `Explore more of ${country.name} at your own pace.`,
+        evening: region
+          ? `Learn about ${region.signature_festival} and try ${region.signature_dish}.`
+          : `Explore local food and cultural traditions in ${city}.`,
+      };
+    }
+  );
 
   const daysList: ItineraryDay[] = [];
   for (let i = 0; i < safeDays; i++) {
     const loc = locations[i % locations.length];
-    const food = isVegetarian
-      ? (i % 2 === 0
-          ? { dish: 'Tortilla de Patatas', description: 'Classic Spanish golden potato omelet made with farm eggs and caramelized onions.', veg_friendly: true }
-          : { dish: 'Gazpacho Andaluz', description: 'Chilled ripe tomato and bell pepper soup served with crusty artisan bread.', veg_friendly: true })
-      : (i % 2 === 0
-          ? { dish: 'Paella Valenciana', description: 'Traditional saffron rice prepared with seasonal poultry, butter beans, and fresh rosemary.', veg_friendly: false }
-          : { dish: 'Pintxos Variados', description: 'Assorted skewers of grilled vegetables, artisan cheese, and regional cured meats.', veg_friendly: false });
-
-    const phrase = spain.daily_phrases ? spain.daily_phrases[i % spain.daily_phrases.length] : { es: 'Una mesa, por favor.', en: 'A table, please.', pronunciation: 'OO-nah MEH-sah' };
+    const foodChoices = isVegetarian ? vegetarianFood : availableFood;
+    const selectedFood = foodChoices.length ? foodChoices[i % foodChoices.length] : undefined;
+    const food = selectedFood
+      ? {
+          dish: selectedFood.name_es,
+          description: selectedFood.caption,
+          veg_friendly: selectedFood.veg_friendly,
+        }
+      : {
+          dish: 'Ask locally about available options',
+          description: 'Check that the dish contains no meat, seafood, or animal broth.',
+          veg_friendly: false,
+        };
+    const phrases = country.daily_phrases ?? [];
+    const phrase = phrases.length
+      ? phrases[i % phrases.length]
+      : { es: 'Una mesa, por favor.', en: 'A table, please.', pronunciation: 'OO-nah MEH-sah' };
 
     daysList.push({
       day_number: i + 1,
@@ -89,20 +113,20 @@ function buildFallbackItinerary(
   }
 
   return {
-    title: `${safeDays}-Day Grand ${interestLabel} Journey Across Spain`,
-    summary: `A balanced, research-backed itinerary highlighting Spain's cultural wonders, historic monuments, and delectable culinary traditions tailored for ${isVegetarian ? 'vegetarian dining' : 'all dietary preferences'}.`,
+    title: `${safeDays}-Day ${interestLabel} Journey Across ${country.name}`,
+    summary: `A balanced itinerary highlighting ${country.name}'s cultural sites, regional traditions, and local food, tailored for ${isVegetarian ? 'vegetarian dining' : 'flexible dining'}.`,
     estimated_cost_inr: `₹${(budgetInr || safeDays * 11000).toLocaleString('en-IN')}`,
     is_vegetarian: isVegetarian,
     days: daysList,
     practical_tips: [
-      `Cost baseline: Approx. ₹6,000–₹9,000 per day including meals and regional transit.`,
-      `Dining schedule: Spaniards eat lunch around 2:00 PM and dinner after 8:30 PM.`,
-      `Vegetarian guidance: Order tortilla de patatas, gazpacho, and pimientos de padrón for naturally vegetarian dishes.`,
-      `Transport: Book high-speed Renfe AVE trains between Madrid, Barcelona, and Seville in advance for the best fares.`,
+      `Confirm local transport routes, opening times, and entry requirements before setting out.`,
+      `Ask restaurants whether dishes contain meat, seafood, or animal broth.`,
+      `Use the regional highlights in this itinerary to choose places that match your interests.`,
+      `Check current local guidance for seasonal weather and travel conditions.`,
     ],
     isFallback: true,
-    source: 'spain.json (Verified Local Ground Truth)',
-    message: 'Generated using verified data from spain.json.',
+    source: `${country.id}.json (Verified Local Ground Truth)`,
+    message: `Generated using verified data from ${country.name}.`,
   };
 }
 
@@ -130,7 +154,7 @@ export async function POST(req: NextRequest) {
     const client = getGeminiClient();
 
     if (!client) {
-      const fallback = buildFallbackItinerary(safeDays, safeBudget, interests, isVegetarian);
+      const fallback = buildFallbackItinerary(country, safeDays, safeBudget, interests, isVegetarian);
       setCachedResponse(cacheKey, fallback);
       return NextResponse.json(fallback);
     }
@@ -197,20 +221,20 @@ Apply this language rule inside the morning, afternoon, evening, and description
       const parsed: TripPlanResult = JSON.parse(cleanedJson);
 
       parsed.isFallback = false;
-      parsed.source = 'Gemini 2.5 Flash (Grounded in spain.json)';
+      parsed.source = `Gemini 2.5 Flash (Grounded in ${country.id}.json)`;
 
       setCachedResponse(cacheKey, parsed);
       return NextResponse.json(parsed);
     } catch (apiError: any) {
       console.warn('[Gemini Planner API] API error or JSON parse error, using fallback:', apiError?.message || apiError);
-      const fallback = buildFallbackItinerary(safeDays, safeBudget, interests, isVegetarian);
-      fallback.message = 'Live AI itinerary generated fallback from verified spain.json data due to API limits.';
+      const fallback = buildFallbackItinerary(country, safeDays, safeBudget, interests, isVegetarian);
+      fallback.message = `Live AI was unavailable; this itinerary uses verified ${country.name} data.`;
       setCachedResponse(cacheKey, fallback);
       return NextResponse.json(fallback);
     }
   } catch (error: any) {
     console.error('[Planner Route Handler] Error caught; returning resilient fallback itinerary:', error);
-    const fallback = buildFallbackItinerary(3, 35000, ['Culture', 'Gastronomy'], true);
+    const fallback = buildFallbackItinerary(getCountryData('spain'), 3, 35000, ['Culture', 'Gastronomy'], true);
     return NextResponse.json(fallback);
   }
 }

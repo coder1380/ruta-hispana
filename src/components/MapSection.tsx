@@ -7,11 +7,12 @@ import { MapPin, X } from 'lucide-react';
 import Image from 'next/image';
 
 interface MapSectionProps {
+  countryName: string;
   regions: RegionSummary[];
   landmarks: LandmarkItem[];
 }
 
-export const MapSection: React.FC<MapSectionProps> = ({ regions, landmarks }) => {
+export const MapSection: React.FC<MapSectionProps> = ({ countryName, regions, landmarks }) => {
   const [selectedRegion, setSelectedRegion] = useState<RegionSummary>(regions[0]);
   const [activeLandmark, setActiveLandmark] = useState<LandmarkItem | null>(null);
 
@@ -34,17 +35,17 @@ export const MapSection: React.FC<MapSectionProps> = ({ regions, landmarks }) =>
               Cartografía · Interactive Map
             </span>
             <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink mt-1">
-              Mapa de España · Cartography of Six Regions
+              Mapa de {countryName} · Interactive Cartography
             </h2>
             <p className="mt-2 text-sm sm:text-base text-ink/80 max-w-2xl font-body">
-              Click any colored region circle or landmark pin to view its signature place, festival, and dish.
+              Explore each region and landmark to discover its signature place, festival, and dish.
             </p>
           </div>
           <div className="text-right hidden sm:block shrink-0">
             <span className="font-handwriting text-2xl text-terracotta block">
-              &ldquo;La piel de toro&rdquo;
+              &ldquo;Explora y descubre&rdquo;
             </span>
-            <span className="text-xs text-ink/70">6 historical realms</span>
+            <span className="text-xs text-ink/70">{regions.length} regions</span>
           </div>
         </div>
 
@@ -132,7 +133,7 @@ export const MapSection: React.FC<MapSectionProps> = ({ regions, landmarks }) =>
                 <div className="pb-3 border-b border-sand">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
-                      Comunidad Autónoma
+                      Región · Region
                     </span>
                     <span className="text-xs px-2.5 py-0.5 rounded-full bg-sand text-ink font-semibold">
                       Capital: {selectedRegion.capital}

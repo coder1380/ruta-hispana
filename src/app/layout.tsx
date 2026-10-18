@@ -21,17 +21,17 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: 'Ruta Hispana · Travel & Cultural Journal | España',
+  title: 'Ruta Hispana · Travel & Cultural Journal',
   description:
-    'An interactive, visually rich cultural journal exploring Spain — architectural landmarks, street fiestas, regional gastronomy, and living traditions.',
+    'An interactive, visually rich cultural journal exploring Hispanic countries, landmarks, festivals, regional gastronomy, and living traditions.',
   keywords: [
     'Ruta Hispana',
-    'Spain Culture',
+    'Hispanic Culture',
     'Spanish Language',
     'Comida Española',
-    'Fiestas de España',
+    'Hispanic Festivals',
     'Lugares Famosos',
-    'Interactive Spain Map',
+    'Interactive Travel Map',
   ],
 };
 

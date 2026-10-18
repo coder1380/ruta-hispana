@@ -37,7 +37,7 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
               Cultura · Living Traditions
             </h2>
             <p className="mt-2 text-sm sm:text-base text-ink/80 max-w-2xl font-body">
-              Four living expressions: passionate Andalusian song, towering human towers, and regional communal dances.
+              Explore music, dance, craft, and other traditions that shape everyday cultural life.
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
             <span className="font-handwriting text-2xl text-terracotta block">
               &ldquo;El cuerpo expresa lo que el pueblo siente&rdquo;
             </span>
-            <span className="text-xs text-ink/70">4 living expressions</span>
+            <span className="text-xs text-ink/70">{cultura.length} living expressions</span>
           </div>
         </div>
 
