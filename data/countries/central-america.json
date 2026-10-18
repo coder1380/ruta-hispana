@@ -1,0 +1,795 @@
+{
+  "id": "central-america",
+  "name": "Central America",
+  "name_es": "Centroamérica",
+  "capital": "Regional chapter",
+  "currency": "Multiple currencies",
+  "best_time_to_visit": "December to April (varies by country)",
+  "hero_image": "/images/central-america/central-america-hero.jpg",
+  "hero_credit": "Image credit to be added",
+  "daily_phrases": [
+    {
+      "es": "¡Hola!",
+      "en": "Hello!",
+      "pronunciation": "OH-lah"
+    },
+    {
+      "es": "Por favor.",
+      "en": "Please.",
+      "pronunciation": "por fah-VOR"
+    },
+    {
+      "es": "Muchas gracias.",
+      "en": "Thank you very much.",
+      "pronunciation": "MOO-chahs GRAH-syahs"
+    },
+    {
+      "es": "¿Cuánto cuesta?",
+      "en": "How much does it cost?",
+      "pronunciation": "KWAN-toh KWES-tah"
+    },
+    {
+      "es": "¿Dónde está el baño?",
+      "en": "Where is the bathroom?",
+      "pronunciation": "DON-deh es-TAH el BAH-nyoh"
+    },
+    {
+      "es": "Quisiera agua, por favor.",
+      "en": "I would like water, please.",
+      "pronunciation": "kee-see-EH-rah AH-gwah por fah-VOR"
+    },
+    {
+      "es": "No entiendo.",
+      "en": "I don't understand.",
+      "pronunciation": "noh en-TYEN-doh"
+    },
+    {
+      "es": "¿Habla inglés?",
+      "en": "Do you speak English?",
+      "pronunciation": "AH-blah een-GLES"
+    }
+  ],
+  "regions": [
+    {
+      "id": "guatemala",
+      "name": "Guatemala",
+      "name_es": "Guatemala",
+      "capital": "Guatemala City",
+      "coordinates": [14.6349, -90.5069],
+      "famous_place": "Tikal National Park",
+      "signature_festival": "Semana Santa",
+      "signature_dish": "Pepián"
+    },
+    {
+      "id": "belize",
+      "name": "Belize",
+      "name_es": "Belice",
+      "capital": "Belmopan",
+      "coordinates": [17.251, -88.759],
+      "famous_place": "Great Blue Hole",
+      "signature_festival": "Garifuna Settlement Day",
+      "signature_dish": "Rice and beans",
+      "regional_language": "English is the official language"
+    },
+    {
+      "id": "honduras",
+      "name": "Honduras",
+      "name_es": "Honduras",
+      "capital": "Tegucigalpa",
+      "coordinates": [14.0723, -87.1921],
+      "famous_place": "Copán Archaeological Site",
+      "signature_festival": "Feria Juniana",
+      "signature_dish": "Baleadas"
+    },
+    {
+      "id": "el-salvador",
+      "name": "El Salvador",
+      "name_es": "El Salvador",
+      "capital": "San Salvador",
+      "coordinates": [13.6929, -89.2182],
+      "famous_place": "Joya de Cerén",
+      "signature_festival": "August Festival",
+      "signature_dish": "Pupusas"
+    },
+    {
+      "id": "nicaragua",
+      "name": "Nicaragua",
+      "name_es": "Nicaragua",
+      "capital": "Managua",
+      "coordinates": [12.114, -86.2362],
+      "famous_place": "Granada",
+      "signature_festival": "La Purísima",
+      "signature_dish": "Gallo pinto"
+    },
+    {
+      "id": "costa-rica",
+      "name": "Costa Rica",
+      "name_es": "Costa Rica",
+      "capital": "San José",
+      "coordinates": [9.9281, -84.0907],
+      "famous_place": "Arenal Volcano",
+      "signature_festival": "Fiestas de Palmares",
+      "signature_dish": "Gallo pinto"
+    },
+    {
+      "id": "panama",
+      "name": "Panama",
+      "name_es": "Panamá",
+      "capital": "Panama City",
+      "coordinates": [8.9824, -79.5199],
+      "famous_place": "Panama Canal",
+      "signature_festival": "Carnaval de Las Tablas",
+      "signature_dish": "Sancocho"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "guatemala-tikal",
+      "name": "Tikal National Park",
+      "city": "Petén, Guatemala",
+      "caption": "Ancient Maya temples rise above a vast tropical forest.",
+      "image": "/images/central-america/tikal.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [17.222, -89.6237]
+    },
+    {
+      "id": "guatemala-antigua",
+      "name": "Antigua Guatemala",
+      "city": "Antigua, Guatemala",
+      "caption": "Colourful colonial streets sit beneath towering volcanoes.",
+      "image": "/images/central-america/antigua-guatemala.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [14.5586, -90.7295]
+    },
+    {
+      "id": "belize-blue-hole",
+      "name": "Great Blue Hole",
+      "city": "Belize Barrier Reef",
+      "caption": "A giant marine sinkhole surrounded by brilliant blue water.",
+      "image": "/images/central-america/great-blue-hole.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [17.315, -87.535]
+    },
+    {
+      "id": "belize-xunantunich",
+      "name": "Xunantunich",
+      "city": "Cayo District, Belize",
+      "caption": "Maya ruins overlook forest and the Mopan River valley.",
+      "image": "/images/central-america/xunantunich.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [17.089, -89.14]
+    },
+    {
+      "id": "honduras-copan",
+      "name": "Copán Archaeological Site",
+      "city": "Copán Ruinas, Honduras",
+      "caption": "Carved stelae and plazas reveal the legacy of Maya civilisation.",
+      "image": "/images/central-america/copan.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [14.8386, -89.1406]
+    },
+    {
+      "id": "honduras-roatan",
+      "name": "Roatán Island",
+      "city": "Bay Islands, Honduras",
+      "caption": "Coral reefs and clear Caribbean waters attract divers.",
+      "image": "/images/central-america/roatan.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [16.329, -86.529]
+    },
+    {
+      "id": "elsalvador-joya",
+      "name": "Joya de Cerén",
+      "city": "La Libertad, El Salvador",
+      "caption": "A preserved Maya farming village offers a glimpse of daily life.",
+      "image": "/images/central-america/joya-de-ceren.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [13.827, -89.36]
+    },
+    {
+      "id": "elsalvador-santa-ana",
+      "name": "Santa Ana Volcano",
+      "city": "Santa Ana, El Salvador",
+      "caption": "A hiking trail leads to a striking turquoise crater lake.",
+      "image": "/images/central-america/santa-ana-volcano.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [13.853, -89.63]
+    },
+    {
+      "id": "nicaragua-granada",
+      "name": "Granada",
+      "city": "Granada, Nicaragua",
+      "caption": "Historic architecture and colourful façades line the colonial streets.",
+      "image": "/images/central-america/granada.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [11.9344, -85.956]
+    },
+    {
+      "id": "nicaragua-ometepe",
+      "name": "Ometepe Island",
+      "city": "Lake Nicaragua",
+      "caption": "Two volcanoes shape an island in a vast freshwater lake.",
+      "image": "/images/central-america/ometepe.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [11.5, -85.55]
+    },
+    {
+      "id": "costarica-arenal",
+      "name": "Arenal Volcano",
+      "city": "La Fortuna, Costa Rica",
+      "caption": "Rainforest trails surround one of Costa Rica's best-known volcanoes.",
+      "image": "/images/central-america/arenal-volcano.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [10.463, -84.703]
+    },
+    {
+      "id": "costarica-manuel-antonio",
+      "name": "Manuel Antonio National Park",
+      "city": "Puntarenas, Costa Rica",
+      "caption": "Tropical forest meets sandy beaches along the Pacific coast.",
+      "image": "/images/central-america/manuel-antonio.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [9.392, -84.137]
+    },
+    {
+      "id": "panama-canal",
+      "name": "Panama Canal",
+      "city": "Panama City, Panama",
+      "caption": "A remarkable waterway connects shipping routes across two oceans.",
+      "image": "/images/central-america/panama-canal.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [9.08, -79.68]
+    },
+    {
+      "id": "panama-casco-viejo",
+      "name": "Casco Viejo",
+      "city": "Panama City, Panama",
+      "caption": "Historic plazas and colourful buildings define the old quarter.",
+      "image": "/images/central-america/casco-viejo.jpg",
+      "credit": "Image credit to be added",
+      "coordinates": [8.952, -79.535]
+    }
+  ],
+  "lugares_palabras": [
+    {
+      "id": "l1",
+      "word": "ruinas",
+      "meaning": "ruins",
+      "pronunciation": "roo-EE-nahs"
+    },
+    {
+      "id": "l2",
+      "word": "volcán",
+      "meaning": "volcano",
+      "pronunciation": "bol-KAHN"
+    },
+    {
+      "id": "l3",
+      "word": "selva",
+      "meaning": "jungle",
+      "pronunciation": "SEL-bah"
+    },
+    {
+      "id": "l4",
+      "word": "playa",
+      "meaning": "beach",
+      "pronunciation": "PLAH-yah"
+    },
+    {
+      "id": "l5",
+      "word": "montaña",
+      "meaning": "mountain",
+      "pronunciation": "mon-TAH-nyah"
+    },
+    {
+      "id": "l6",
+      "word": "isla",
+      "meaning": "island",
+      "pronunciation": "EES-lah"
+    },
+    {
+      "id": "l7",
+      "word": "canal",
+      "meaning": "canal",
+      "pronunciation": "kah-NAHL"
+    },
+    {
+      "id": "l8",
+      "word": "lago",
+      "meaning": "lake",
+      "pronunciation": "LAH-goh"
+    },
+    {
+      "id": "l9",
+      "word": "cascada",
+      "meaning": "waterfall",
+      "pronunciation": "kahs-KAH-dah"
+    },
+    {
+      "id": "l10",
+      "word": "bosque",
+      "meaning": "forest",
+      "pronunciation": "BOS-keh"
+    }
+  ],
+  "fiestas": [
+    {
+      "id": "guatemala-semana-santa",
+      "name": "Semana Santa",
+      "month": "March/April",
+      "town_region": "Antigua Guatemala",
+      "caption": "Colourful carpets and religious processions fill historic streets.",
+      "image": "/images/central-america/semana-santa.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "belize-garifuna-day",
+      "name": "Garifuna Settlement Day",
+      "month": "November",
+      "town_region": "Dangriga, Belize",
+      "caption": "Garifuna communities celebrate their heritage with music and dance.",
+      "image": "/images/central-america/garifuna-day.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "honduras-feria-juniana",
+      "name": "Feria Juniana",
+      "month": "June",
+      "town_region": "San Pedro Sula, Honduras",
+      "caption": "Parades, music and festivities celebrate the city.",
+      "image": "/images/central-america/feria-juniana.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "elsalvador-august-festival",
+      "name": "August Festival",
+      "month": "August",
+      "town_region": "San Salvador, El Salvador",
+      "caption": "Festivities honour the Divine Saviour of the World.",
+      "image": "/images/central-america/august-festival.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "nicaragua-la-purisima",
+      "name": "La Purísima",
+      "month": "December",
+      "town_region": "Nicaragua",
+      "caption": "Families celebrate with songs, altars and community gatherings.",
+      "image": "/images/central-america/la-purisima.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "costarica-palmares",
+      "name": "Fiestas de Palmares",
+      "month": "January",
+      "town_region": "Palmares, Costa Rica",
+      "caption": "A popular festival features concerts, parades and traditional celebrations.",
+      "image": "/images/central-america/palmares.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "panama-carnaval",
+      "name": "Carnaval de Las Tablas",
+      "month": "February/March",
+      "town_region": "Las Tablas, Panama",
+      "caption": "Colourful costumes, music and parades fill the streets before Lent.",
+      "image": "/images/central-america/carnaval-las-tablas.jpg",
+      "credit": "Image credit to be added"
+    }
+  ],
+  "fiestas_palabras": [
+    {
+      "id": "f1",
+      "word": "fiesta",
+      "meaning": "celebration",
+      "pronunciation": "FYES-tah"
+    },
+    {
+      "id": "f2",
+      "word": "baile",
+      "meaning": "dance",
+      "pronunciation": "BYE-leh"
+    },
+    {
+      "id": "f3",
+      "word": "música",
+      "meaning": "music",
+      "pronunciation": "MOO-see-kah"
+    },
+    {
+      "id": "f4",
+      "word": "desfile",
+      "meaning": "parade",
+      "pronunciation": "des-FEE-leh"
+    },
+    {
+      "id": "f5",
+      "word": "máscara",
+      "meaning": "mask",
+      "pronunciation": "MAHS-kah-rah"
+    },
+    {
+      "id": "f6",
+      "word": "tradición",
+      "meaning": "tradition",
+      "pronunciation": "trah-dee-SYOHN"
+    },
+    {
+      "id": "f7",
+      "word": "celebración",
+      "meaning": "celebration",
+      "pronunciation": "seh-leh-brah-SYOHN"
+    },
+    {
+      "id": "f8",
+      "word": "comunidad",
+      "meaning": "community",
+      "pronunciation": "koh-moo-nee-DAHD"
+    },
+    {
+      "id": "f9",
+      "word": "tambor",
+      "meaning": "drum",
+      "pronunciation": "tahm-BOR"
+    },
+    {
+      "id": "f10",
+      "word": "vestido",
+      "meaning": "dress",
+      "pronunciation": "bes-TEE-doh"
+    }
+  ],
+  "comida": [
+    {
+      "id": "guatemala-pepian",
+      "name_es": "Pepián",
+      "caption": "A rich stew of meat, vegetables and roasted spices.",
+      "veg_friendly": false,
+      "image": "/images/central-america/pepian.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "guatemala-jocon",
+      "name_es": "Jocón",
+      "caption": "Chicken stew in a green tomatillo and herb sauce.",
+      "veg_friendly": false,
+      "image": "/images/central-america/jocon.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "guatemala-r rellenitos",
+      "name_es": "Rellenitos de plátano",
+      "caption": "Sweet plantain treats filled with black beans.",
+      "veg_friendly": true,
+      "image": "/images/central-america/rellenitos.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "belize-rice-beans",
+      "name_es": "Rice and Beans",
+      "caption": "Rice and red beans cooked with coconut milk.",
+      "veg_friendly": true,
+      "image": "/images/central-america/belize-rice-and-beans.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "belize-fry-jacks",
+      "name_es": "Fry Jacks",
+      "caption": "Fried dough served with breakfast or savoury fillings.",
+      "veg_friendly": true,
+      "image": "/images/central-america/fry-jacks.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "belize-stew-chicken",
+      "name_es": "Stew Chicken",
+      "caption": "Belizean stewed chicken served with rice and beans.",
+      "veg_friendly": false,
+      "image": "/images/central-america/belize-stew-chicken.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "honduras-baleadas",
+      "name_es": "Baleadas",
+      "caption": "Flour tortillas filled with beans, cheese and cream.",
+      "veg_friendly": true,
+      "image": "/images/central-america/baleadas.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "honduras-sopa-caracol",
+      "name_es": "Sopa de Caracol",
+      "caption": "A coconut-based soup traditionally made with conch.",
+      "veg_friendly": false,
+      "image": "/images/central-america/sopa-caracol.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "honduras-tamales",
+      "name_es": "Nacatamales",
+      "caption": "Corn dough parcels with seasoned fillings, wrapped in leaves.",
+      "veg_friendly": false,
+      "image": "/images/central-america/nacatamales.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "elsalvador-pupusas",
+      "name_es": "Pupusas",
+      "caption": "Thick corn cakes stuffed with cheese, beans or meat.",
+      "veg_friendly": true,
+      "image": "/images/central-america/pupusas.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "elsalvador-yuca",
+      "name_es": "Yuca Frita",
+      "caption": "Fried cassava served with curtido or tomato sauce.",
+      "veg_friendly": true,
+      "image": "/images/central-america/yuca-frita.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "elsalvador-tamales",
+      "name_es": "Tamales Salvadoreños",
+      "caption": "Corn dough parcels steamed in banana leaves.",
+      "veg_friendly": false,
+      "image": "/images/central-america/tamales-salvadorenos.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "nicaragua-gallo-pinto",
+      "name_es": "Gallo Pinto",
+      "caption": "A beloved mix of rice and beans, often served at breakfast.",
+      "veg_friendly": true,
+      "image": "/images/central-america/gallo-pinto.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "nicaragua-vigoron",
+      "name_es": "Vigorón",
+      "caption": "Yuca and pork cracklings served with cabbage salad.",
+      "veg_friendly": false,
+      "image": "/images/central-america/vigoron.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "nicaragua-nacatamal",
+      "name_es": "Nacatamal",
+      "caption": "A corn-based parcel with savoury filling, wrapped and steamed.",
+      "veg_friendly": false,
+      "image": "/images/central-america/nacatamal.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "costarica-casado",
+      "name_es": "Casado",
+      "caption": "A plate with rice, beans, salad and a choice of protein.",
+      "veg_friendly": true,
+      "image": "/images/central-america/casado.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "costarica-olla-carne",
+      "name_es": "Olla de Carne",
+      "caption": "A hearty beef and vegetable soup.",
+      "veg_friendly": false,
+      "image": "/images/central-america/olla-de-carne.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "costarica-tamales",
+      "name_es": "Tamales",
+      "caption": "Seasoned corn dough wrapped in leaves and steamed.",
+      "veg_friendly": false,
+      "image": "/images/central-america/costa-rica-tamales.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "panama-sancocho",
+      "name_es": "Sancocho",
+      "caption": "A comforting chicken soup with herbs and root vegetables.",
+      "veg_friendly": false,
+      "image": "/images/central-america/sancocho.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "panama-hojaldres",
+      "name_es": "Hojaldres",
+      "caption": "Fried dough often served with breakfast.",
+      "veg_friendly": true,
+      "image": "/images/central-america/hojaldres.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "panama-carimanolas",
+      "name_es": "Carimañolas",
+      "caption": "Cassava fritters filled with cheese or seasoned meat.",
+      "veg_friendly": true,
+      "image": "/images/central-america/carimanolas.jpg",
+      "credit": "Image credit to be added"
+    }
+  ],
+  "comida_palabras": [
+    {
+      "id": "c1",
+      "word": "comida",
+      "meaning": "food",
+      "pronunciation": "koh-MEE-dah"
+    },
+    {
+      "id": "c2",
+      "word": "arroz",
+      "meaning": "rice",
+      "pronunciation": "ah-RROHS"
+    },
+    {
+      "id": "c3",
+      "word": "frijoles",
+      "meaning": "beans",
+      "pronunciation": "free-HOH-les"
+    },
+    {
+      "id": "c4",
+      "word": "maíz",
+      "meaning": "corn",
+      "pronunciation": "mah-EES"
+    },
+    {
+      "id": "c5",
+      "word": "tortilla",
+      "meaning": "tortilla",
+      "pronunciation": "tor-TEE-yah"
+    },
+    {
+      "id": "c6",
+      "word": "queso",
+      "meaning": "cheese",
+      "pronunciation": "KEH-soh"
+    },
+    {
+      "id": "c7",
+      "word": "pollo",
+      "meaning": "chicken",
+      "pronunciation": "POH-yoh"
+    },
+    {
+      "id": "c8",
+      "word": "plátano",
+      "meaning": "plantain",
+      "pronunciation": "PLAH-tah-noh"
+    },
+    {
+      "id": "c9",
+      "word": "sopa",
+      "meaning": "soup",
+      "pronunciation": "SOH-pah"
+    },
+    {
+      "id": "c10",
+      "word": "agua",
+      "meaning": "water",
+      "pronunciation": "AH-gwah"
+    }
+  ],
+  "cultura": [
+    {
+      "id": "guatemala-maya",
+      "name": "Maya Heritage",
+      "origin": "Guatemala",
+      "description": "Maya languages, textiles, cuisine and traditions remain important across many communities.",
+      "image": "/images/central-america/maya-heritage.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "belize-garifuna",
+      "name": "Garifuna Culture",
+      "origin": "Belize and Caribbean coast",
+      "description": "Garifuna communities preserve distinctive music, dance, language and food traditions.",
+      "image": "/images/central-america/garifuna-culture.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "honduras-lenca",
+      "name": "Lenca Traditions",
+      "origin": "Honduras",
+      "description": "Lenca communities sustain local craft traditions, pottery and cultural knowledge.",
+      "image": "/images/central-america/lenca-crafts.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "elsalvador-mural",
+      "name": "Local Art and Craft",
+      "origin": "El Salvador",
+      "description": "Artisans and artists express community history through crafts, murals and visual art.",
+      "image": "/images/central-america/el-salvador-art.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "nicaragua-marimba",
+      "name": "Marimba Music",
+      "origin": "Nicaragua",
+      "description": "Marimba and other musical traditions feature in celebrations and community events.",
+      "image": "/images/central-america/marimba.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "costarica-carreta",
+      "name": "Painted Oxcarts",
+      "origin": "Costa Rica",
+      "description": "Decorated oxcarts celebrate a well-known tradition of Costa Rican craftsmanship.",
+      "image": "/images/central-america/painted-oxcarts.jpg",
+      "credit": "Image credit to be added"
+    },
+    {
+      "id": "panama-pollera",
+      "name": "Pollera Dress",
+      "origin": "Panama",
+      "description": "The richly decorated pollera is an important traditional garment for festive occasions.",
+      "image": "/images/central-america/pollera.jpg",
+      "credit": "Image credit to be added"
+    }
+  ],
+  "cultura_palabras": [
+    {
+      "id": "cu1",
+      "word": "cultura",
+      "meaning": "culture",
+      "pronunciation": "kool-TOO-rah"
+    },
+    {
+      "id": "cu2",
+      "word": "historia",
+      "meaning": "history",
+      "pronunciation": "ees-TOH-ryah"
+    },
+    {
+      "id": "cu3",
+      "word": "artesanía",
+      "meaning": "craftsmanship",
+      "pronunciation": "ar-teh-sah-NEE-ah"
+    },
+    {
+      "id": "cu4",
+      "word": "pueblo",
+      "meaning": "town / people",
+      "pronunciation": "PWEH-bloh"
+    },
+    {
+      "id": "cu5",
+      "word": "familia",
+      "meaning": "family",
+      "pronunciation": "fah-MEE-lyah"
+    },
+    {
+      "id": "cu6",
+      "word": "leyenda",
+      "meaning": "legend",
+      "pronunciation": "leh-YEN-dah"
+    },
+    {
+      "id": "cu7",
+      "word": "artista",
+      "meaning": "artist",
+      "pronunciation": "ar-TEES-tah"
+    },
+    {
+      "id": "cu8",
+      "word": "artesano",
+      "meaning": "craftsperson",
+      "pronunciation": "ar-teh-SAH-noh"
+    },
+    {
+      "id": "cu9",
+      "word": "naturaleza",
+      "meaning": "nature",
+      "pronunciation": "nah-too-rah-LEH-sah"
+    },
+    {
+      "id": "cu10",
+      "word": "patrimonio",
+      "meaning": "heritage",
+      "pronunciation": "pah-tree-MOH-nyoh"
+    }
+  ],
+  "photo_credits": []
+}

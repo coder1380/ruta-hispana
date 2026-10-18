@@ -13,6 +13,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
 
+  const isCentralAmerica = currentCountry.id === 'central-america';
+  const countryHref = (id: string) =>
+    id === 'spain' ? '/' : `/?country=${encodeURIComponent(id)}`;
+
   const navLinks = [
     { label: 'Mapa · Map', href: '#mapa' },
     { label: 'Lugares · Places', href: '#lugares' },
@@ -27,26 +31,32 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a
+            href={countryHref(currentCountry.id)}
+            className="flex items-center gap-3 group"
+          >
             <div className="w-9 h-9 rounded-xl bg-terracotta flex items-center justify-center text-cream shadow-xs">
               <Compass className="w-5 h-5 text-cream" />
             </div>
+
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display text-xl sm:text-2xl font-bold tracking-tight text-ink">
                   Ruta <span className="text-terracotta">Hispana</span>
                 </span>
+
                 <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-terracotta/10 text-terracotta border border-terracotta/20">
                   {currentCountry.name_es.toUpperCase()}
                 </span>
               </div>
+
               <p className="text-[10px] text-ink/70 font-body hidden sm:block">
                 Cuaderno Visual · Creative Exploration of the Hispanic World
               </p>
             </div>
           </a>
 
-          {/* Desktop Navigation Links (Bilingual labels) */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((item) => (
               <a
@@ -59,12 +69,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
             ))}
           </nav>
 
-          {/* Project Architecture Info Badge */}
+          {/* Chapter Information Dropdown */}
           <div className="relative">
             <button
               onClick={() => setInfoOpen(!infoOpen)}
               className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-sand bg-sand/30 text-xs font-semibold text-ink hover:border-terracotta transition-colors shadow-2xs cursor-pointer"
-              aria-label="Country information"
+              aria-label="Chapter information"
+              aria-expanded={infoOpen}
             >
               <Globe className="w-3.5 h-3.5 text-terracotta" />
               <span>{currentCountry.name_es} · {currentCountry.name}</span>
@@ -80,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
                   {countries.map((country) => (
                     <a
                       key={country.id}
-                      href={country.id === 'spain' ? '/' : `/?country=${encodeURIComponent(country.id)}`}
+                      href={countryHref(country.id)}
                       className={`flex items-center justify-between p-2 rounded-lg border transition-colors ${
                         country.id === currentCountry.id
                           ? 'bg-sand/60 border-sand'
@@ -100,20 +111,25 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
             )}
           </div>
 
-          {/* Mobile menu toggle */}
+          {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center ml-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-lg text-ink hover:bg-sand/60 cursor-pointer"
               aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-sand bg-cream px-4 pt-2 pb-4 space-y-1">
           {navLinks.map((item) => (
@@ -126,6 +142,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
               {item.label}
             </a>
           ))}
+
+          <div className="pt-2 mt-2 border-t border-sand">
+            <a
+              href={countryHref(isCentralAmerica ? 'spain' : 'central-america')}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-lg text-xs font-bold text-terracotta hover:bg-sand/60"
+            >
+              {isCentralAmerica
+                ? '🇪🇸 España · Spain'
+                : '🌎 Centroamérica · Central America'}
+            </a>
+          </div>
         </div>
       )}
     </header>

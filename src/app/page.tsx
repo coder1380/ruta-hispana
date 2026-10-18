@@ -37,7 +37,12 @@ async function CountryHome({
         <WavyDivider fillColor="#EBDDC0" bgColor="#F5ECD9" />
 
         {/* 2. Cartografía: Leaflet Map with OpenStreetMap warm tiles, dropping pins, pulsing circles */}
-        <MapSection countryName={country.name_es} regions={country.regions} landmarks={country.lugares} />
+        <MapSection
+          countryName={country.name_es}
+          regions={country.regions}
+          landmarks={country.lugares}
+          currentCountry={country.id}
+        />
 
         {/* Looping Marquee Vocabulary Strip */}
         <MarqueeStrip theme="sand" />
@@ -51,6 +56,7 @@ async function CountryHome({
           lugares={country.lugares}
           palabras={country.lugares_palabras}
           studentName="Liam Vance"
+          currentCountry={country.id}
         />
 
         {/* Transition: Cream to Full-Bleed Azulejo (#1E3A5F) */}
