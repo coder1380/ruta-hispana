@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F5ECD9;
+  --color-sand: #EBDDC0;
+  --color-terracotta: #C2512B;
+  --color-saffron: #E5A02D;
+  --color-azulejo: #1E3A5F;
+  --color-ink: #231A14;
+
+  --font-display: var(--font-fraunces), serif;
+  --font-body: var(--font-karla), sans-serif;
+  --font-handwriting: var(--font-caveat), cursive;
+}
+
+:root {
+  --cream: #F5ECD9;
+  --sand: #EBDDC0;
+  --terracotta: #C2512B;
+  --saffron: #E5A02D;
+  --azulejo: #1E3A5F;
+  --ink: #231A14;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-karla), -apple-system, sans-serif;
+  --font-handwriting: var(--font-caveat), cursive;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+/* Animations (Strictly transform and opacity only, 300-700ms gentle easing) */
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes stampBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.65) rotate(-3deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.06) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-stamp {
+  animation: stampBounce 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes pinDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.7);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(3px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-pin {
+  animation: pinDrop 550ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes revealLine {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-line-1 {
+  animation: revealLine 600ms cubic-bezier(0.16, 1, 0.3, 1) 100ms forwards;
+}
+
+.reveal-line-2 {
+  animation: revealLine 600ms cubic-bezier(0.16, 1, 0.3, 1) 250ms forwards;
+}
+
+.reveal-line-3 {
+  animation: revealLine 600ms cubic-bezier(0.16, 1, 0.3, 1) 400ms forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3D Flip Card Styles for Gastronomía */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Photo Tilt & Subtle Zoom on Hover (transform only) */
+.photo-hover-tilt {
+  transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.photo-hover-tilt:hover {
+  transform: scale(1.03) rotate(1deg);
+}
+
+.photo-hover-tilt-alt:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
+
+/* Warm paper tone filter on Leaflet tiles */
+.leaflet-tile-pane {
+  filter: sepia(0.35) saturate(0.8);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EBDDC0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C2512B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #943A1E;
+}
+
+/* Respect prefers-reduced-motion by disabling animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee,
+  .animate-stamp,
+  .animate-pin,
+  .animate-pulse-glow,
+  .reveal-line-1,
+  .reveal-line-2,
+  .reveal-line-3,
+  .animate-fade-in-up,
+  .photo-hover-tilt,
+  .photo-hover-tilt-alt {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

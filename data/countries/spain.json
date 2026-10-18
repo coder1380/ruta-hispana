@@ -1,0 +1,336 @@
+{
+  "id": "spain",
+  "name": "Spain",
+  "name_es": "España",
+  "capital": "Madrid",
+  "currency": "Euro (€ / EUR)",
+  "best_time_to_visit": "Spring (April–May) and Autumn (September–October)",
+  "hero_image": "/images/spain/hero-spain.jpg",
+  "hero_credit": "Plaza de España, Seville (Photo: Henrique Ferreira / Unsplash)",
+  "daily_phrases": [
+    {
+      "es": "Una mesa para dos, por favor.",
+      "en": "A table for two, please.",
+      "pronunciation": "OO-nah MEH-sah PAH-rah dohs, por fah-VOR"
+    },
+    {
+      "es": "¿Me cobras, por favor? / La cuenta.",
+      "en": "The bill, please.",
+      "pronunciation": "meh KOH-brahs, por fah-VOR / lah KWEHN-tah"
+    },
+    {
+      "es": "Soy vegetariano/a; sin carne ni jamón.",
+      "en": "I am vegetarian; without meat or ham.",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh, seen KAR-neh nee hah-MOHN"
+    },
+    {
+      "es": "¡Vale, muchas gracias por tu ayuda!",
+      "en": "Okay, thank you very much for your help!",
+      "pronunciation": "VAH-leh, MOO-chahs GRAH-thyahs por too ah-YOO-dah"
+    }
+  ],
+  "regions": [
+    {
+      "id": "catalonia",
+      "name": "Catalonia",
+      "name_es": "Cataluña / Catalunya",
+      "capital": "Barcelona",
+      "coordinates": [41.3879, 2.1699],
+      "famous_place": "Sagrada Família & Park Güell (Barcelona)",
+      "signature_festival": "La Diada de Sant Jordi (April 23)",
+      "signature_dish": "Pa amb tomàquet (crusty bread with olive oil & tomato)"
+    },
+    {
+      "id": "basque-country",
+      "name": "Basque Country",
+      "name_es": "País Vasco / Euskadi",
+      "capital": "Vitoria-Gasteiz (Bilbao & San Sebastián)",
+      "coordinates": [43.263, -2.935],
+      "famous_place": "Museo Guggenheim (Bilbao)",
+      "signature_festival": "Aste Nagusia / Semana Grande (August)",
+      "signature_dish": "Pintxos (gourmet skewered appetizers)"
+    },
+    {
+      "id": "andalusia",
+      "name": "Andalusia",
+      "name_es": "Andalucía",
+      "capital": "Seville",
+      "coordinates": [37.3891, -5.9845],
+      "famous_place": "La Alhambra (Granada) & Mezquita (Córdoba)",
+      "signature_festival": "Feria de Abril & Semana Santa (Seville)",
+      "signature_dish": "Gazpacho andaluz (chilled tomato soup)"
+    },
+    {
+      "id": "madrid",
+      "name": "Madrid",
+      "name_es": "Comunidad de Madrid",
+      "capital": "Madrid",
+      "coordinates": [40.4168, -3.7038],
+      "famous_place": "Museo del Prado & Plaza Mayor",
+      "signature_festival": "Fiestas de San Isidro (May 15)",
+      "signature_dish": "Tortilla de patatas & Cocido madrileño"
+    },
+    {
+      "id": "valencia",
+      "name": "Valencia",
+      "name_es": "Comunidad Valenciana",
+      "capital": "Valencia",
+      "coordinates": [39.4699, -0.3763],
+      "famous_place": "Ciudad de las Artes y las Ciencias",
+      "signature_festival": "Las Fallas (March 15–19 bonfires)",
+      "signature_dish": "Paella valenciana tradicional"
+    },
+    {
+      "id": "galicia",
+      "name": "Galicia",
+      "name_es": "Galicia",
+      "capital": "Santiago de Compostela",
+      "coordinates": [42.8782, -8.5448],
+      "famous_place": "Catedral de Santiago de Compostela",
+      "signature_festival": "Fiesta del Apóstol Santiago (July 25)",
+      "signature_dish": "Pimientos de Padrón & Pulpo á feira"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "sagrada-familia",
+      "name": "Sagrada Família",
+      "city": "Barcelona",
+      "caption": "Gaudí's stone forest basilica, flooded with afternoon Mediterranean light.",
+      "image": "/images/spain/sagrada-familia.jpg",
+      "credit": "Daniel Corneschi / Unsplash",
+      "coordinates": [41.4036, 2.1744]
+    },
+    {
+      "id": "alhambra",
+      "name": "La Alhambra",
+      "city": "Granada",
+      "caption": "Intricate Moorish palaces and reflective pools crowning Granada's hills.",
+      "image": "/images/spain/alhambra.jpg",
+      "credit": "Jorge Fernández Salas / Unsplash",
+      "coordinates": [37.1773, -3.5986]
+    },
+    {
+      "id": "park-guell",
+      "name": "Park Güell",
+      "city": "Barcelona",
+      "caption": "Serpentine mosaic benches overlooking the city and the distant sea.",
+      "image": "/images/spain/park-guell.jpg",
+      "credit": "Moritz Kindler / Unsplash",
+      "coordinates": [41.4145, 2.1527]
+    },
+    {
+      "id": "prado",
+      "name": "Museo del Prado",
+      "city": "Madrid",
+      "caption": "Spain's premier royal gallery, housing masterworks by Velázquez and Goya.",
+      "image": "/images/spain/prado-museum.jpg",
+      "credit": "Birmingham Museums Trust / Unsplash",
+      "coordinates": [40.4138, -3.6921]
+    },
+    {
+      "id": "plaza-mayor",
+      "name": "Plaza Mayor",
+      "city": "Madrid",
+      "caption": "Seventeenth-century arcaded square that once held royal tournaments and trials.",
+      "image": "/images/spain/plaza-mayor.jpg",
+      "credit": "Florian Wehde / Unsplash",
+      "coordinates": [40.4154, -3.7074]
+    },
+    {
+      "id": "mezquita",
+      "name": "Mezquita de Córdoba",
+      "city": "Córdoba",
+      "caption": "Eight hundred red-and-white stone arches inside an eighth-century prayer hall.",
+      "image": "/images/spain/mezquita.jpg",
+      "credit": "Unsplash Library",
+      "coordinates": [37.8789, -4.7794]
+    },
+    {
+      "id": "guggenheim",
+      "name": "Guggenheim Bilbao",
+      "city": "Bilbao",
+      "caption": "Frank Gehry's titanium curves revitalizing the Basque industrial riverfront.",
+      "image": "/images/spain/guggenheim.jpg",
+      "credit": "Spencer Davis / Unsplash",
+      "coordinates": [43.2686, -2.934]
+    }
+  ],
+  "lugares_palabras": [
+    { "word": "la basílica", "meaning": "cathedral / large ceremonial church", "pronunciation": "lah bah-SEE-lee-kah" },
+    { "word": "el palacio", "meaning": "royal residence or grand mansion", "pronunciation": "el pah-LAH-thyoh" },
+    { "word": "la mezquita", "meaning": "mosque / Islamic place of prayer", "pronunciation": "lah meth-KEE-tah" },
+    { "word": "la arcada", "meaning": "covered stone walkway or arched colonnade", "pronunciation": "lah ar-KAH-dah" },
+    { "word": "el azulejo", "meaning": "glazed decorative ceramic tile", "pronunciation": "el ah-thoo-LEH-hoh" }
+  ],
+  "fiestas": [
+    {
+      "id": "tomatina",
+      "name": "La Tomatina",
+      "month": "August (Last Wednesday)",
+      "town_region": "Buñol, Valencia",
+      "caption": "One hundred tons of overripe tomatoes flying through cobblestone alleys.",
+      "image": "/images/spain/tomatina.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "fallas",
+      "name": "Las Fallas",
+      "month": "March 15–19",
+      "town_region": "Valencia",
+      "caption": "Colossal satirical wooden sculptures burned in midnight bonfires.",
+      "image": "/images/spain/fallas.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "san-fermin",
+      "name": "San Fermín",
+      "month": "July 6–14",
+      "town_region": "Pamplona, Navarra",
+      "caption": "Runners in red and white leading fighting bulls through town.",
+      "image": "/images/spain/san-fermin.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "semana-santa",
+      "name": "Semana Santa",
+      "month": "March / April",
+      "town_region": "Seville & Andalusia",
+      "caption": "Candlelit night processions carrying heavy carved wooden floats.",
+      "image": "/images/spain/semana-santa.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "feria-abril",
+      "name": "Feria de Abril",
+      "month": "Two weeks post-Easter",
+      "town_region": "Seville",
+      "caption": "Private canvas tents, polka-dot flamenco dresses, and sherry.",
+      "image": "/images/spain/feria-abril.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "san-juan",
+      "name": "Noche de San Juan",
+      "month": "June 23 (Midsummer)",
+      "town_region": "Mediterranean Coasts",
+      "caption": "Beach bonfires and midnight sea swims to welcome summer.",
+      "image": "/images/spain/san-juan.jpg",
+      "credit": "Unsplash Community"
+    }
+  ],
+  "fiestas_palabras": [
+    { "word": "la fiesta", "meaning": "celebration / public street festival", "pronunciation": "lah FYEHS-tah" },
+    { "word": "el paso", "meaning": "heavy carved wooden float carried in holy processions", "pronunciation": "el PAH-soh" },
+    { "word": "la caseta", "meaning": "private tent set up for fair celebrations", "pronunciation": "lah kah-SEH-tah" },
+    { "word": "la hoguera", "meaning": "bonfire / wood fire in the street or beach", "pronunciation": "lah oh-GEH-rah" },
+    { "word": "el rebujito", "meaning": "chilled fair drink of dry sherry with lemon soda", "pronunciation": "el reh-boo-HEE-toh" }
+  ],
+  "comida": [
+    {
+      "id": "paella",
+      "name_es": "Paella Valenciana",
+      "caption": "Saffron rice simmered with chicken and beans.",
+      "veg_friendly": false,
+      "image": "/images/spain/paella.jpg",
+      "credit": "Annie Spratt / Unsplash"
+    },
+    {
+      "id": "tortilla",
+      "name_es": "Tortilla de Patatas",
+      "caption": "Golden potato omelet with caramelized onions.",
+      "veg_friendly": true,
+      "image": "/images/spain/tortilla.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "gazpacho",
+      "name_es": "Gazpacho Andaluz",
+      "caption": "Chilled raw tomato, pepper, and garlic soup.",
+      "veg_friendly": true,
+      "image": "/images/spain/gazpacho.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "padron",
+      "name_es": "Pimientos de Padrón",
+      "caption": "Blistered Galician peppers; a few are spicy.",
+      "veg_friendly": true,
+      "image": "/images/spain/padron.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "pan-tomate",
+      "name_es": "Pan con Tomate",
+      "caption": "Toasted crusty bread rubbed with garlic and tomato.",
+      "veg_friendly": true,
+      "image": "/images/spain/pan-tomate.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "churros",
+      "name_es": "Churros con Chocolate",
+      "caption": "Crispy fried dough with thick hot chocolate.",
+      "veg_friendly": true,
+      "image": "/images/spain/churros.jpg",
+      "credit": "Unsplash Food"
+    }
+  ],
+  "comida_palabras": [
+    { "word": "el tapeo", "meaning": "the social ritual of going from bar to bar eating tapas", "pronunciation": "el tah-PEH-oh" },
+    { "word": "el socarrat", "meaning": "the crunchy toasted rice layer at the bottom of a paella pan", "pronunciation": "el soh-kah-RAHT" },
+    { "word": "la ración", "meaning": "a larger sharing portion of food", "pronunciation": "lah rah-THYOHN" },
+    { "word": "la sobremesa", "meaning": "time spent sitting and talking around the table after eating", "pronunciation": "lah soh-breh-MEH-sah" },
+    { "word": "el pimentón", "meaning": "smoked dried paprika from La Vera", "pronunciation": "el pee-mehn-TOHN" }
+  ],
+  "cultura": [
+    {
+      "id": "flamenco",
+      "name": "El Flamenco",
+      "origin": "Andalucía",
+      "description": "Soulful Andalusian folk art combining raw singing, rhythmic guitar, and footwork.\nBorn of Romani, Moorish, and southern Spanish musical traditions.",
+      "image": "/images/spain/flamenco.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "castells",
+      "name": "Els Castells",
+      "origin": "Cataluña / Catalunya",
+      "description": "Human towers rising up to ten stories high in town plazas.\nBuilt through collective strength, careful balance, and community trust.",
+      "image": "/images/spain/castells.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "sardana",
+      "name": "La Sardana",
+      "origin": "Cataluña / Catalunya",
+      "description": "Traditional circular folk dance performed in open public squares.\nDancers hold raised hands and count complex steps to live wind bands.",
+      "image": "/images/spain/sardana.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "jota",
+      "name": "La Jota",
+      "origin": "Aragón",
+      "description": "Lively couple dance featuring quick kicks, spins, and clicking castanets.\nAccompanied by strummed guitars, bandurrias, and celebratory song.",
+      "image": "/images/spain/jota.jpg",
+      "credit": "Unsplash Culture"
+    }
+  ],
+  "cultura_palabras": [
+    { "word": "el duende", "meaning": "mysterious emotional power or soul in Spanish art", "pronunciation": "el DWEHN-deh" },
+    { "word": "el cante", "meaning": "flamenco singing style, passionate and raw", "pronunciation": "el KAHN-teh" },
+    { "word": "el compás", "meaning": "rhythmic meter or beat cycle in Spanish music", "pronunciation": "el kohm-PAHS" },
+    { "word": "las castañuelas", "meaning": "castanets / handheld wooden clickers", "pronunciation": "lahs kahs-tah-NYWEH-lahs" },
+    { "word": "la gaita", "meaning": "Celtic bagpipe of northern Spain (Galicia)", "pronunciation": "lah GAHY-tah" }
+  ],
+  "photo_credits": [
+    { "title": "Cover & Plaza de España", "photographer": "Henrique Ferreira", "license": "Unsplash Free License" },
+    { "title": "Sagrada Família", "photographer": "Daniel Corneschi", "license": "Unsplash Free License" },
+    { "title": "La Alhambra", "photographer": "Jorge Fernández Salas", "license": "Unsplash Free License" },
+    { "title": "Park Güell", "photographer": "Moritz Kindler", "license": "Unsplash Free License" },
+    { "title": "Plaza Mayor", "photographer": "Florian Wehde", "license": "Unsplash Free License" },
+    { "title": "Paella Valenciana", "photographer": "Annie Spratt", "license": "Unsplash Free License" },
+    { "title": "Guggenheim Bilbao", "photographer": "Spencer Davis", "license": "Unsplash Free License" }
+  ]
+}
