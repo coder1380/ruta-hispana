@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { CountryVisualData } from '@/types/country';
+import { renderBilingualContent } from './SpanishTooltip';
 import {
   Volume2,
   RefreshCw,
@@ -29,11 +30,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ country }) => {
     ? 'SIETE PAÍSES · UNA REGIÓN LLENA DE CULTURA'
     : `${country.name_es} · Travel & Culture`;
 
-  const description = isCentralAmerica ? (
-    'Discover seven countries between North and South America, from ancient Maya cities and tropical rainforests to colourful festivals, local traditions, and delicious food.'
-  ) : (
-    `Explore ${country.name} through its historic landmarks, local festivals, regional food traditions, and living culture.`
-  );
+  const description = country.intro
+    ? renderBilingualContent(country.intro)
+    : isCentralAmerica
+      ? 'Discover seven countries between North and South America, from ancient Maya cities and tropical rainforests to colourful festivals, local traditions, and delicious food.'
+      : `Explore ${country.name} through its historic landmarks, local festivals, regional food traditions, and living culture.`;
 
   const phrases = (country.daily_phrases || []).map((item) => ({
     es: item.es,
@@ -181,6 +182,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ country }) => {
                 Rica · Panama
               </p>
             )}
+            {country.fun_fact && (
+              <p className="text-xs sm:text-sm text-cream/85 leading-relaxed max-w-2xl pt-1">
+                <strong>Did you know?</strong> {renderBilingualContent(country.fun_fact)}
+              </p>
+            )}
           </div>
 
           {/* Photo credit */}
@@ -210,7 +216,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ country }) => {
 
               <div className="flex flex-wrap items-baseline gap-2 mt-0.5">
                 <span className="font-display text-lg sm:text-xl font-bold text-ink">
-                  &ldquo;{phrase.es}&rdquo;
+                  &ldquo;{renderBilingualContent(phrase.es)}&rdquo;
                 </span>
 
                 <span className="text-xs sm:text-sm text-terracotta font-semibold">

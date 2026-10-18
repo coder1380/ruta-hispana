@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FoodTileItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
 import { Leaf, Sparkles, RotateCw } from 'lucide-react';
 
 interface ComidaVisualSectionProps {
@@ -42,6 +44,9 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-terracotta font-display px-2.5 py-1 rounded-full bg-cream border border-terracotta/20 mb-2">
               Sección 03 · Gastronomy
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Food research" />
+            </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               Comida · Culinary Craft
             </h2>
@@ -102,7 +107,7 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
                         {dish.veg_friendly ? (
                           <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-cream/95 text-ink border border-emerald-700/30 shadow-xs">
                             <Leaf className="w-3 h-3 text-emerald-700" />
-                            <span>Veg</span>
+                            <span>🌱 Veg</span>
                           </span>
                         ) : (
                           <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cream/95 text-ink border border-sand shadow-xs">
@@ -149,7 +154,7 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
 
                       {/* Max 8 words caption */}
                       <p className="font-body text-base sm:text-lg italic text-ink/90 mt-3 leading-snug">
-                        &ldquo;{dish.caption}&rdquo;
+                        &ldquo;{renderBilingualContent(dish.caption)}&rdquo;
                       </p>
 
                       {/* Single short phrase with inline translation */}

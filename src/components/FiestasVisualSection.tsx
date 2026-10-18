@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { FestivalItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
 import { Calendar } from 'lucide-react';
 
 interface FiestasVisualSectionProps {
@@ -26,11 +28,14 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-saffron font-display px-2.5 py-1 rounded-full bg-cream/10 border border-cream/20 mb-2">
               Sección 02 · Celebrations
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Festival research" />
+            </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-cream mt-1">
               Fiestas · Street Festivals
             </h2>
             <p className="mt-2 text-sm sm:text-base text-cream/80 max-w-2xl font-body">
-              Six festivals that bring towns into the street. Bonfires, costumed parades, and community celebration.
+              {fiestas.length} celebrations bring music, dance, and community traditions into public spaces.
             </p>
           </div>
 
@@ -82,7 +87,7 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
                       {fest.name}
                     </h3>
                     <p className="text-xs sm:text-sm text-cream/80 font-body leading-relaxed">
-                      {fest.caption}
+                      {renderBilingualContent(fest.caption)}
                     </p>
                   </div>
 

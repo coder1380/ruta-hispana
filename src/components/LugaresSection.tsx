@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { LandmarkItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
 import { MapPin } from 'lucide-react';
 
 interface LugaresSectionProps {
@@ -47,6 +49,9 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-terracotta font-display px-2.5 py-1 rounded-full bg-sand/60 border border-sand mb-2">
               Sección 01 · Landmarks
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Landmark research" />
+            </div>
 
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               {title}
@@ -127,7 +132,7 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
                     </h3>
 
                     <p className="text-xs sm:text-sm text-ink/80 font-body leading-relaxed">
-                      {place.caption}
+                      {renderBilingualContent(place.caption)}
                     </p>
                   </div>
 

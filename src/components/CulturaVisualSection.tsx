@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { CultureTraditionItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
 import { MapPin, Sparkles } from 'lucide-react';
 
 interface CulturaVisualSectionProps {
@@ -33,6 +35,9 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-terracotta font-display px-2.5 py-1 rounded-full bg-sand/60 border border-sand mb-2">
               Sección 04 · Heritage & Dance
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Culture research" />
+            </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               Cultura · Living Traditions
             </h2>
@@ -87,7 +92,7 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
                     </h3>
                     <div className="space-y-1 text-xs sm:text-sm text-ink/80 font-body leading-relaxed">
                       {descLines.map((line, lIdx) => (
-                        <p key={lIdx}>{line}</p>
+                        <p key={lIdx}>{renderBilingualContent(line)}</p>
                       ))}
                     </div>
                   </div>

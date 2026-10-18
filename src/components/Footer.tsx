@@ -2,7 +2,12 @@ import React from 'react';
 import { Compass, Heart, Code2, Camera } from 'lucide-react';
 
 interface FooterProps {
-  photoCredits?: { title: string; photographer: string; license: string }[];
+  photoCredits?: {
+    title: string;
+    photographer: string;
+    license: string;
+    source_url?: string;
+  }[];
 }
 
 export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
@@ -35,9 +40,13 @@ export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
               Map Tiles: © OpenStreetMap contributors.
             </p>
             <div className="text-[11px] text-cream/50 space-y-0.5">
-              {photoCredits.slice(0, 4).map((c, i) => (
+              {photoCredits.slice(0, 10).map((c, i) => (
                 <div key={i}>
-                  • {c.title}: <span className="text-cream/80">{c.photographer}</span> ({c.license})
+                  • {c.source_url ? (
+                    <a href={c.source_url} target="_blank" rel="noreferrer" className="hover:text-cream hover:underline">
+                      {c.title}
+                    </a>
+                  ) : c.title}: <span className="text-cream/80">{c.photographer}</span> ({c.license})
                 </div>
               ))}
             </div>

@@ -80,7 +80,19 @@ export interface CountryVisualData {
   comida_palabras: SpanishWordItem[];
   cultura: CultureTraditionItem[];
   cultura_palabras: SpanishWordItem[];
-  photo_credits: { title: string; photographer: string; license: string }[];
+  photo_credits: {
+    title: string;
+    photographer: string;
+    license: string;
+    source_url?: string;
+  }[];
+  intro?: string;
+  fun_fact?: string;
+  viaje_palabras?: SpanishWordItem[];
+  india_traveller?: IndiaTravellerGuide;
+  research_sources?: AcademicSource[];
+  verification_notes?: string[];
+  research_reflection?: string;
   [key: string]: any;
 }
 
@@ -116,11 +128,29 @@ export interface TimelineEvent {
 }
 
 export interface IndiaTravellerGuide {
-  [key: string]: any;
+  visa_note: string;
+  flight_note: string;
+  cost_per_day_inr: string;
+  veg_tips: string;
+  visa_label?: string;
+  visa_official_url?: string;
+  visa_official_label?: string;
+  visa_application_note?: string;
+  visa_timing_note?: string;
+  flight_duration?: string;
+  flight_route?: string;
+  flight_carriers?: string;
+  cost_daily_range?: string;
+  cost_reference_note?: string;
+  key_food_phrase?: string;
 }
 
 export interface AcademicSource {
-  [key: string]: any;
+  title: string;
+  author_or_institution: string;
+  url: string;
+  year?: string;
+  note?: string;
 }
 
 export interface SpanishComparisonItem {

@@ -5,6 +5,7 @@ import { RegionSummary, LandmarkItem } from '@/types/country';
 import { MapLeaflet } from './MapLeaflet';
 import { MapPin, X } from 'lucide-react';
 import Image from 'next/image';
+import { renderBilingualContent } from './SpanishTooltip';
 
 interface MapSectionProps {
   countryName: string;
@@ -165,7 +166,7 @@ export const MapSection: React.FC<MapSectionProps> = ({
                 </div>
 
                 <p className="text-sm text-ink font-body leading-relaxed">
-                  {activeLandmark.caption}
+                  {renderBilingualContent(activeLandmark.caption)}
                 </p>
 
                 <p className="text-[10px] text-ink/50 pt-2 border-t border-sand">
