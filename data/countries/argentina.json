@@ -1,0 +1,339 @@
+{
+  "id": "argentina",
+  "name": "Argentina",
+  "name_es": "Argentina",
+  "capital": "Buenos Aires",
+  "currency": "Argentine Peso ($ / ARS)",
+  "best_time_to_visit": "Spring (October–November) and Autumn (March–April)",
+  "hero_image": "/images/argentina/hero-argentina.jpg",
+  "hero_credit": "Buenos Aires skyline at dusk (Photo: Unsplash Community)",
+  "daily_phrases": [
+    {
+      "es": "¡Che, buen día! ¿Cómo andás?",
+      "en": "Hey, good morning! How are you going?",
+      "pronunciation": "cheh bwen DEE-ah, KOH-moh ahn-DAHS"
+    },
+    {
+      "es": "¿Me traés la carta, por favor?",
+      "en": "Could you bring me the menu, please?",
+      "pronunciation": "meh trah-EHS lah KAR-tah por fah-VOR"
+    },
+    {
+      "es": "Soy vegetariano/a. ¿Tiene opciones sin carne?",
+      "en": "I am vegetarian. Do you have options without meat?",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh, TYEH-neh op-SYOH-nes seen KAR-neh"
+    },
+    {
+      "es": "¿Me podés decir cómo llegar al centro?",
+      "en": "Can you tell me how to get to the city centre?",
+      "pronunciation": "meh poh-DEHS deh-SEER KOH-moh yeh-GAR al SEN-troh"
+    }
+  ],
+  "regions": [
+    {
+      "id": "buenos-aires",
+      "name": "Buenos Aires",
+      "name_es": "Buenos Aires",
+      "capital": "Buenos Aires",
+      "coordinates": [-34.6037, -58.3816],
+      "famous_place": "La Boca & Recoleta Cemetery",
+      "signature_festival": "Tango Buenos Aires Festival (August)",
+      "signature_dish": "Asado porteño"
+    },
+    {
+      "id": "patagonia",
+      "name": "Patagonia",
+      "name_es": "Patagonia",
+      "capital": "Bariloche",
+      "coordinates": [-41.1335, -71.3103],
+      "famous_place": "Perito Moreno Glacier & Nahuel Huapi",
+      "signature_festival": "Fiesta Nacional de la Nieve (Bariloche, August)",
+      "signature_dish": "Cordero patagónico (Patagonian lamb)"
+    },
+    {
+      "id": "mendoza",
+      "name": "Mendoza",
+      "name_es": "Mendoza",
+      "capital": "Mendoza",
+      "coordinates": [-32.8908, -68.8272],
+      "famous_place": "Aconcagua Provincial Park",
+      "signature_festival": "Fiesta Nacional de la Vendimia (March)",
+      "signature_dish": "Empanadas mendocinas"
+    },
+    {
+      "id": "northwest",
+      "name": "Northwest",
+      "name_es": "Noroeste Argentino",
+      "capital": "Salta",
+      "coordinates": [-24.7821, -65.4232],
+      "famous_place": "Quebrada de Humahuaca (UNESCO)",
+      "signature_festival": "Carnaval de Tilcara (February)",
+      "signature_dish": "Locro norteño"
+    },
+    {
+      "id": "iguazu",
+      "name": "Iguazú Region",
+      "name_es": "Misiones",
+      "capital": "Puerto Iguazú",
+      "coordinates": [-25.6953, -54.4367],
+      "famous_place": "Cataratas del Iguazú (UNESCO)",
+      "signature_festival": "Fiesta Nacional del Inmigrante (September)",
+      "signature_dish": "Chipá (cheese bread)"
+    },
+    {
+      "id": "cordoba",
+      "name": "Córdoba",
+      "name_es": "Córdoba",
+      "capital": "Córdoba",
+      "coordinates": [-31.4201, -64.1888],
+      "famous_place": "Manzana Jesuítica (Jesuit Block, UNESCO)",
+      "signature_festival": "Festival de Cosquín (January folk music)",
+      "signature_dish": "Chancho al estilo cordobés"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "perito-moreno",
+      "name": "Glaciar Perito Moreno",
+      "city": "Santa Cruz, Patagonia",
+      "caption": "Colossal blue-white glacier calving into a glacial lake.",
+      "image": "/images/argentina/perito-moreno.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-50.4897, -73.0545]
+    },
+    {
+      "id": "iguazu-falls",
+      "name": "Cataratas del Iguazú",
+      "city": "Puerto Iguazú, Misiones",
+      "caption": "Horseshoe of 275 waterfalls roaring through subtropical rainforest.",
+      "image": "/images/argentina/iguazu-falls.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-25.6953, -54.4367]
+    },
+    {
+      "id": "la-boca",
+      "name": "La Boca, El Caminito",
+      "city": "Buenos Aires",
+      "caption": "Vivid painted tenements along a cobblestone tango alley.",
+      "image": "/images/argentina/la-boca.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.6345, -58.3631]
+    },
+    {
+      "id": "recoleta",
+      "name": "Cementerio de la Recoleta",
+      "city": "Buenos Aires",
+      "caption": "Grand marble mausoleums where Evita Perón rests eternally.",
+      "image": "/images/argentina/recoleta.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.5877, -58.3935]
+    },
+    {
+      "id": "quebrada-humahuaca",
+      "name": "Quebrada de Humahuaca",
+      "city": "Jujuy, Northwest",
+      "caption": "Rainbow-layered canyon gorge declared a UNESCO World Heritage site.",
+      "image": "/images/argentina/quebrada-humahuaca.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-23.1954, -65.3516]
+    },
+    {
+      "id": "aconcagua",
+      "name": "Cerro Aconcagua",
+      "city": "Mendoza Province",
+      "caption": "Highest peak in the Americas at 6,961 metres above sea level.",
+      "image": "/images/argentina/aconcagua.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-32.6532, -70.0109]
+    },
+    {
+      "id": "ushuaia",
+      "name": "Ushuaia – El Fin del Mundo",
+      "city": "Tierra del Fuego",
+      "caption": "Southernmost city on Earth, gateway to Antarctica's icy frontier.",
+      "image": "/images/argentina/ushuaia.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-54.8019, -68.303]
+    }
+  ],
+  "lugares_palabras": [
+    { "word": "el glaciar", "meaning": "glacier / slow-moving river of ice", "pronunciation": "el glah-SYAR" },
+    { "word": "la catarata", "meaning": "waterfall / cascade", "pronunciation": "lah kah-tah-RAH-tah" },
+    { "word": "la pampa", "meaning": "vast flat grassland plain of Argentina", "pronunciation": "lah PAHM-pah" },
+    { "word": "el barrio", "meaning": "neighbourhood / urban district", "pronunciation": "el BAH-ryoh" },
+    { "word": "el fin del mundo", "meaning": "the end of the world (Ushuaia's nickname)", "pronunciation": "el feen del MOON-doh" }
+  ],
+  "fiestas": [
+    {
+      "id": "tango-festival",
+      "name": "Festival y Mundial de Tango",
+      "month": "August",
+      "town_region": "Buenos Aires",
+      "caption": "World's largest tango competition fills milongas across the city.",
+      "image": "/images/argentina/tango-festival.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "vendimia",
+      "name": "Fiesta Nacional de la Vendimia",
+      "month": "March (first week)",
+      "town_region": "Mendoza",
+      "caption": "Grape harvest queen crowning, theatrical show, and vineyard parades.",
+      "image": "/images/argentina/vendimia.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "cosquin",
+      "name": "Festival Nacional de Folklore de Cosquín",
+      "month": "January",
+      "town_region": "Cosquín, Córdoba",
+      "caption": "Weeklong open-air folklore concert showcasing Argentine folk and dance.",
+      "image": "/images/argentina/cosquin.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "carnaval-gualeguaychu",
+      "name": "Carnaval de Gualeguaychú",
+      "month": "January–March (weekends)",
+      "town_region": "Gualeguaychú, Entre Ríos",
+      "caption": "South America's longest carnival season with dazzling feather costumes.",
+      "image": "/images/argentina/carnaval-gualeguaychu.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "tilcara-carnaval",
+      "name": "Carnaval Andino de Tilcara",
+      "month": "February",
+      "town_region": "Tilcara, Jujuy",
+      "caption": "Pre-Columbian Andean traditions fused with vibrant carnival colour.",
+      "image": "/images/argentina/tilcara-carnaval.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "dia-independencia",
+      "name": "Día de la Independencia",
+      "month": "July 9",
+      "town_region": "Nationwide",
+      "caption": "Patriotic parades, gaucho processions, and folk performances across Argentina.",
+      "image": "/images/argentina/dia-independencia.jpg",
+      "credit": "Unsplash Community"
+    }
+  ],
+  "fiestas_palabras": [
+    { "word": "el milonga", "meaning": "tango dance hall or a type of tango music", "pronunciation": "el mee-LOHN-gah" },
+    { "word": "el gaucho", "meaning": "iconic Argentine cowboy of the Pampas", "pronunciation": "el GOW-choh" },
+    { "word": "la vendimia", "meaning": "grape harvest festival", "pronunciation": "lah ben-DEE-myah" },
+    { "word": "el folklore", "meaning": "traditional folk culture, music and dance", "pronunciation": "el fol-KLOH-reh" },
+    { "word": "las comparsas", "meaning": "carnival dance troupes or performing groups", "pronunciation": "lahs kohm-PAR-sahs" }
+  ],
+  "comida": [
+    {
+      "id": "asado",
+      "name_es": "Asado",
+      "caption": "Slow-grilled beef ribs over glowing wood embers.",
+      "veg_friendly": false,
+      "image": "/images/argentina/asado.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "empanadas",
+      "name_es": "Empanadas Argentinas",
+      "caption": "Baked or fried pastry pockets filled with seasoned beef.",
+      "veg_friendly": false,
+      "image": "/images/argentina/empanadas-v2.jpg",
+      "credit": "Gastronomy"
+    },
+    {
+      "id": "locro",
+      "name_es": "Locro",
+      "caption": "Hearty corn, bean, and squash stew from the Andes.",
+      "veg_friendly": true,
+      "image": "/images/argentina/locro.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "medialunas",
+      "name_es": "Medialunas",
+      "caption": "Buttery glazed croissants, essential to every Argentine breakfast.",
+      "veg_friendly": true,
+      "image": "/images/argentina/medialunas.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "dulce-de-leche",
+      "name_es": "Dulce de Leche",
+      "caption": "Silky caramel milk spread on everything from toast to ice cream.",
+      "veg_friendly": true,
+      "image": "/images/argentina/dulce-de-leche.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "mate",
+      "name_es": "Mate",
+      "caption": "Bitter shared herbal drink, Argentina's beloved social ritual.",
+      "veg_friendly": true,
+      "image": "/images/argentina/mate.jpg",
+      "credit": "Unsplash Food"
+    }
+  ],
+  "comida_palabras": [
+    { "word": "el asado", "meaning": "Argentine barbecue, a national social ritual", "pronunciation": "el ah-SAH-doh" },
+    { "word": "el chimichurri", "meaning": "herb and garlic sauce served with grilled meats", "pronunciation": "el chee-mee-CHOO-ree" },
+    { "word": "el mate", "meaning": "traditional herbal drink sipped through a metal straw", "pronunciation": "el MAH-teh" },
+    { "word": "el dulce de leche", "meaning": "thick caramel spread made from slowly heated milk", "pronunciation": "el DOOL-seh deh LEH-cheh" },
+    { "word": "la parrilla", "meaning": "the grill rack / Argentine steakhouse restaurant", "pronunciation": "lah pah-REE-yah" }
+  ],
+  "cultura": [
+    {
+      "id": "tango",
+      "name": "El Tango",
+      "origin": "Buenos Aires (La Boca & San Telmo)",
+      "description": "UNESCO-listed embrace dance born in Buenos Aires immigrant tenements.\nIntense, improvised, and intimate — tango is Argentina's soul in motion.",
+      "image": "/images/argentina/tango-dance.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "gaucho-culture",
+      "name": "La Cultura Gaucha",
+      "origin": "La Pampa, Patagonia",
+      "description": "Horse-riding cowboys of the Pampas who shaped Argentine national identity.\nTheir equestrian skill, poncho, and folk songs echo through festivals today.",
+      "image": "/images/argentina/gaucho.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "futbol",
+      "name": "El Fútbol Argentino",
+      "origin": "Buenos Aires",
+      "description": "Football is a near-religion — home of Messi, Maradona, and La Albiceleste.\nEl Superclásico (Boca vs River) is one of the world's greatest sporting spectacles.",
+      "image": "/images/argentina/futbol.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "literatura",
+      "name": "La Literatura Bonaerense",
+      "origin": "Buenos Aires",
+      "description": "Home of Jorge Luis Borges, whose labyrinths and mirrors shaped world literature.\nBuenos Aires has more bookshops per capita than any other city on Earth.",
+      "image": "/images/argentina/literature.jpg",
+      "credit": "Unsplash Culture"
+    }
+  ],
+  "cultura_palabras": [
+    { "word": "el abrazo", "meaning": "the embrace / close hold in tango dancing", "pronunciation": "el ah-BRAH-soh" },
+    { "word": "el laberinto", "meaning": "labyrinth / maze — key image in Borges's writing", "pronunciation": "el lah-beh-REEN-toh" },
+    { "word": "el poncho", "meaning": "woven woollen cloak worn by gauchos", "pronunciation": "el PON-choh" },
+    { "word": "la milonga", "meaning": "tango salon or a folk-song style from the Pampas", "pronunciation": "lah mee-LOHN-gah" },
+    { "word": "el bandoneón", "meaning": "button concertina central to tango orchestras", "pronunciation": "el ban-doh-neh-OHN" }
+  ],
+  "india_traveller": {
+    "visa_note": "Indian passport holders require a Tourist Visa (Visa de Turismo) for Argentina, obtained from the Argentine Consulate in Delhi or Mumbai. Apply 4–6 weeks in advance. No Schengen visa required — separate from Europe.",
+    "flight_note": "No direct flights from India to Argentina. Common routes go via Dubai (Emirates), Doha (Qatar Airways), or São Paulo (LATAM). Total journey time is typically 20–26 hours. Buenos Aires Ezeiza (EZE) is the main international airport.",
+    "cost_per_day_inr": "Budget travellers can manage on ₹2,500–4,000/day (hostels + local food). Mid-range trips cost ₹6,000–10,000/day. The peso exchange rate makes Argentina relatively affordable. Malbec wine and steak dinners are surprisingly pocket-friendly.",
+    "veg_tips": "Argentina is a meat-heavy country, but vegetarian options are growing in Buenos Aires. Look for 'vegetariano' menus in San Telmo and Palermo. Locro (stew), empanadas de queso, medialunas, and salads are safe bets. Say: 'Soy vegetariano/a, sin carne por favor.'"
+  },
+  "photo_credits": [
+    { "title": "Glaciar Perito Moreno", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Cataratas del Iguazú", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "La Boca, El Caminito", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Tango Dance", "photographer": "Unsplash Culture", "license": "Unsplash Free License" }
+  ]
+}

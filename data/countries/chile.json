@@ -1,0 +1,339 @@
+{
+  "id": "chile",
+  "name": "Chile",
+  "name_es": "Chile",
+  "capital": "Santiago",
+  "currency": "Chilean Peso ($ / CLP)",
+  "best_time_to_visit": "Spring (October–November) and Autumn (March–April); Patagonia is best in December–February",
+  "hero_image": "/images/chile/hero-chile.jpg",
+  "hero_credit": "Torres del Paine at sunrise, Patagonia (Photo: Unsplash Community)",
+  "daily_phrases": [
+    {
+      "es": "¡Hola! ¿Cómo estái?",
+      "en": "Hi! How are you? (Chilean voseo form)",
+      "pronunciation": "OH-lah, KOH-moh ehs-TAY"
+    },
+    {
+      "es": "¿Me podría traer la cuenta, por favor?",
+      "en": "Could you bring me the bill, please?",
+      "pronunciation": "meh poh-DREE-ah trah-EHR lah KWEHN-tah por fah-VOR"
+    },
+    {
+      "es": "Soy vegetariano/a. ¿Tienen algo sin carne?",
+      "en": "I am vegetarian. Do you have anything without meat?",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh, TYEH-nen AL-goh seen KAR-neh"
+    },
+    {
+      "es": "¿Cachai? — ¡Bacán!",
+      "en": "You know what I mean? — Awesome! (Chilean slang)",
+      "pronunciation": "kah-CHAY, bah-KAHN"
+    }
+  ],
+  "regions": [
+    {
+      "id": "santiago",
+      "name": "Santiago Metropolitan Region",
+      "name_es": "Región Metropolitana",
+      "capital": "Santiago",
+      "coordinates": [-33.4569, -70.6483],
+      "famous_place": "Cerro San Cristóbal & Plaza de Armas",
+      "signature_festival": "Festival de Viña del Mar (February)",
+      "signature_dish": "Cazuela de vacuno"
+    },
+    {
+      "id": "patagonia-chilena",
+      "name": "Chilean Patagonia",
+      "name_es": "Patagonia Chilena",
+      "capital": "Punta Arenas",
+      "coordinates": [-53.1638, -70.9171],
+      "famous_place": "Torres del Paine National Park",
+      "signature_festival": "Carnaval de Invierno de Punta Arenas",
+      "signature_dish": "Cordero magallánico (Magellan lamb)"
+    },
+    {
+      "id": "atacama",
+      "name": "Atacama Desert",
+      "name_es": "Desierto de Atacama",
+      "capital": "Calama / San Pedro de Atacama",
+      "coordinates": [-22.9087, -68.2003],
+      "famous_place": "Valle de la Luna & Salar de Atacama",
+      "signature_festival": "Festival Atacameño (August)",
+      "signature_dish": "Quinoa picante con llama"
+    },
+    {
+      "id": "lake-district",
+      "name": "Lake District",
+      "name_es": "Los Lagos",
+      "capital": "Puerto Montt / Valdivia",
+      "coordinates": [-40.5744, -73.1375],
+      "famous_place": "Lago Llanquihue & Osorno Volcano",
+      "signature_festival": "Semana Valdiviana (February)",
+      "signature_dish": "Curanto al hoyo"
+    },
+    {
+      "id": "easter-island",
+      "name": "Easter Island",
+      "name_es": "Isla de Pascua / Rapa Nui",
+      "capital": "Hanga Roa",
+      "coordinates": [-27.1127, -109.3497],
+      "famous_place": "Moai statues of Ahu Tongariki",
+      "signature_festival": "Tapati Rapa Nui (February)",
+      "signature_dish": "Umu pae (earth oven feast)"
+    },
+    {
+      "id": "valparaiso",
+      "name": "Valparaíso",
+      "name_es": "Valparaíso",
+      "capital": "Valparaíso",
+      "coordinates": [-33.0472, -71.6127],
+      "famous_place": "Cerro Alegre & Concepción murals",
+      "signature_festival": "Año Nuevo (New Year fireworks over the bay)",
+      "signature_dish": "Chorrillana (caramelised onion fries)"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "torres-del-paine",
+      "name": "Torres del Paine",
+      "city": "Magallanes, Patagonia",
+      "caption": "Three granite monoliths pierce low cloud above a turquoise lake.",
+      "image": "/images/chile/torres-del-paine.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-51.0, -73.0]
+    },
+    {
+      "id": "valle-luna",
+      "name": "Valle de la Luna",
+      "city": "San Pedro de Atacama",
+      "caption": "Salt-crusted canyon that glows amber at dusk in the Atacama.",
+      "image": "/images/chile/valle-luna.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-22.929, -68.295]
+    },
+    {
+      "id": "easter-island-moai",
+      "name": "Ahu Tongariki – Rapa Nui",
+      "city": "Easter Island",
+      "caption": "Fifteen silent moai facing inland against the Pacific sky.",
+      "image": "/images/chile/easter-island-moai.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-27.1253, -109.278]
+    },
+    {
+      "id": "valparaiso-cerros",
+      "name": "Cerros de Valparaíso",
+      "city": "Valparaíso",
+      "caption": "Staircase hillside neighbourhoods covered in bold street murals.",
+      "image": "/images/chile/valparaiso.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-33.0472, -71.6127]
+    },
+    {
+      "id": "geysers-tatio",
+      "name": "Géiseres del Tatio",
+      "city": "Atacama, Antofagasta",
+      "caption": "World's highest geyser field steaming at 4,300 metres at dawn.",
+      "image": "/images/chile/tatio-geysers.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-22.327, -68.01]
+    },
+    {
+      "id": "marble-caves",
+      "name": "Cuevas de Mármol",
+      "city": "General Carrera Lake, Aysén",
+      "caption": "Swirling blue marble caves sculpted by turquoise glacial water.",
+      "image": "/images/chile/marble-caves.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-46.64, -71.79]
+    },
+    {
+      "id": "salar-atacama",
+      "name": "Salar de Atacama",
+      "city": "Antofagasta Region",
+      "caption": "Chile's largest salt flat hosts thousands of pink flamingos.",
+      "image": "/images/chile/salar-atacama.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-23.4925, -68.2581]
+    }
+  ],
+  "lugares_palabras": [
+    { "word": "el salar", "meaning": "salt flat / dried salt lake bed", "pronunciation": "el sah-LAR" },
+    { "word": "el géiser", "meaning": "geyser / hot spring that erupts steam", "pronunciation": "el HEH-ee-sehr" },
+    { "word": "el moai", "meaning": "monolithic stone statue of the Rapa Nui people", "pronunciation": "el moh-AH-ee" },
+    { "word": "el cerro", "meaning": "hill / elevated urban neighbourhood", "pronunciation": "el SEH-roh" },
+    { "word": "el volcán", "meaning": "volcano / conical erupting mountain", "pronunciation": "el bol-KAHN" }
+  ],
+  "fiestas": [
+    {
+      "id": "festival-vina",
+      "name": "Festival Internacional de la Canción de Viña del Mar",
+      "month": "February",
+      "town_region": "Viña del Mar, Valparaíso",
+      "caption": "Latin America's biggest music festival crowns new stars under summer stars.",
+      "image": "/images/chile/festival-vina.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "tapati-rapa-nui",
+      "name": "Tapati Rapa Nui",
+      "month": "February",
+      "town_region": "Easter Island",
+      "caption": "Polynesian-heritage carnival of body-painting, canoe racing, and chanting.",
+      "image": "/images/chile/tapati.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "vendimia-colchagua",
+      "name": "Fiesta de la Vendimia",
+      "month": "March",
+      "town_region": "Colchagua Valley, O'Higgins",
+      "caption": "Harvest celebrations in Chile's finest Carménère wine country.",
+      "image": "/images/chile/vendimia-chile.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "semana-valdiviana",
+      "name": "Semana Valdiviana",
+      "month": "February",
+      "town_region": "Valdivia, Los Ríos",
+      "caption": "Illuminated boat parade gliding down the Río Calle-Calle at night.",
+      "image": "/images/chile/semana-valdiviana.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "fiestas-patrias",
+      "name": "Fiestas Patrias",
+      "month": "September 18–19",
+      "town_region": "Nationwide",
+      "caption": "Cueca dancing, empanadas, and chicha in every fondas across Chile.",
+      "image": "/images/chile/fiestas-patrias.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "año-nuevo-valparaiso",
+      "name": "Año Nuevo en Valparaíso",
+      "month": "December 31",
+      "town_region": "Valparaíso",
+      "caption": "South America's most spectacular New Year fireworks over the Pacific.",
+      "image": "/images/chile/ano-nuevo-valparaiso.jpg",
+      "credit": "Unsplash Community"
+    }
+  ],
+  "fiestas_palabras": [
+    { "word": "la cueca", "meaning": "Chile's national dance — handkerchief courtship dance", "pronunciation": "lah KWEH-kah" },
+    { "word": "las fondas", "meaning": "temporary fair stalls serving food and drink on Fiestas Patrias", "pronunciation": "lahs FON-dahs" },
+    { "word": "el tonada", "meaning": "traditional Chilean folk song style", "pronunciation": "el toh-NAH-dah" },
+    { "word": "el huaso", "meaning": "Chilean horseman / rural cowboy equivalent of gaucho", "pronunciation": "el WAH-soh" },
+    { "word": "la chicha", "meaning": "fermented grape or apple drink popular at harvest festivals", "pronunciation": "lah CHEE-chah" }
+  ],
+  "comida": [
+    {
+      "id": "cazuela",
+      "name_es": "Cazuela de Vacuno",
+      "caption": "Clear broth with beef, potato, corn on the cob, and squash.",
+      "veg_friendly": false,
+      "image": "/images/chile/cazuela.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "empanadas-pino",
+      "name_es": "Empanadas de Pino",
+      "caption": "Baked pastry filled with beef, onion, olive, egg, and raisin.",
+      "veg_friendly": false,
+      "image": "/images/chile/empanadas-pino.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "pastel-choclo",
+      "name_es": "Pastel de Choclo",
+      "caption": "Creamy corn crust baked over a savoury meat and olive filling.",
+      "veg_friendly": false,
+      "image": "/images/chile/pastel-choclo.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "completo",
+      "name_es": "El Completo",
+      "caption": "Chilean hot dog loaded with avocado, tomato, and mayonnaise.",
+      "veg_friendly": true,
+      "image": "/images/chile/completo.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "humitas",
+      "name_es": "Humitas",
+      "caption": "Fresh corn paste steamed inside its own husks with basil.",
+      "veg_friendly": true,
+      "image": "/images/chile/humitas.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "pebre",
+      "name_es": "Pebre",
+      "caption": "Fresh salsa of cilantro, onion, chilli, and tomato — on everything.",
+      "veg_friendly": true,
+      "image": "/images/chile/pebre.jpg",
+      "credit": "Unsplash Food"
+    }
+  ],
+  "comida_palabras": [
+    { "word": "el pino", "meaning": "spiced ground beef filling for empanadas", "pronunciation": "el PEE-noh" },
+    { "word": "el choclo", "meaning": "large Chilean corn cob / sweet maize", "pronunciation": "el CHOH-kloh" },
+    { "word": "el pebre", "meaning": "fresh Chilean salsa of herbs, onion and chilli", "pronunciation": "el PEH-breh" },
+    { "word": "el curanto", "meaning": "Chiloé seafood and meat feast cooked in an earth pit", "pronunciation": "el koo-RAHN-toh" },
+    { "word": "el mote con huesillo", "meaning": "sweet wheat and dried peach drink — Chile's summer staple", "pronunciation": "el MOH-teh kon weh-SEE-yoh" }
+  ],
+  "cultura": [
+    {
+      "id": "cueca",
+      "name": "La Cueca",
+      "origin": "Santiago & Valparaíso",
+      "description": "Chile's national dance — a flirtatious courtship between man and woman with a handkerchief.\nDanced everywhere during Fiestas Patrias in September, from city squares to rural farms.",
+      "image": "/images/chile/cueca-dance.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "rapa-nui-culture",
+      "name": "La Cultura Rapa Nui",
+      "origin": "Easter Island",
+      "description": "Polynesian people carved 900 moai statues from volcanic rock over 500 years.\nTheir oral traditions, dance, and tattooing culture survive in the Tapati festival today.",
+      "image": "/images/chile/rapa-nui.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "mapuche-culture",
+      "name": "La Cultura Mapuche",
+      "origin": "La Araucanía & Lake District",
+      "description": "The Mapuche people resisted both Inca and Spanish conquest for centuries.\nTheir weaving, ceremonial music (kultrún drum), and cosmology remain alive today.",
+      "image": "/images/chile/mapuche.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "nueva-cancion",
+      "name": "La Nueva Canción Chilena",
+      "origin": "Santiago",
+      "description": "Political folk music movement of the 1960s–70s — Víctor Jara and Violeta Parra.\nUsed Andean instruments to carry messages of social justice to the world.",
+      "image": "/images/chile/nueva-cancion.jpg",
+      "credit": "Unsplash Culture"
+    }
+  ],
+  "cultura_palabras": [
+    { "word": "el kultrún", "meaning": "sacred Mapuche ceremonial drum", "pronunciation": "el kool-TROON" },
+    { "word": "la machi", "meaning": "Mapuche shaman / spiritual healer", "pronunciation": "lah MAH-chee" },
+    { "word": "el huaso", "meaning": "Chilean rural horseman and folk icon", "pronunciation": "el WAH-soh" },
+    { "word": "el lonko", "meaning": "Mapuche community chief or leader", "pronunciation": "el LON-koh" },
+    { "word": "la quena", "meaning": "Andean flute used in Chilean folk music", "pronunciation": "lah KEH-nah" }
+  ],
+  "india_traveller": {
+    "visa_note": "Indian passport holders require a tourist visa for Chile, applied for at the Chilean Consulate in Delhi or Mumbai. The process takes approximately 2–4 weeks and requires proof of accommodation and return ticket. Chile is a modern, well-organised country, and the consular process is straightforward.",
+    "flight_note": "No direct flights from India to Chile. Common routes fly via Dubai (Emirates to Santiago), Doha (Qatar Airways), Madrid (Iberia + LATAM), or São Paulo (LATAM). Total journey time is typically 22–28 hours. Santiago's Arturo Merino Benítez (SCL) is the main international hub.",
+    "cost_per_day_inr": "Chile is one of the more expensive South American countries. Budget travellers need around ₹4,500–7,000/day. Mid-range travel costs ₹9,000–15,000/day. Patagonia is premium — budget ₹15,000–20,000/day for Torres del Paine. Santiago has good value set-lunch menus (almuerzo) for ₹600–900.",
+    "veg_tips": "Chile has limited vegetarian options outside Santiago. In the capital, look for vegetarian restaurants in Barrio Italia and Barrio Lastarria. Humitas (corn paste), pebre (salsa), and salads are safe. Empanadas de queso (cheese) are widely available. Phrase to use: 'Soy vegetariano/a, sin carne ni mariscos, por favor.'"
+  },
+  "photo_credits": [
+    { "title": "Torres del Paine", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Valle de la Luna", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Rapa Nui / Easter Island", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Valparaíso Murals", "photographer": "Unsplash Community", "license": "Unsplash Free License" }
+  ]
+}

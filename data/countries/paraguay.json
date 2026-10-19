@@ -1,0 +1,329 @@
+{
+  "id": "paraguay",
+  "name": "Paraguay",
+  "name_es": "Paraguay",
+  "capital": "Asunción",
+  "currency": "Paraguayan Guaraní (₲ / PYG)",
+  "best_time_to_visit": "Autumn & Winter (April–August) to avoid extreme summer heat",
+  "hero_image": "/images/paraguay/hero-paraguay.jpg",
+  "hero_credit": "Asunción waterfront along the Río Paraguay (Photo: Unsplash Community)",
+  "daily_phrases": [
+    {
+      "es": "¡Mba'éichapa! ¿Porã nde?",
+      "en": "How are you? Are you well? (Guaraní-Spanish mix)",
+      "pronunciation": "mbah-EH-ee-chah-pah, poh-RAHN deh"
+    },
+    {
+      "es": "Quiero una mesa, por favor.",
+      "en": "I would like a table, please.",
+      "pronunciation": "KYEH-roh OO-nah MEH-sah por fah-VOR"
+    },
+    {
+      "es": "Soy vegetariano/a. ¿Sin carne, por favor?",
+      "en": "I am vegetarian. Without meat, please.",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh, seen KAR-neh por fah-VOR"
+    },
+    {
+      "es": "¿Cuánto cuesta esto?",
+      "en": "How much does this cost?",
+      "pronunciation": "KWAN-toh KWES-tah EHS-toh"
+    }
+  ],
+  "regions": [
+    {
+      "id": "asuncion",
+      "name": "Asunción",
+      "name_es": "Asunción",
+      "capital": "Asunción",
+      "coordinates": [-25.2867, -57.647],
+      "famous_place": "Palacio de los López & historic Cabildo",
+      "signature_festival": "Carnaval Asunceno (February)",
+      "signature_dish": "Sopa paraguaya"
+    },
+    {
+      "id": "misiones",
+      "name": "Misiones Region",
+      "name_es": "Misiones",
+      "capital": "San Juan Bautista",
+      "coordinates": [-26.6667, -57.15],
+      "famous_place": "Jesuit Ruins of Jesús and Trinidad (UNESCO)",
+      "signature_festival": "Festival Folklórico de Misiones",
+      "signature_dish": "Chipa guazú"
+    },
+    {
+      "id": "chaco",
+      "name": "The Gran Chaco",
+      "name_es": "El Chaco",
+      "capital": "Filadelfia",
+      "coordinates": [-22.35, -60.03],
+      "famous_place": "Chaco National Park & Mennonite colonies",
+      "signature_festival": "Festival del Chaco (August)",
+      "signature_dish": "Locro chaqueño"
+    },
+    {
+      "id": "itaipu",
+      "name": "Itaipú Region",
+      "name_es": "Alto Paraná",
+      "capital": "Ciudad del Este",
+      "coordinates": [-25.5163, -54.6132],
+      "famous_place": "Itaipú Dam (world's second-largest hydroelectric plant)",
+      "signature_festival": "Fiesta de la Fundación de Ciudad del Este",
+      "signature_dish": "Bori-bori"
+    },
+    {
+      "id": "ybycui",
+      "name": "Ybycuí & Cordillera",
+      "name_es": "Cordillera",
+      "capital": "Caacupé",
+      "coordinates": [-25.3869, -57.1439],
+      "famous_place": "Basílica de Caacupé (Blue Virgin Shrine)",
+      "signature_festival": "Día de la Virgen de Caacupé (December 8)",
+      "signature_dish": "Mbejú (starch flatbread)"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "trinidad-ruins",
+      "name": "Ruinas de Trinidad",
+      "city": "Itapúa, Misiones",
+      "caption": "Sweeping Jesuit mission ruins under a vast Paraguayan sky.",
+      "image": "/images/paraguay/trinidad-ruins.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-27.125, -55.736]
+    },
+    {
+      "id": "itaipu-dam",
+      "name": "Represa Itaipú",
+      "city": "Alto Paraná",
+      "caption": "Colossal hydroelectric dam producing 15% of Brazil's electricity.",
+      "image": "/images/paraguay/itaipu-dam.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-25.4083, -54.589]
+    },
+    {
+      "id": "palacio-lopez",
+      "name": "Palacio de los López",
+      "city": "Asunción",
+      "caption": "Ornate colonial presidential palace overlooking the Río Paraguay.",
+      "image": "/images/paraguay/palacio-lopez.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-25.2867, -57.6335]
+    },
+    {
+      "id": "caacupe",
+      "name": "Basílica de Caacupé",
+      "city": "Caacupé, Cordillera",
+      "caption": "Paraguay's holiest shrine draws millions of pilgrims every December.",
+      "image": "/images/paraguay/caacupe.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-25.3869, -57.1439]
+    },
+    {
+      "id": "cerro-koi",
+      "name": "Cerro Koi & Corá",
+      "city": "San Bernardino",
+      "caption": "Bizarre red sandstone formations rising beside a shimmering lake.",
+      "image": "/images/paraguay/cerro-koi.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-25.2834, -57.5348]
+    },
+    {
+      "id": "chaco-national-park",
+      "name": "Parque Nacional Defensores",
+      "city": "Boquerón, Chaco",
+      "caption": "One of South America's last great dry forest wilderness areas.",
+      "image": "/images/paraguay/chaco-park.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-20.2167, -60.0167]
+    },
+    {
+      "id": "humaita-ruins",
+      "name": "Fortaleza de Humaitá",
+      "city": "Humaitá, Ñeembucú",
+      "caption": "Crumbling walls of a 19th-century fortress beside the Paraná River.",
+      "image": "/images/paraguay/humaita.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-27.0531, -58.2228]
+    }
+  ],
+  "lugares_palabras": [
+    { "word": "las ruinas", "meaning": "ruins / crumbling historic remains", "pronunciation": "lahs roo-EE-nahs" },
+    { "word": "el río", "meaning": "river / flowing waterway", "pronunciation": "el REE-oh" },
+    { "word": "la selva", "meaning": "jungle / tropical forest", "pronunciation": "lah SEL-bah" },
+    { "word": "el pueblo", "meaning": "small town / people", "pronunciation": "el PWEH-bloh" },
+    { "word": "el cerro", "meaning": "hill / rocky peak", "pronunciation": "el SEH-roh" }
+  ],
+  "fiestas": [
+    {
+      "id": "caacupe-pilgrimage",
+      "name": "Festividad de la Virgen de Caacupé",
+      "month": "December 8",
+      "town_region": "Caacupé, Cordillera",
+      "caption": "Two million pilgrims walk through the night to honour the Blue Virgin.",
+      "image": "/images/paraguay/caacupe-fiesta.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "carnaval-encarnacion",
+      "name": "Carnaval de Encarnación",
+      "month": "January–February",
+      "town_region": "Encarnación, Itapúa",
+      "caption": "Paraguay's biggest carnival — glittering floats on the city's main avenue.",
+      "image": "/images/paraguay/carnaval-encarnacion.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "festival-folklore",
+      "name": "Festival Nacional del Folklore",
+      "month": "July",
+      "town_region": "Villarrica, Guairá",
+      "caption": "Open-air folk music and dance celebrating Paraguayan Guaraní heritage.",
+      "image": "/images/paraguay/festival-folklore.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "san-juan-fiesta",
+      "name": "Fiesta de San Juan",
+      "month": "June 24",
+      "town_region": "Nationwide",
+      "caption": "Midsummer games including walking barefoot over hot embers (tatá pynandí).",
+      "image": "/images/paraguay/san-juan-py.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "semana-santa-py",
+      "name": "Semana Santa",
+      "month": "March/April",
+      "town_region": "Nationwide, especially Asunción",
+      "caption": "Solemn processions through city streets marking Holy Week in Paraguay.",
+      "image": "/images/paraguay/semana-santa-py.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "dia-heroes",
+      "name": "Día de los Héroes",
+      "month": "March 1",
+      "town_region": "Asunción",
+      "caption": "Military parades and ceremonies honouring Paraguay's war of the Triple Alliance.",
+      "image": "/images/paraguay/dia-heroes.jpg",
+      "credit": "Unsplash Community"
+    }
+  ],
+  "fiestas_palabras": [
+    { "word": "la peregrinación", "meaning": "pilgrimage / long religious journey on foot", "pronunciation": "lah peh-reh-gree-nah-SYOHN" },
+    { "word": "el arpa", "meaning": "harp — Paraguay's national instrument", "pronunciation": "el AR-pah" },
+    { "word": "la guarania", "meaning": "slow, melancholic Paraguayan musical genre", "pronunciation": "lah gwah-rah-NEE-ah" },
+    { "word": "el tatá pynandí", "meaning": "walking on embers during San Juan (Guaraní phrase)", "pronunciation": "el tah-TAH pee-nahn-DEE" },
+    { "word": "la procesión", "meaning": "religious procession through the streets", "pronunciation": "lah proh-seh-SYOHN" }
+  ],
+  "comida": [
+    {
+      "id": "sopa-paraguaya",
+      "name_es": "Sopa Paraguaya",
+      "caption": "Dense, savoury corn bread baked with cheese and onion.",
+      "veg_friendly": true,
+      "image": "/images/paraguay/sopa-paraguaya.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "chipa",
+      "name_es": "Chipá",
+      "caption": "Chewy cheese and cassava rings baked golden — sold everywhere.",
+      "veg_friendly": true,
+      "image": "/images/paraguay/chipa.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "bori-bori",
+      "name_es": "Bori-Bori",
+      "caption": "Comforting chicken soup with fluffy cornmeal and cheese balls.",
+      "veg_friendly": false,
+      "image": "/images/paraguay/bori-bori.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "mbeju",
+      "name_es": "Mbejú",
+      "caption": "Crispy starch and cheese flatbread cooked on a cast-iron pan.",
+      "veg_friendly": true,
+      "image": "/images/paraguay/mbeju.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "asado-py",
+      "name_es": "Asado Paraguayo",
+      "caption": "Smoky wood-fire grilled beef, a beloved national tradition.",
+      "veg_friendly": false,
+      "image": "/images/paraguay/asado-py.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "tereré",
+      "name_es": "Tereré",
+      "caption": "Iced cold yerba mate drink with medicinal herbs — Paraguay's national drink.",
+      "veg_friendly": true,
+      "image": "/images/paraguay/terere.jpg",
+      "credit": "Unsplash Food"
+    }
+  ],
+  "comida_palabras": [
+    { "word": "el tereré", "meaning": "iced herbal drink made with yerba mate, Paraguay's national drink", "pronunciation": "el teh-reh-REH" },
+    { "word": "la chipá", "meaning": "traditional Guaraní cheese bread ring", "pronunciation": "lah chee-PAH" },
+    { "word": "la mandioca", "meaning": "cassava / yuca root, staple of Paraguayan cooking", "pronunciation": "lah mahn-dee-OH-kah" },
+    { "word": "el locro", "meaning": "thick stew of corn, squash, and meat", "pronunciation": "el LOH-kroh" },
+    { "word": "el kuré", "meaning": "pork / pig in Guaraní — important in festive dishes", "pronunciation": "el koo-REH" }
+  ],
+  "cultura": [
+    {
+      "id": "arpa-paraguaya",
+      "name": "El Arpa Paraguaya",
+      "origin": "Asunción & rural Paraguay",
+      "description": "The diatonic harp is Paraguay's national instrument, played with bare fingers.\nIts warm, rolling sound defines guarania — Paraguay's signature musical genre.",
+      "image": "/images/paraguay/arpa-paraguaya.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "guarani-language",
+      "name": "El Idioma Guaraní",
+      "origin": "Nationwide",
+      "description": "Paraguay is the only South American country where an indigenous language is co-official.\nOver 90% of Paraguayans speak Guaraní — woven into everyday speech and identity.",
+      "image": "/images/paraguay/guarani-language.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "nanduti",
+      "name": "El Ñandutí",
+      "origin": "Itauguá, Central Region",
+      "description": "Intricate spider-web lace crafted by hand in dazzling concentric patterns.\nThe word ñandutí means 'spider web' in Guaraní — worn as collars, shawls, and art.",
+      "image": "/images/paraguay/nanduti.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "jesuit-missions",
+      "name": "Las Misiones Jesuíticas",
+      "origin": "Misiones & Itapúa",
+      "description": "17th–18th century Jesuit reductions built thriving communities of Guaraní peoples.\nUNESCO-listed ruins at Trinidad and Jesús remain spiritual and architectural wonders.",
+      "image": "/images/paraguay/jesuit-missions.jpg",
+      "credit": "Unsplash Culture"
+    }
+  ],
+  "cultura_palabras": [
+    { "word": "el ñandutí", "meaning": "delicate spider-web lace craft from Itauguá", "pronunciation": "el nyahn-doo-TEE" },
+    { "word": "la guarania", "meaning": "slow, lyrical Paraguayan musical style", "pronunciation": "lah gwah-rah-NEE-ah" },
+    { "word": "el jopara", "meaning": "mixed Guaraní-Spanish speech used in daily conversation", "pronunciation": "el hoh-pah-RAH" },
+    { "word": "la reducción", "meaning": "Jesuit mission settlement for indigenous communities", "pronunciation": "lah reh-dook-SYOHN" },
+    { "word": "el tereré", "meaning": "cold yerba mate, also symbolises friendship and sharing", "pronunciation": "el teh-reh-REH" }
+  ],
+  "india_traveller": {
+    "visa_note": "Indian passport holders do not require a tourist visa for Paraguay for stays up to 90 days. This makes Paraguay one of the easier South American destinations. Ensure your passport is valid for at least 6 months beyond your travel date.",
+    "flight_note": "No direct or single-stop flights from India to Paraguay. Common routes go via São Paulo (GRU) or Buenos Aires (EZE) on LATAM, Qatar Airways + LATAM, or similar combinations. Total journey time is typically 22–28 hours. Asunción's Silvio Pettirossi Airport (ASU) is the main entry point.",
+    "cost_per_day_inr": "Paraguay is one of South America's most affordable countries. Budget travellers can manage on ₹1,800–3,000/day. Mid-range travel costs around ₹4,000–7,000/day. The guaraní has weakened significantly, making street food, transport, and accommodation very cheap by Indian standards.",
+    "veg_tips": "Paraguay is a heavily meat-based cuisine, so vegetarians need to plan ahead. Safe bets are sopa paraguaya (corn bread), chipá (cheese bread), mbejú (starch flatbread), and rice-and-vegetable dishes. In Asunción, look for international restaurants. Always say: 'Soy vegetariano/a, sin carne ni pollo, por favor.'"
+  },
+  "photo_credits": [
+    { "title": "Ruinas de Trinidad", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Represa Itaipú", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Palacio de los López", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "El Arpa Paraguaya", "photographer": "Unsplash Culture", "license": "Unsplash Free License" }
+  ]
+}

@@ -95,7 +95,7 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 via-40% to-transparent" />
 
                       {/* Dietary Tag */}
                       <div className="absolute top-3.5 right-3.5 z-10">
