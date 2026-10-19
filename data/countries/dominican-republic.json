@@ -37,7 +37,10 @@
       "name": "Santo Domingo",
       "name_es": "Santo Domingo",
       "capital": "Santo Domingo",
-      "coordinates": [18.4861, -69.9312],
+      "coordinates": [
+        18.4861,
+        -69.9312
+      ],
       "famous_place": "Colonial City of Santo Domingo",
       "signature_festival": "Santo Domingo Carnival (February)",
       "signature_dish": "La Bandera Dominicana"
@@ -47,7 +50,10 @@
       "name": "Santiago",
       "name_es": "Santiago de los Caballeros",
       "capital": "Santiago de los Caballeros",
-      "coordinates": [19.4517, -70.6970],
+      "coordinates": [
+        19.4517,
+        -70.697
+      ],
       "famous_place": "Monumento a los Héroes de la Restauración",
       "signature_festival": "Carnaval de Santiago (February)",
       "signature_dish": "Mangú"
@@ -57,7 +63,10 @@
       "name": "La Altagracia",
       "name_es": "La Altagracia",
       "capital": "Higüey",
-      "coordinates": [18.6150, -68.7070],
+      "coordinates": [
+        18.615,
+        -68.707
+      ],
       "famous_place": "Basilica of Our Lady of Altagracia",
       "signature_festival": "Our Lady of Altagracia Day (January 21)",
       "signature_dish": "Pescado con coco"
@@ -67,7 +76,10 @@
       "name": "Samaná",
       "name_es": "Samaná",
       "capital": "Santa Bárbara de Samaná",
-      "coordinates": [19.2056, -69.3369],
+      "coordinates": [
+        19.2056,
+        -69.3369
+      ],
       "famous_place": "Los Haitises National Park",
       "signature_festival": "Carnaval and patron-saint festivities",
       "signature_dish": "Sancocho"
@@ -79,9 +91,12 @@
       "name": "Colonial City",
       "city": "Santo Domingo",
       "caption": "A UNESCO-listed **ciudad colonial** (colonial city) preserves an early American grid.",
-      "image": null,
-      "credit": null,
-      "coordinates": [18.4735, -69.8845]
+      "image": "/images/dominican-republic/colonial-district.jpg",
+      "credit": "Dominican Republic Tourism · CC BY 2.0",
+      "coordinates": [
+        18.4735,
+        -69.8845
+      ]
     },
     {
       "id": "cathedral",
@@ -90,7 +105,10 @@
       "caption": "The **catedral** (cathedral) stands beside the old quarter's historic lanes.",
       "image": "/images/dominican-republic/santo-domingo-cathedral-audit.jpg",
       "credit": "Reinhard Link · CC BY-SA 2.0",
-      "coordinates": [18.4727, -69.8836]
+      "coordinates": [
+        18.4727,
+        -69.8836
+      ]
     },
     {
       "id": "los-haitises",
@@ -99,7 +117,10 @@
       "caption": "Mangroves, limestone islets, and caves define this protected landscape.",
       "image": "/images/dominican-republic/los-haitises-audit.jpg",
       "credit": "Anton Bielousov · CC BY-SA 3.0",
-      "coordinates": [19.1130, -69.4740]
+      "coordinates": [
+        19.113,
+        -69.474
+      ]
     },
     {
       "id": "pico-duarte",
@@ -108,24 +129,50 @@
       "caption": "The country's highest **montaña** (mountain) rises above pine-covered trails.",
       "image": "/images/dominican-republic/pico-duarte-audit.jpg",
       "credit": "Adrian Michael · CC BY-SA 3.0",
-      "coordinates": [19.0290, -70.9980]
+      "coordinates": [
+        19.029,
+        -70.998
+      ]
     },
     {
       "id": "punta-cana",
       "name": "Punta Cana Coast",
       "city": "La Altagracia",
       "caption": "White-sand beaches are a signature draw of the eastern tourism region.",
-      "image": null,
-      "credit": null,
-      "coordinates": [18.5601, -68.3725]
+      "image": "/images/dominican-republic/dominican-island.jpg",
+      "credit": "Dominican Republic · CC BY 2.0",
+      "coordinates": [
+        18.5601,
+        -68.3725
+      ]
     }
   ],
   "lugares_palabras": [
-    { "word": "ciudad colonial", "meaning": "colonial city", "pronunciation": "syoo-DAHD koh-loh-NYAHL" },
-    { "word": "catedral", "meaning": "cathedral", "pronunciation": "kah-teh-DRAHL" },
-    { "word": "costa", "meaning": "coast", "pronunciation": "KOH-stah" },
-    { "word": "montaña", "meaning": "mountain", "pronunciation": "mon-TAH-nyah" },
-    { "word": "bahía", "meaning": "bay", "pronunciation": "bah-EE-ah" }
+    {
+      "word": "ciudad colonial",
+      "meaning": "colonial city",
+      "pronunciation": "syoo-DAHD koh-loh-NYAHL"
+    },
+    {
+      "word": "catedral",
+      "meaning": "cathedral",
+      "pronunciation": "kah-teh-DRAHL"
+    },
+    {
+      "word": "costa",
+      "meaning": "coast",
+      "pronunciation": "KOH-stah"
+    },
+    {
+      "word": "montaña",
+      "meaning": "mountain",
+      "pronunciation": "mon-TAH-nyah"
+    },
+    {
+      "word": "bahía",
+      "meaning": "bay",
+      "pronunciation": "bah-EE-ah"
+    }
   ],
   "fiestas": [
     {
@@ -134,8 +181,8 @@
       "month": "February",
       "town_region": "Santo Domingo",
       "caption": "A **carnaval** (carnival) fills avenues with costumes and **comparsa** (parade troupe).",
-      "image": null,
-      "credit": null
+      "image": "/images/dominican-republic/dominican-carnival-parade.jpg",
+      "credit": "Carnaval Dominicano · CC BY-SA 3.0"
     },
     {
       "id": "santiago-carnival",
@@ -143,8 +190,8 @@
       "month": "February",
       "town_region": "Santiago de los Caballeros",
       "caption": "Colourful **diablos cojuelos** (limping devils) are a familiar carnival character.",
-      "image": null,
-      "credit": null
+      "image": "/images/dominican-republic/santiago-carnival.jpg",
+      "credit": "Carnaval de Santiago · CC BY 2.0"
     },
     {
       "id": "merengue-festival",
@@ -152,8 +199,8 @@
       "month": "Dates vary",
       "town_region": "Santo Domingo",
       "caption": "Live bands bring **merengue** (national music and dance) to public stages.",
-      "image": null,
-      "credit": null
+      "image": "/images/dominican-republic/merengue-dance.jpg",
+      "credit": "Javier10 · CC BY-SA 3.0"
     },
     {
       "id": "altagracia-day",
@@ -161,16 +208,36 @@
       "month": "January 21",
       "town_region": "Higüey",
       "caption": "Pilgrims gather for a major religious celebration in the eastern region.",
-      "image": null,
-      "credit": null
+      "image": "/images/dominican-republic/altagracia-basilica.jpg",
+      "credit": "Basílica de Higüey · CC BY-SA 4.0"
     }
   ],
   "fiestas_palabras": [
-    { "word": "carnaval", "meaning": "carnival", "pronunciation": "kar-nah-VAHL" },
-    { "word": "comparsa", "meaning": "parade or dance troupe", "pronunciation": "kom-PAR-sah" },
-    { "word": "merengue", "meaning": "Dominican music and dance", "pronunciation": "meh-REHN-geh" },
-    { "word": "bachata", "meaning": "Dominican guitar-led music and dance", "pronunciation": "bah-CHAH-tah" },
-    { "word": "diablos cojuelos", "meaning": "limping devils, a carnival character", "pronunciation": "DYAH-blos koh-HWEH-los" }
+    {
+      "word": "carnaval",
+      "meaning": "carnival",
+      "pronunciation": "kar-nah-VAHL"
+    },
+    {
+      "word": "comparsa",
+      "meaning": "parade or dance troupe",
+      "pronunciation": "kom-PAR-sah"
+    },
+    {
+      "word": "merengue",
+      "meaning": "Dominican music and dance",
+      "pronunciation": "meh-REHN-geh"
+    },
+    {
+      "word": "bachata",
+      "meaning": "Dominican guitar-led music and dance",
+      "pronunciation": "bah-CHAH-tah"
+    },
+    {
+      "word": "diablos cojuelos",
+      "meaning": "limping devils, a carnival character",
+      "pronunciation": "DYAH-blos koh-HWEH-los"
+    }
   ],
   "comida": [
     {
@@ -199,11 +266,31 @@
     }
   ],
   "comida_palabras": [
-    { "word": "mangú", "meaning": "mashed green plantains", "pronunciation": "mahn-GOO" },
-    { "word": "plátano", "meaning": "plantain", "pronunciation": "PLAH-tah-noh" },
-    { "word": "yuca", "meaning": "cassava", "pronunciation": "YOO-kah" },
-    { "word": "habichuelas", "meaning": "beans", "pronunciation": "ah-bee-CHWEH-lahs" },
-    { "word": "sancocho", "meaning": "hearty stew", "pronunciation": "sahn-KOH-choh" }
+    {
+      "word": "mangú",
+      "meaning": "mashed green plantains",
+      "pronunciation": "mahn-GOO"
+    },
+    {
+      "word": "plátano",
+      "meaning": "plantain",
+      "pronunciation": "PLAH-tah-noh"
+    },
+    {
+      "word": "yuca",
+      "meaning": "cassava",
+      "pronunciation": "YOO-kah"
+    },
+    {
+      "word": "habichuelas",
+      "meaning": "beans",
+      "pronunciation": "ah-bee-CHWEH-lahs"
+    },
+    {
+      "word": "sancocho",
+      "meaning": "hearty stew",
+      "pronunciation": "sahn-KOH-choh"
+    }
   ],
   "cultura": [
     {
@@ -235,23 +322,63 @@
       "name": "Perico ripiao",
       "origin": "Cibao region",
       "description": "Merengue típico traditionally features accordion, tambora, and güira.\nThis lively **ritmo** (rhythm) remains closely tied to community dancing.",
-      "image": null,
-      "credit": null
+      "image": "/images/dominican-republic/perico-ripiao.jpg",
+      "credit": "Merengue Típico · CC BY-SA 3.0"
     }
   ],
   "cultura_palabras": [
-    { "word": "tambora", "meaning": "two-headed drum", "pronunciation": "tahm-BOH-rah" },
-    { "word": "güira", "meaning": "metal percussion scraper", "pronunciation": "GWEE-rah" },
-    { "word": "muñeca", "meaning": "doll", "pronunciation": "moo-NYEH-kah" },
-    { "word": "folclore", "meaning": "folk traditions", "pronunciation": "fohl-KLOH-reh" },
-    { "word": "ritmo", "meaning": "rhythm", "pronunciation": "REET-moh" }
+    {
+      "word": "tambora",
+      "meaning": "two-headed drum",
+      "pronunciation": "tahm-BOH-rah"
+    },
+    {
+      "word": "güira",
+      "meaning": "metal percussion scraper",
+      "pronunciation": "GWEE-rah"
+    },
+    {
+      "word": "muñeca",
+      "meaning": "doll",
+      "pronunciation": "moo-NYEH-kah"
+    },
+    {
+      "word": "folclore",
+      "meaning": "folk traditions",
+      "pronunciation": "fohl-KLOH-reh"
+    },
+    {
+      "word": "ritmo",
+      "meaning": "rhythm",
+      "pronunciation": "REET-moh"
+    }
   ],
   "viaje_palabras": [
-    { "word": "malecón", "meaning": "seafront promenade", "pronunciation": "mah-leh-KOHN" },
-    { "word": "motoconcho", "meaning": "motorcycle taxi", "pronunciation": "moh-toh-KOHN-choh" },
-    { "word": "propina", "meaning": "tip", "pronunciation": "proh-PEE-nah" },
-    { "word": "efectivo", "meaning": "cash", "pronunciation": "eh-fehk-TEE-boh" },
-    { "word": "alojamiento", "meaning": "accommodation", "pronunciation": "ah-loh-hah-MYEHN-toh" }
+    {
+      "word": "malecón",
+      "meaning": "seafront promenade",
+      "pronunciation": "mah-leh-KOHN"
+    },
+    {
+      "word": "motoconcho",
+      "meaning": "motorcycle taxi",
+      "pronunciation": "moh-toh-KOHN-choh"
+    },
+    {
+      "word": "propina",
+      "meaning": "tip",
+      "pronunciation": "proh-PEE-nah"
+    },
+    {
+      "word": "efectivo",
+      "meaning": "cash",
+      "pronunciation": "eh-fehk-TEE-boh"
+    },
+    {
+      "word": "alojamiento",
+      "meaning": "accommodation",
+      "pronunciation": "ah-loh-hah-MYEHN-toh"
+    }
   ],
   "india_traveller": {
     "visa_label": "Indian passport: verify first",

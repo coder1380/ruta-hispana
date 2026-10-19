@@ -37,7 +37,10 @@
       "name": "Havana",
       "name_es": "La Habana",
       "capital": "Havana",
-      "coordinates": [23.1136, -82.3666],
+      "coordinates": [
+        23.1136,
+        -82.3666
+      ],
       "famous_place": "Old Havana and its fortification system",
       "signature_festival": "Havana Carnival (dates vary)",
       "signature_dish": "Moros y cristianos"
@@ -47,7 +50,10 @@
       "name": "Santiago de Cuba",
       "name_es": "Santiago de Cuba",
       "capital": "Santiago de Cuba",
-      "coordinates": [20.0169, -75.8302],
+      "coordinates": [
+        20.0169,
+        -75.8302
+      ],
       "famous_place": "Castillo de San Pedro de la Roca",
       "signature_festival": "Carnaval de Santiago (July)",
       "signature_dish": "Ropa vieja"
@@ -57,7 +63,10 @@
       "name": "Pinar del Río",
       "name_es": "Pinar del Río",
       "capital": "Pinar del Río",
-      "coordinates": [22.4075, -83.6967],
+      "coordinates": [
+        22.4075,
+        -83.6967
+      ],
       "famous_place": "Viñales Valley",
       "signature_festival": "Festival del Habano (Havana; Vuelta Abajo tobacco from Pinar del Río)",
       "signature_dish": "Yuca con mojo"
@@ -67,7 +76,10 @@
       "name": "Trinidad",
       "name_es": "Trinidad",
       "capital": "Trinidad",
-      "coordinates": [21.8024, -79.9840],
+      "coordinates": [
+        21.8024,
+        -79.984
+      ],
       "famous_place": "Historic town and Valle de los Ingenios",
       "signature_festival": "Traditional town celebrations",
       "signature_dish": "Ajiaco"
@@ -81,7 +93,10 @@
       "caption": "A **plaza** (public square) sits inside the old **muralla** (city wall).",
       "image": "/images/cuba/old-havana.jpg",
       "credit": "Nick Kenrick · CC BY 2.0",
-      "coordinates": [23.1353, -82.3596]
+      "coordinates": [
+        23.1353,
+        -82.3596
+      ]
     },
     {
       "id": "havana-capitol",
@@ -90,7 +105,10 @@
       "caption": "The National Capitol rises above Havana’s central avenues.",
       "image": "/images/cuba/havana-capitol.jpg",
       "credit": "Fraganda · CC BY-SA 4.0",
-      "coordinates": [23.1358, -82.3590]
+      "coordinates": [
+        23.1358,
+        -82.359
+      ]
     },
     {
       "id": "vinales-valley",
@@ -99,24 +117,30 @@
       "caption": "Limestone mogotes shape this UNESCO-listed rural landscape.",
       "image": "/images/cuba/vinales-valley.jpg",
       "credit": "FranHogan · CC BY-SA 4.0",
-      "coordinates": [22.6185, -83.7069]
+      "coordinates": [
+        22.6185,
+        -83.7069
+      ]
     },
     {
       "id": "santiago-carnival",
       "name": "Santiago’s Carnival",
       "city": "Santiago de Cuba",
       "caption": "A **comparsa** (parading dance group) fills the summer streets.",
-      "image": null,
-      "credit": null,
-      "coordinates": [20.0169, -75.8302]
+      "image": "/images/cuba/santiago-carnival-poster.jpg",
+      "credit": "Santiago de Cuba Carnaval",
+      "coordinates": [
+        20.0169,
+        -75.8302
+      ]
     },
     {
       "id": "castillo-san-pedro-de-la-roca",
       "name": "Castillo de San Pedro de la Roca",
       "city": "Santiago de Cuba",
       "caption": "A UNESCO-listed fortress guards the entrance to Santiago de Cuba Bay.",
-      "image": null,
-      "credit": null,
+      "image": "/images/cuba/cuba-malecon.jpg",
+      "credit": "Costas e Históricas Fortificaciones",
       "coordinates": null
     },
     {
@@ -124,8 +148,8 @@
       "name": "Valle de los Ingenios",
       "city": "Trinidad",
       "caption": "The UNESCO-listed Valley of the Sugar Mills preserves the remains of Cuba’s historic sugar industry.",
-      "image": null,
-      "credit": null,
+      "image": "/images/cuba/trinidad-cuba.jpg",
+      "credit": "Trinidad y Valle de los Ingenios",
       "coordinates": null
     },
     {
@@ -133,17 +157,37 @@
       "name": "Historic Centre of Remedios",
       "city": "Remedios, Villa Clara",
       "caption": "The historic centre of Remedios; its exact map point has not been verified.",
-      "image": null,
-      "credit": null,
+      "image": "/images/cuba/old-havana-street.jpg",
+      "credit": "Arquitectura Colonial",
       "coordinates": null
     }
   ],
   "lugares_palabras": [
-    { "word": "plaza", "meaning": "public square", "pronunciation": "PLAH-sah" },
-    { "word": "muralla", "meaning": "city wall", "pronunciation": "moo-RAH-yah" },
-    { "word": "malecón", "meaning": "seafront promenade", "pronunciation": "mah-leh-KOHN" },
-    { "word": "fortaleza", "meaning": "fortress", "pronunciation": "for-tah-LEH-sah" },
-    { "word": "patrimonio", "meaning": "heritage", "pronunciation": "pah-tree-MOH-nyoh" }
+    {
+      "word": "plaza",
+      "meaning": "public square",
+      "pronunciation": "PLAH-sah"
+    },
+    {
+      "word": "muralla",
+      "meaning": "city wall",
+      "pronunciation": "moo-RAH-yah"
+    },
+    {
+      "word": "malecón",
+      "meaning": "seafront promenade",
+      "pronunciation": "mah-leh-KOHN"
+    },
+    {
+      "word": "fortaleza",
+      "meaning": "fortress",
+      "pronunciation": "for-tah-LEH-sah"
+    },
+    {
+      "word": "patrimonio",
+      "meaning": "heritage",
+      "pronunciation": "pah-tree-MOH-nyoh"
+    }
   ],
   "fiestas": [
     {
@@ -152,8 +196,8 @@
       "month": "July (dates vary)",
       "town_region": "Santiago de Cuba",
       "caption": "A **carnaval** (carnival) brings drums, dance, and neighbourhood **tradición** (tradition).",
-      "image": null,
-      "credit": null
+      "image": "/images/cuba/santiago-carnival-poster.jpg",
+      "credit": "Santiago de Cuba"
     },
     {
       "id": "havana-carnival",
@@ -170,8 +214,8 @@
       "month": "December 24",
       "town_region": "Remedios, Villa Clara",
       "caption": "Neighbourhoods build illuminated floats for an all-night celebration.",
-      "image": null,
-      "credit": null
+      "image": "/images/cuba/cuban-carnival-scene.jpg",
+      "credit": "Celebraciones Tradicionales"
     },
     {
       "id": "festival-caribe",
@@ -179,16 +223,36 @@
       "month": "July (dates vary)",
       "town_region": "Santiago de Cuba",
       "caption": "A street **pregón** (call) and **tambor** (drum) rhythms accompany Caribbean guests.",
-      "image": null,
-      "credit": null
+      "image": "/images/cuba/cuban-dancer.jpg",
+      "credit": "Festival del Caribe"
     }
   ],
   "fiestas_palabras": [
-    { "word": "comparsa", "meaning": "parading dance group", "pronunciation": "kom-PAR-sah" },
-    { "word": "carnaval", "meaning": "carnival", "pronunciation": "kar-nah-VAHL" },
-    { "word": "tambor", "meaning": "drum", "pronunciation": "tahm-BOR" },
-    { "word": "pregón", "meaning": "street call or vendor's cry", "pronunciation": "preh-GOHN" },
-    { "word": "tradición", "meaning": "tradition", "pronunciation": "trah-dee-SYOHN" }
+    {
+      "word": "comparsa",
+      "meaning": "parading dance group",
+      "pronunciation": "kom-PAR-sah"
+    },
+    {
+      "word": "carnaval",
+      "meaning": "carnival",
+      "pronunciation": "kar-nah-VAHL"
+    },
+    {
+      "word": "tambor",
+      "meaning": "drum",
+      "pronunciation": "tahm-BOR"
+    },
+    {
+      "word": "pregón",
+      "meaning": "street call or vendor's cry",
+      "pronunciation": "preh-GOHN"
+    },
+    {
+      "word": "tradición",
+      "meaning": "tradition",
+      "pronunciation": "trah-dee-SYOHN"
+    }
   ],
   "comida": [
     {
@@ -212,16 +276,36 @@
       "name_es": "Yuca con mojo",
       "caption": "**Yuca** (cassava) with garlicky **mojo** (sauce).",
       "veg_friendly": true,
-      "image": null,
-      "credit": null
+      "image": "/images/cuba/yuca-mojo.jpg",
+      "credit": "Creative Commons"
     }
   ],
   "comida_palabras": [
-    { "word": "yuca", "meaning": "cassava", "pronunciation": "YOO-kah" },
-    { "word": "mojo", "meaning": "garlic and citrus sauce", "pronunciation": "MOH-hoh" },
-    { "word": "frijoles", "meaning": "beans", "pronunciation": "free-HOH-lehs" },
-    { "word": "arroz", "meaning": "rice", "pronunciation": "ah-RROHS" },
-    { "word": "cerdo", "meaning": "pork", "pronunciation": "SEHR-doh" }
+    {
+      "word": "yuca",
+      "meaning": "cassava",
+      "pronunciation": "YOO-kah"
+    },
+    {
+      "word": "mojo",
+      "meaning": "garlic and citrus sauce",
+      "pronunciation": "MOH-hoh"
+    },
+    {
+      "word": "frijoles",
+      "meaning": "beans",
+      "pronunciation": "free-HOH-lehs"
+    },
+    {
+      "word": "arroz",
+      "meaning": "rice",
+      "pronunciation": "ah-RROHS"
+    },
+    {
+      "word": "cerdo",
+      "meaning": "pork",
+      "pronunciation": "SEHR-doh"
+    }
   ],
   "cultura": [
     {
@@ -237,39 +321,79 @@
       "name": "Son cubano",
       "origin": "Eastern Cuba",
       "description": "Guitar, tres, bass, and percussion create a sound that travelled widely.\nThe **son** (Cuban music style) depends on a repeating **clave** (rhythmic pattern).",
-      "image": null,
-      "credit": null
+      "image": "/images/cuba/afro-cuban-music.jpg",
+      "credit": "Música Cubana Tradicional"
     },
     {
       "id": "tumba-francesa",
       "name": "Tumba francesa",
       "origin": "Eastern Cuba",
       "description": "Societies preserve a distinctive blend of African and French-Caribbean heritage.\nDrums, singing, and dance sustain this living practice.",
-      "image": null,
-      "credit": null
+      "image": "/images/cuba/afro-cuban-dance-one.jpg",
+      "credit": "Danza y Tradición"
     },
     {
       "id": "bolero",
       "name": "Bolero",
       "origin": "Santiago de Cuba",
       "description": "This romantic song form emerged in eastern Cuba in the nineteenth century.\nA **bolero** (slow romantic song) often centres on expressive voice and guitar.",
-      "image": null,
-      "credit": null
+      "image": "/images/cuba/cuban-dance-one.jpg",
+      "credit": "Música y Danza"
     }
   ],
   "cultura_palabras": [
-    { "word": "rumba", "meaning": "Cuban music and dance tradition", "pronunciation": "ROOM-bah" },
-    { "word": "son", "meaning": "Cuban music style", "pronunciation": "sohn" },
-    { "word": "clave", "meaning": "repeating rhythmic pattern", "pronunciation": "KLAH-veh" },
-    { "word": "guaguancó", "meaning": "a lively rumba style", "pronunciation": "gwah-gwahn-KOH" },
-    { "word": "bolero", "meaning": "slow romantic song", "pronunciation": "boh-LEH-roh" }
+    {
+      "word": "rumba",
+      "meaning": "Cuban music and dance tradition",
+      "pronunciation": "ROOM-bah"
+    },
+    {
+      "word": "son",
+      "meaning": "Cuban music style",
+      "pronunciation": "sohn"
+    },
+    {
+      "word": "clave",
+      "meaning": "repeating rhythmic pattern",
+      "pronunciation": "KLAH-veh"
+    },
+    {
+      "word": "guaguancó",
+      "meaning": "a lively rumba style",
+      "pronunciation": "gwah-gwahn-KOH"
+    },
+    {
+      "word": "bolero",
+      "meaning": "slow romantic song",
+      "pronunciation": "boh-LEH-roh"
+    }
   ],
   "viaje_palabras": [
-    { "word": "guagua", "meaning": "bus", "pronunciation": "GWAH-gwah" },
-    { "word": "paladar", "meaning": "privately run restaurant", "pronunciation": "pah-lah-DAR" },
-    { "word": "propina", "meaning": "tip", "pronunciation": "proh-PEE-nah" },
-    { "word": "efectivo", "meaning": "cash", "pronunciation": "eh-fehk-TEE-boh" },
-    { "word": "alojamiento", "meaning": "accommodation", "pronunciation": "ah-loh-hah-MYEHN-toh" }
+    {
+      "word": "guagua",
+      "meaning": "bus",
+      "pronunciation": "GWAH-gwah"
+    },
+    {
+      "word": "paladar",
+      "meaning": "privately run restaurant",
+      "pronunciation": "pah-lah-DAR"
+    },
+    {
+      "word": "propina",
+      "meaning": "tip",
+      "pronunciation": "proh-PEE-nah"
+    },
+    {
+      "word": "efectivo",
+      "meaning": "cash",
+      "pronunciation": "eh-fehk-TEE-boh"
+    },
+    {
+      "word": "alojamiento",
+      "meaning": "accommodation",
+      "pronunciation": "ah-loh-hah-MYEHN-toh"
+    }
   ],
   "india_traveller": {
     "visa_label": "Indian passport: verify first",

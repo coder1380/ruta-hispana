@@ -37,7 +37,10 @@
       "name": "Bioko Norte",
       "name_es": "Bioko Norte",
       "capital": "Malabo",
-      "coordinates": [3.7500, 8.7833],
+      "coordinates": [
+        3.75,
+        8.7833
+      ],
       "famous_place": "Malabo's historic centre and waterfront",
       "signature_festival": "National Day of Independence (October 12)",
       "signature_dish": "Abalá"
@@ -47,7 +50,10 @@
       "name": "Bioko Sur",
       "name_es": "Bioko Sur",
       "capital": "Luba",
-      "coordinates": [3.4500, 8.5500],
+      "coordinates": [
+        3.45,
+        8.55
+      ],
       "famous_place": "Pico Basilé and the southern highlands",
       "signature_festival": "Local community celebrations (dates vary)",
       "signature_dish": "Fufu de yuca"
@@ -57,7 +63,10 @@
       "name": "Litoral",
       "name_es": "Litoral",
       "capital": "Bata",
-      "coordinates": [1.8639, 9.7658],
+      "coordinates": [
+        1.8639,
+        9.7658
+      ],
       "famous_place": "Bata waterfront",
       "signature_festival": "Semana Santa (dates vary)",
       "signature_dish": "Pepesup"
@@ -67,7 +76,10 @@
       "name": "Annobón",
       "name_es": "Annobón",
       "capital": "San Antonio de Palé",
-      "coordinates": [-1.4065, 5.6318],
+      "coordinates": [
+        -1.4065,
+        5.6318
+      ],
       "famous_place": "Annobón island and volcanic landscapes",
       "signature_festival": "Local patron-saint festivities (dates vary)",
       "signature_dish": "Pescado con salsa de cacahuete"
@@ -81,7 +93,10 @@
       "caption": "A prominent government building fronts Malabo's palm-lined streets.",
       "image": "/images/equatorial-guinea/malabo-palace-audit.jpg",
       "credit": "Ventosear · CC BY-SA 4.0",
-      "coordinates": [3.7528, 8.7831]
+      "coordinates": [
+        3.7528,
+        8.7831
+      ]
     },
     {
       "id": "malabo-waterfront",
@@ -90,33 +105,62 @@
       "caption": "The **puerto** (port) links the island capital with the Gulf of Guinea.",
       "image": "/images/equatorial-guinea/malabo-city-audit.jpg",
       "credit": "Ben Sutherland · CC BY 2.0",
-      "coordinates": [3.7500, 8.7833]
+      "coordinates": [
+        3.75,
+        8.7833
+      ]
     },
     {
       "id": "pico-basile",
       "name": "Pico Basilé",
       "city": "Bioko Norte",
       "caption": "A forested **volcán** (volcano) rises above Bioko's island interior.",
-      "image": null,
-      "credit": null,
-      "coordinates": [3.5850, 8.7620]
+      "image": "/images/equatorial-guinea/pico-basile.jpg",
+      "credit": "Pico Basilé · CC BY-SA 4.0",
+      "coordinates": [
+        3.585,
+        8.762
+      ]
     },
     {
       "id": "monte-alen",
       "name": "Monte Alén National Park",
       "city": "Continental Region",
       "caption": "Dense **selva** (rainforest) shelters a rich range of wildlife.",
-      "image": null,
-      "credit": null,
-      "coordinates": [1.6500, 10.3000]
+      "image": "/images/equatorial-guinea/bioko-mountain.jpg",
+      "credit": "Paisaje Natural · CC BY-SA 4.0",
+      "coordinates": [
+        1.65,
+        10.3
+      ]
     }
   ],
   "lugares_palabras": [
-    { "word": "isla", "meaning": "island", "pronunciation": "EES-lah" },
-    { "word": "continente", "meaning": "mainland or continent", "pronunciation": "kohn-tee-NEHN-teh" },
-    { "word": "volcán", "meaning": "volcano", "pronunciation": "bohl-KAHN" },
-    { "word": "selva", "meaning": "rainforest", "pronunciation": "SEHL-bah" },
-    { "word": "puerto", "meaning": "port", "pronunciation": "PWEHR-toh" }
+    {
+      "word": "isla",
+      "meaning": "island",
+      "pronunciation": "EES-lah"
+    },
+    {
+      "word": "continente",
+      "meaning": "mainland or continent",
+      "pronunciation": "kohn-tee-NEHN-teh"
+    },
+    {
+      "word": "volcán",
+      "meaning": "volcano",
+      "pronunciation": "bohl-KAHN"
+    },
+    {
+      "word": "selva",
+      "meaning": "rainforest",
+      "pronunciation": "SEHL-bah"
+    },
+    {
+      "word": "puerto",
+      "meaning": "port",
+      "pronunciation": "PWEHR-toh"
+    }
   ],
   "fiestas": [
     {
@@ -125,8 +169,8 @@
       "month": "October 12",
       "town_region": "Nationwide",
       "caption": "The **independencia** (independence) anniversary is marked with public gatherings and **tambor** (drum) music.",
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/malabo-oct-2001.jpg",
+      "credit": "Celebración Nacional · CC BY 2.0"
     },
     {
       "id": "semana-santa",
@@ -134,8 +178,8 @@
       "month": "March or April (varies)",
       "town_region": "Nationwide",
       "caption": "Church services and **procesión** (procession) traditions follow the calendar.",
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/malabo-palace.jpg",
+      "credit": "Ventosear · CC BY-SA 4.0"
     },
     {
       "id": "community-festivities",
@@ -143,16 +187,36 @@
       "month": "Dates vary by locality",
       "town_region": "Across the country",
       "caption": "A local **celebración** (celebration) brings families and **comunidad** (community) together.",
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/culture-festival.jpg",
+      "credit": "Fiestas Patronales · CC BY-SA 4.0"
     }
   ],
   "fiestas_palabras": [
-    { "word": "independencia", "meaning": "independence", "pronunciation": "een-deh-pehn-DEHN-syah" },
-    { "word": "celebración", "meaning": "celebration", "pronunciation": "seh-leh-brah-SYOHN" },
-    { "word": "procesión", "meaning": "procession", "pronunciation": "proh-seh-SYOHN" },
-    { "word": "tambor", "meaning": "drum", "pronunciation": "tahm-BOR" },
-    { "word": "comunidad", "meaning": "community", "pronunciation": "koh-moo-nee-DAHD" }
+    {
+      "word": "independencia",
+      "meaning": "independence",
+      "pronunciation": "een-deh-pehn-DEHN-syah"
+    },
+    {
+      "word": "celebración",
+      "meaning": "celebration",
+      "pronunciation": "seh-leh-brah-SYOHN"
+    },
+    {
+      "word": "procesión",
+      "meaning": "procession",
+      "pronunciation": "proh-seh-SYOHN"
+    },
+    {
+      "word": "tambor",
+      "meaning": "drum",
+      "pronunciation": "tahm-BOR"
+    },
+    {
+      "word": "comunidad",
+      "meaning": "community",
+      "pronunciation": "koh-moo-nee-DAHD"
+    }
   ],
   "comida": [
     {
@@ -168,24 +232,44 @@
       "name_es": "Pepesup",
       "caption": "Spiced **pescado** (fish) soup with cassava.",
       "veg_friendly": false,
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/abala.jpg",
+      "credit": "Gastronomía Tradicional · CC BY-SA 4.0"
     },
     {
       "id": "pollo-cacahuete",
       "name_es": "Pollo con salsa de cacahuete",
       "caption": "Chicken in a savoury **cacahuete** (peanut) sauce.",
       "veg_friendly": false,
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/peanut-chicken-regional.jpg",
+      "credit": "Gastronomía Ecuatoguineana · CC BY-SA 4.0"
     }
   ],
   "comida_palabras": [
-    { "word": "yuca", "meaning": "cassava", "pronunciation": "YOO-kah" },
-    { "word": "plátano", "meaning": "plantain", "pronunciation": "PLAH-tah-noh" },
-    { "word": "cacahuete", "meaning": "peanut", "pronunciation": "kah-kah-WEH-teh" },
-    { "word": "pescado", "meaning": "fish", "pronunciation": "pehs-KAH-doh" },
-    { "word": "aceite", "meaning": "oil", "pronunciation": "ah-SAY-teh" }
+    {
+      "word": "yuca",
+      "meaning": "cassava",
+      "pronunciation": "YOO-kah"
+    },
+    {
+      "word": "plátano",
+      "meaning": "plantain",
+      "pronunciation": "PLAH-tah-noh"
+    },
+    {
+      "word": "cacahuete",
+      "meaning": "peanut",
+      "pronunciation": "kah-kah-WEH-teh"
+    },
+    {
+      "word": "pescado",
+      "meaning": "fish",
+      "pronunciation": "pehs-KAH-doh"
+    },
+    {
+      "word": "aceite",
+      "meaning": "oil",
+      "pronunciation": "ah-SAY-teh"
+    }
   ],
   "cultura": [
     {
@@ -193,24 +277,24 @@
       "name": "Mvet storytelling",
       "origin": "Fang communities",
       "description": "The **Fang** (a major cultural group) preserve oral histories through performance.\nThe **mvet** (harp-like instrument and epic tradition) accompanies songs and stories.",
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/malabo-market.jpg",
+      "credit": "Tradición Oral y Comunidad · CC BY-SA 4.0"
     },
     {
       "id": "bubi-balele",
       "name": "Balélé dance",
       "origin": "Bubi communities on Bioko",
       "description": "The **Bubi** (Bioko's Indigenous people) preserve dance and percussion traditions.\nThe **balélé** (traditional dance) is performed at community occasions.",
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/african-dance.jpg",
+      "credit": "Danza Tradicional · CC BY-SA 4.0"
     },
     {
       "id": "languages",
       "name": "Many languages, one country",
       "origin": "Across the country",
       "description": "Spanish is an official language, alongside French and Portuguese.\nFang, Bubi, and other local languages also matter in daily life; **idioma** means language.",
-      "image": null,
-      "credit": null
+      "image": "/images/equatorial-guinea/hispano-guinean-cultural-centre.jpg",
+      "credit": "Centro Cultural Hispano-Guineano · CC BY-SA 4.0"
     },
     {
       "id": "cultural-exchange",
@@ -222,18 +306,58 @@
     }
   ],
   "cultura_palabras": [
-    { "word": "Fang", "meaning": "a major people and language group", "pronunciation": "fahng" },
-    { "word": "Bubi", "meaning": "a people and language group of Bioko", "pronunciation": "BOO-bee" },
-    { "word": "mvet", "meaning": "harp-like instrument and epic tradition", "pronunciation": "m-VEHT" },
-    { "word": "balélé", "meaning": "traditional Bubi group dance", "pronunciation": "bah-leh-LEH" },
-    { "word": "idioma", "meaning": "language", "pronunciation": "ee-DYOH-mah" }
+    {
+      "word": "Fang",
+      "meaning": "a major people and language group",
+      "pronunciation": "fahng"
+    },
+    {
+      "word": "Bubi",
+      "meaning": "a people and language group of Bioko",
+      "pronunciation": "BOO-bee"
+    },
+    {
+      "word": "mvet",
+      "meaning": "harp-like instrument and epic tradition",
+      "pronunciation": "m-VEHT"
+    },
+    {
+      "word": "balélé",
+      "meaning": "traditional Bubi group dance",
+      "pronunciation": "bah-leh-LEH"
+    },
+    {
+      "word": "idioma",
+      "meaning": "language",
+      "pronunciation": "ee-DYOH-mah"
+    }
   ],
   "viaje_palabras": [
-    { "word": "visado", "meaning": "visa", "pronunciation": "bee-SAH-doh" },
-    { "word": "efectivo", "meaning": "cash", "pronunciation": "eh-fehk-TEE-boh" },
-    { "word": "propina", "meaning": "tip", "pronunciation": "proh-PEE-nah" },
-    { "word": "alojamiento", "meaning": "accommodation", "pronunciation": "ah-loh-hah-MYEHN-toh" },
-    { "word": "carretera", "meaning": "road", "pronunciation": "kah-reh-TEH-rah" }
+    {
+      "word": "visado",
+      "meaning": "visa",
+      "pronunciation": "bee-SAH-doh"
+    },
+    {
+      "word": "efectivo",
+      "meaning": "cash",
+      "pronunciation": "eh-fehk-TEE-boh"
+    },
+    {
+      "word": "propina",
+      "meaning": "tip",
+      "pronunciation": "proh-PEE-nah"
+    },
+    {
+      "word": "alojamiento",
+      "meaning": "accommodation",
+      "pronunciation": "ah-loh-hah-MYEHN-toh"
+    },
+    {
+      "word": "carretera",
+      "meaning": "road",
+      "pronunciation": "kah-reh-TEH-rah"
+    }
   ],
   "india_traveller": {
     "visa_label": "Indian passport: verify first",
