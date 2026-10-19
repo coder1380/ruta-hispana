@@ -36,7 +36,7 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
               Consejos para Viajeros de la India · Indian Traveller&apos;s Guide
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#57524E] max-w-2xl font-body">
-              Logistics for students and travelers arriving from India: Schengen visa realities, air routes, INR budget estimations, and navigating traditional menus as a strict vegetarian.
+              Entry requirements, route guidance, source-based INR budget information, and vegetarian dining notes for travelers from India.
             </p>
           </div>
         </div>
@@ -51,7 +51,7 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
                   <FileText className="w-5 h-5" />
                 </span>
                 <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#FCFAF6] border border-[#E6DCCD] text-[#943A1E]">
-                  Schengen (Tipo C)
+                  {data.visa_label ?? 'Check visa requirements'}
                 </span>
               </div>
               <h3 className="font-display text-xl font-bold text-[#1C1917] mb-2">
@@ -62,8 +62,21 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
               </p>
             </div>
             <div className="mt-5 pt-3 border-t border-[#E6DCCD] flex items-center justify-between text-xs text-[#57524E]">
-              <span>BLS International Centres</span>
-              <span className="text-[#943A1E] font-semibold">Book 6–8 weeks ahead</span>
+              {data.visa_official_url ? (
+                <a
+                  className="underline underline-offset-2"
+                  href={data.visa_official_url}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {data.visa_official_label ?? 'Official guidance'}
+                </a>
+              ) : (
+                <span>Check with the relevant consular authority</span>
+              )}
+              <span className="text-[#943A1E] font-semibold">
+                {data.visa_timing_note ?? 'Recheck before travel'}
+              </span>
             </div>
           </div>
 
@@ -75,7 +88,7 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
                   <Plane className="w-5 h-5" />
                 </span>
                 <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#FCFAF6] border border-[#E6DCCD] text-[#57524E]">
-                  11–13 Horas
+                  {data.flight_duration ?? 'Not verified'}
                 </span>
               </div>
               <h3 className="font-display text-xl font-bold text-[#1C1917] mb-2">
@@ -86,8 +99,10 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
               </p>
             </div>
             <div className="mt-5 pt-3 border-t border-[#E6DCCD] flex items-center justify-between text-xs text-[#57524E]">
-              <span>DEL ➔ MAD / BCN</span>
-              <span className="text-[#C25B38] font-semibold">Air India / Gulf Carriers</span>
+              <span>{data.flight_route ?? 'Route not verified'}</span>
+              <span className="text-[#C25B38] font-semibold">
+                {data.flight_carriers ?? 'Carriers not verified'}
+              </span>
             </div>
           </div>
 
@@ -99,19 +114,19 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
                   <IndianRupee className="w-5 h-5 text-[#A66E0C]" />
                 </span>
                 <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-[#FCFAF6] border border-[#E6DCCD] text-[#A66E0C]">
-                  Coste Diario
+                  {data.cost_daily_range ?? 'Range not verified'}
                 </span>
               </div>
               <h3 className="font-display text-xl font-bold text-[#1C1917] mb-2">
                 Presupuesto en Rupias · Daily Costs in INR
               </h3>
               <p className="text-xs sm:text-sm text-[#1C1917] font-body leading-relaxed">
-                {data.cost_per_day_inr}
+                {data.cost_per_day_inr ?? 'No source-based daily cost estimate is available.'}
               </p>
             </div>
             <div className="mt-5 pt-3 border-t border-[#E6DCCD] flex items-center justify-between text-xs text-[#57524E]">
-              <span>Approx. €90–150 / day</span>
-              <span className="text-[#4A582F] font-semibold">Value for Students</span>
+              <span>{data.cost_reference_note ?? 'Check current local prices'}</span>
+              <span className="text-[#4A582F] font-semibold">INR</span>
             </div>
           </div>
 
@@ -134,7 +149,9 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
               </p>
             </div>
             <div className="mt-5 pt-3 border-t border-[#E6DCCD] flex items-center justify-between text-xs text-[#354020]">
-              <span className="font-bold">Frase clave: &ldquo;Sin carne ni jamón&rdquo;</span>
+              <span className="font-bold">
+                Frase clave: &ldquo;{data.key_food_phrase ?? 'Sin carne ni pescado, por favor'}&rdquo;
+              </span>
               <CheckCircle2 className="w-4 h-4 text-[#4A582F]" />
             </div>
           </div>

@@ -93,14 +93,22 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
                   {/* FRONT FACE */}
                   <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl overflow-hidden border border-sand bg-cream flex flex-col justify-between">
                     <div className="relative w-full h-full overflow-hidden">
-                      <Image
-                        src={dish.image}
-                        alt={dish.name_es}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
+                      {dish.image ? (
+                        <>
+                          <Image
+                            src={dish.image}
+                            alt={dish.name_es}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
+                        </>
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center text-sm text-ink/60">
+                          No verified image available
+                        </div>
+                      )}
 
                       {/* Dietary Tag */}
                       <div className="absolute top-3.5 right-3.5 z-10">

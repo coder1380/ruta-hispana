@@ -144,6 +144,8 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
 
         // 2. Illustrated Landmark Pins that drop in one after another on load
         landmarks.forEach((lm, index) => {
+          if (!lm.coordinates) return;
+
           const delayMs = index * 120 + 150;
           const pinHtml = `
             <div style="

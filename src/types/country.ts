@@ -9,9 +9,9 @@ export interface LandmarkItem {
   name: string;
   city: string;
   caption: string; // Max 12 words
-  image: string;
-  credit: string;
-  coordinates: [number, number];
+  image: string | null;
+  credit: string | null;
+  coordinates: [number, number] | null;
   tagline?: string;
 }
 
@@ -21,8 +21,8 @@ export interface FestivalItem {
   month: string;
   town_region: string;
   caption: string; // Max 12 words
-  image: string;
-  credit: string;
+  image: string | null;
+  credit: string | null;
 }
 
 export interface FoodTileItem {
@@ -30,8 +30,8 @@ export interface FoodTileItem {
   name_es: string;
   caption: string; // Max 8 words
   veg_friendly: boolean;
-  image: string;
-  credit: string;
+  image: string | null;
+  credit: string | null;
 }
 
 export interface CultureTraditionItem {
@@ -39,8 +39,8 @@ export interface CultureTraditionItem {
   name: string;
   origin: string;
   description: string; // 2 lines
-  image: string;
-  credit: string;
+  image: string | null;
+  credit: string | null;
 }
 
 export interface RegionSummary {
@@ -130,18 +130,18 @@ export interface TimelineEvent {
 export interface IndiaTravellerGuide {
   visa_note: string;
   flight_note: string;
-  cost_per_day_inr: string;
+  cost_per_day_inr: string | null;
   veg_tips: string;
   visa_label?: string;
   visa_official_url?: string;
   visa_official_label?: string;
   visa_application_note?: string;
   visa_timing_note?: string;
-  flight_duration?: string;
-  flight_route?: string;
-  flight_carriers?: string;
-  cost_daily_range?: string;
-  cost_reference_note?: string;
+  flight_duration?: string | null;
+  flight_route?: string | null;
+  flight_carriers?: string | null;
+  cost_daily_range?: string | null;
+  cost_reference_note?: string | null;
   key_food_phrase?: string;
 }
 

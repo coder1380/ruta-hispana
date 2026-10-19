@@ -1,0 +1,368 @@
+{
+  "id": "dominican-republic",
+  "name": "Dominican Republic",
+  "name_es": "República Dominicana",
+  "capital": "Santo Domingo",
+  "currency": "Dominican peso (DOP)",
+  "best_time_to_visit": "Generally November–April; check current weather and hurricane advisories",
+  "hero_image": "/images/dominican-republic/dominican-landscape.jpg",
+  "hero_credit": "Dominican Republic · colros · CC BY 2.0",
+  "intro": "The Dominican Republic pairs Caribbean **costa** (coast) and mountain scenery with a lively musical heritage. Santo Domingo's **malecón** (seafront avenue), historic **muralla** (city wall), and **bahía** (bay) frame a colonial quarter shaped by centuries of exchange.",
+  "fun_fact": "UNESCO describes Santo Domingo's early grid plan as a model that influenced city layouts across the Americas.",
+  "daily_phrases": [
+    {
+      "es": "¿Dónde está la parada de guagua?",
+      "en": "Where is the bus stop?",
+      "pronunciation": "DOHN-deh ehs-TAH lah pah-RAH-dah deh GWAH-gwah"
+    },
+    {
+      "es": "¿Cuánto cuesta esto?",
+      "en": "How much does this cost?",
+      "pronunciation": "KWAN-toh KWEHS-tah EHS-toh"
+    },
+    {
+      "es": "Soy vegetariano/a; sin carne, por favor.",
+      "en": "I am vegetarian; no meat, please.",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh, seen KAR-neh por fah-VOR"
+    },
+    {
+      "es": "¿Aceptan tarjeta?",
+      "en": "Do you accept cards?",
+      "pronunciation": "ah-SEHP-tahn tar-HEH-tah"
+    }
+  ],
+  "regions": [
+    {
+      "id": "santo-domingo",
+      "name": "Santo Domingo",
+      "name_es": "Santo Domingo",
+      "capital": "Santo Domingo",
+      "coordinates": [18.4861, -69.9312],
+      "famous_place": "Colonial City of Santo Domingo",
+      "signature_festival": "Santo Domingo Carnival (February)",
+      "signature_dish": "La Bandera Dominicana"
+    },
+    {
+      "id": "santiago",
+      "name": "Santiago",
+      "name_es": "Santiago de los Caballeros",
+      "capital": "Santiago de los Caballeros",
+      "coordinates": [19.4517, -70.6970],
+      "famous_place": "Monumento a los Héroes de la Restauración",
+      "signature_festival": "Carnaval de Santiago (February)",
+      "signature_dish": "Mangú"
+    },
+    {
+      "id": "la-altagracia",
+      "name": "La Altagracia",
+      "name_es": "La Altagracia",
+      "capital": "Higüey",
+      "coordinates": [18.6150, -68.7070],
+      "famous_place": "Basilica of Our Lady of Altagracia",
+      "signature_festival": "Our Lady of Altagracia Day (January 21)",
+      "signature_dish": "Pescado con coco"
+    },
+    {
+      "id": "samana",
+      "name": "Samaná",
+      "name_es": "Samaná",
+      "capital": "Santa Bárbara de Samaná",
+      "coordinates": [19.2056, -69.3369],
+      "famous_place": "Los Haitises National Park",
+      "signature_festival": "Carnaval and patron-saint festivities",
+      "signature_dish": "Sancocho"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "colonial-city",
+      "name": "Colonial City",
+      "city": "Santo Domingo",
+      "caption": "A UNESCO-listed **ciudad colonial** (colonial city) preserves an early American grid.",
+      "image": "/images/dominican-republic/santo-domingo-cathedral.jpg",
+      "credit": "Traveller-Reini · CC BY-SA 2.0",
+      "coordinates": [18.4735, -69.8845]
+    },
+    {
+      "id": "cathedral",
+      "name": "Catedral Primada de América",
+      "city": "Santo Domingo",
+      "caption": "The **catedral** (cathedral) stands beside the old quarter's historic lanes.",
+      "image": "/images/dominican-republic/santo-domingo-cathedral.jpg",
+      "credit": "Traveller-Reini · CC BY-SA 2.0",
+      "coordinates": [18.4727, -69.8836]
+    },
+    {
+      "id": "los-haitises",
+      "name": "Los Haitises National Park",
+      "city": "Samaná Bay",
+      "caption": "Mangroves, limestone islets, and caves define this protected landscape.",
+      "image": "/images/dominican-republic/los-haitises.jpg",
+      "credit": "Anton Bielousov · CC BY-SA 3.0",
+      "coordinates": [19.1130, -69.4740]
+    },
+    {
+      "id": "pico-duarte",
+      "name": "Pico Duarte",
+      "city": "Cordillera Central",
+      "caption": "The country's highest **montaña** (mountain) rises above pine-covered trails.",
+      "image": "/images/dominican-republic/pico-duarte.jpg",
+      "credit": "Adrian Michael · CC BY-SA 3.0",
+      "coordinates": [19.0290, -70.9980]
+    },
+    {
+      "id": "punta-cana",
+      "name": "Punta Cana Coast",
+      "city": "La Altagracia",
+      "caption": "White-sand beaches are a signature draw of the eastern tourism region.",
+      "image": "/images/dominican-republic/dominican-landscape.jpg",
+      "credit": "colros · CC BY 2.0",
+      "coordinates": [18.5601, -68.3725]
+    }
+  ],
+  "lugares_palabras": [
+    { "word": "ciudad colonial", "meaning": "colonial city", "pronunciation": "syoo-DAHD koh-loh-NYAHL" },
+    { "word": "catedral", "meaning": "cathedral", "pronunciation": "kah-teh-DRAHL" },
+    { "word": "costa", "meaning": "coast", "pronunciation": "KOH-stah" },
+    { "word": "montaña", "meaning": "mountain", "pronunciation": "mon-TAH-nyah" },
+    { "word": "bahía", "meaning": "bay", "pronunciation": "bah-EE-ah" }
+  ],
+  "fiestas": [
+    {
+      "id": "santo-domingo-carnival",
+      "name": "Carnaval de Santo Domingo",
+      "month": "February",
+      "town_region": "Santo Domingo",
+      "caption": "A **carnaval** (carnival) fills avenues with costumes and **comparsa** (parade troupe).",
+      "image": "/images/dominican-republic/merengue-dance.jpg",
+      "credit": "Javier10 · CC BY-SA 3.0"
+    },
+    {
+      "id": "santiago-carnival",
+      "name": "Carnaval de Santiago",
+      "month": "February",
+      "town_region": "Santiago de los Caballeros",
+      "caption": "Colourful **diablos cojuelos** (limping devils) are a familiar carnival character.",
+      "image": "/images/dominican-republic/dominican-dolls.jpg",
+      "credit": "Jose Elias · CC BY 2.0"
+    },
+    {
+      "id": "merengue-festival",
+      "name": "Festival del Merengue",
+      "month": "Dates vary",
+      "town_region": "Santo Domingo",
+      "caption": "Live bands bring **merengue** (national music and dance) to public stages.",
+      "image": "/images/dominican-republic/merengue-dance.jpg",
+      "credit": "Javier10 · CC BY-SA 3.0"
+    },
+    {
+      "id": "altagracia-day",
+      "name": "Día de Nuestra Señora de la Altagracia",
+      "month": "January 21",
+      "town_region": "Higüey",
+      "caption": "Pilgrims gather for a major religious celebration in the eastern region.",
+      "image": "/images/dominican-republic/santo-domingo-cathedral.jpg",
+      "credit": "Traveller-Reini · CC BY-SA 2.0"
+    }
+  ],
+  "fiestas_palabras": [
+    { "word": "carnaval", "meaning": "carnival", "pronunciation": "kar-nah-VAHL" },
+    { "word": "comparsa", "meaning": "parade or dance troupe", "pronunciation": "kom-PAR-sah" },
+    { "word": "merengue", "meaning": "Dominican music and dance", "pronunciation": "meh-REHN-geh" },
+    { "word": "bachata", "meaning": "Dominican guitar-led music and dance", "pronunciation": "bah-CHAH-tah" },
+    { "word": "diablos cojuelos", "meaning": "limping devils, a carnival character", "pronunciation": "DYAH-blos koh-HWEH-los" }
+  ],
+  "comida": [
+    {
+      "id": "mangu",
+      "name_es": "Mangú",
+      "caption": "**Mangú** (plantain mash) uses **plátano** (plantain); omit meat toppings.",
+      "veg_friendly": true,
+      "image": "/images/dominican-republic/mangu.jpg",
+      "credit": "Ll1324 · CC0"
+    },
+    {
+      "id": "la-bandera",
+      "name_es": "La Bandera Dominicana",
+      "caption": "Rice, **habichuelas** (beans), meat, and fried plantain.",
+      "veg_friendly": false,
+      "image": "/images/dominican-republic/dominican-food.jpg",
+      "credit": "Funcheta · CC BY-SA 4.0"
+    },
+    {
+      "id": "sancocho",
+      "name_es": "Sancocho",
+      "caption": "A hearty **sancocho** (stew) combines roots, vegetables, and meat.",
+      "veg_friendly": false,
+      "image": "/images/dominican-republic/sancocho.jpg",
+      "credit": "LittleT889 · CC BY-SA 4.0"
+    }
+  ],
+  "comida_palabras": [
+    { "word": "mangú", "meaning": "mashed green plantains", "pronunciation": "mahn-GOO" },
+    { "word": "plátano", "meaning": "plantain", "pronunciation": "PLAH-tah-noh" },
+    { "word": "yuca", "meaning": "cassava", "pronunciation": "YOO-kah" },
+    { "word": "habichuelas", "meaning": "beans", "pronunciation": "ah-bee-CHWEH-lahs" },
+    { "word": "sancocho", "meaning": "hearty stew", "pronunciation": "sahn-KOH-choh" }
+  ],
+  "cultura": [
+    {
+      "id": "merengue",
+      "name": "Merengue",
+      "origin": "Across the Dominican Republic",
+      "description": "A social music-and-dance tradition recognized by UNESCO as part of national identity.\nThe **tambora** (two-headed drum) and **güira** (metal scraper) drive its rhythm.",
+      "image": "/images/dominican-republic/merengue-dance.jpg",
+      "credit": "Javier10 · CC BY-SA 3.0"
+    },
+    {
+      "id": "bachata",
+      "name": "Bachata",
+      "origin": "Urban Dominican communities",
+      "description": "Guitar-led songs grew from local social settings into a global dance form.\n**Bachata** blends guitar, bass, percussion, and close partner steps.",
+      "image": "/images/dominican-republic/merengue-dance.jpg",
+      "credit": "Javier10 · CC BY-SA 3.0"
+    },
+    {
+      "id": "faceless-dolls",
+      "name": "Muñecas sin rostro",
+      "origin": "Dominican craft tradition",
+      "description": "Colourful clay dolls are widely associated with Dominican folk art.\nEach **muñeca** (doll) is hand-finished; designs vary by maker and region.",
+      "image": "/images/dominican-republic/dominican-dolls.jpg",
+      "credit": "Jose Elias · CC BY 2.0"
+    },
+    {
+      "id": "perico-ripiao",
+      "name": "Perico ripiao",
+      "origin": "Cibao region",
+      "description": "Merengue típico traditionally features accordion, tambora, and güira.\nThis lively **ritmo** (rhythm) remains closely tied to community dancing.",
+      "image": "/images/dominican-republic/merengue-dance.jpg",
+      "credit": "Javier10 · CC BY-SA 3.0"
+    }
+  ],
+  "cultura_palabras": [
+    { "word": "tambora", "meaning": "two-headed drum", "pronunciation": "tahm-BOH-rah" },
+    { "word": "güira", "meaning": "metal percussion scraper", "pronunciation": "GWEE-rah" },
+    { "word": "muñeca", "meaning": "doll", "pronunciation": "moo-NYEH-kah" },
+    { "word": "folclore", "meaning": "folk traditions", "pronunciation": "fohl-KLOH-reh" },
+    { "word": "ritmo", "meaning": "rhythm", "pronunciation": "REET-moh" }
+  ],
+  "viaje_palabras": [
+    { "word": "malecón", "meaning": "seafront promenade", "pronunciation": "mah-leh-KOHN" },
+    { "word": "motoconcho", "meaning": "motorcycle taxi", "pronunciation": "moh-toh-KOHN-choh" },
+    { "word": "propina", "meaning": "tip", "pronunciation": "proh-PEE-nah" },
+    { "word": "efectivo", "meaning": "cash", "pronunciation": "eh-fehk-TEE-boh" },
+    { "word": "alojamiento", "meaning": "accommodation", "pronunciation": "ah-loh-hah-MYEHN-toh" }
+  ],
+  "india_traveller": {
+    "visa_label": "Indian passport: verify first",
+    "visa_note": "Visa exemptions depend on nationality and qualifying visas or residence permits. Indian travellers should confirm their exact eligibility with Dominican immigration or the consular mission serving India before booking.",
+    "visa_official_url": "https://www.godominicanrepublic.com/travel/entry-requirements/",
+    "visa_official_label": "Dominican Republic entry requirements",
+    "visa_application_note": "Check with Dominican consular authorities",
+    "visa_timing_note": "Recheck before departure",
+    "flight_duration": "Usually one or more connections",
+    "flight_note": "Compare current connections from Delhi, Mumbai, or another major Indian airport. Check transit-visa rules for every stop and allow schedule buffer; ask trusted local staff about safe **motoconcho** (motorcycle taxi) services. Routes and fares change.",
+    "flight_route": "DEL / BOM ➔ SDQ / PUJ",
+    "flight_carriers": "Route-dependent; compare schedules",
+    "cost_per_day_inr": "About INR 9,000–18,000 per person for a budget-to-mid-range day; allow for **propina** (tip) and carry **efectivo** (cash). Excludes international flights and visa fees.",
+    "cost_daily_range": "INR 9,000–18,000 / day",
+    "cost_reference_note": "Indicative, not a live quote",
+    "veg_tips": "**Mangú** (mashed plantain) can be ordered without its usual meat, cheese, and egg sides; ask whether it contains butter or broth. Ask if **yuca** (cassava) is available, and ask your **alojamiento** (lodging) host for ingredient guidance.",
+    "key_food_phrase": "Sin carne ni pescado, por favor"
+  },
+  "verification_notes": [
+    "The Dominican Republic's published entry guidance and e-ticket requirement can change; verify rules for Indian passport holders directly with immigration or the consular mission.",
+    "INR daily-cost and flight notes are planning estimates, exclude international airfare, and should be checked against current availability and exchange rates."
+  ],
+  "research_reflection": "The Dominican Republic's history and present-day culture connect public architecture with music heard in ordinary social settings. A useful guide should make room for both the **folclore** (folk traditions) and contemporary city life.",
+  "research_sources": [
+    {
+      "title": "Colonial City of Santo Domingo",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/526/",
+      "year": "1990",
+      "note": "Historical layout and the influence of Santo Domingo's grid plan on cities in the Americas."
+    },
+    {
+      "title": "Music and dance of the merengue",
+      "author_or_institution": "UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en/RL/music-and-dance-of-merengue-in-the-dominican-republic-01162",
+      "year": "2016",
+      "note": "Merengue's role in everyday Dominican social life and national identity."
+    },
+    {
+      "title": "Travel Entry Requirements",
+      "author_or_institution": "Dominican Republic Ministry of Tourism",
+      "url": "https://www.godominicanrepublic.com/travel/entry-requirements/",
+      "note": "Official entry/exit e-ticket instructions and travel requirements."
+    },
+    {
+      "title": "Electronic Entry and Exit Form",
+      "author_or_institution": "Dominican Republic Directorate General of Migration",
+      "url": "https://eticket.migracion.gob.do/",
+      "note": "Official e-ticket portal for commercial air passengers."
+    },
+    {
+      "title": "Dominican Republic Immigration",
+      "author_or_institution": "Dirección General de Migración",
+      "url": "https://migracion.gob.do/en/",
+      "note": "Government immigration authority for current entry and visa questions."
+    }
+  ],
+  "photo_credits": [
+    {
+      "title": "Dominican Republic",
+      "photographer": "colros",
+      "license": "CC BY 2.0",
+      "source_url": "https://www.flickr.com/photos/73416633@N00/340189266"
+    },
+    {
+      "title": "Catedral de Santa María la Menor",
+      "photographer": "Traveller-Reini",
+      "license": "CC BY-SA 2.0",
+      "source_url": "https://www.flickr.com/photos/129472585@N03/16896202791"
+    },
+    {
+      "title": "Mega Adventures Dominican Food",
+      "photographer": "Funcheta",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mega_Adventures_Dominican_Food.jpg"
+    },
+    {
+      "title": "Merengue Dominicano",
+      "photographer": "Javier10",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Merengue_Dominicano.jpg"
+    },
+    {
+      "title": "Dominican Mangu",
+      "photographer": "Ll1324",
+      "license": "CC0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dominican_Mangu.jpg"
+    },
+    {
+      "title": "Sancocho Dominicano",
+      "photographer": "LittleT889",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sancocho_Dominicano.jpg"
+    },
+    {
+      "title": "Faceless Dolls Dominican Republic",
+      "photographer": "Jose Elias",
+      "license": "CC BY 2.0",
+      "source_url": "https://www.flickr.com/photos/48941604@N06/8203683333"
+    },
+    {
+      "title": "Los Haitises Park",
+      "photographer": "Anton Bielousov",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Los_Haitises_Park.jpeg"
+    },
+    {
+      "title": "Pico Duarte",
+      "photographer": "Adrian Michael",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pico_Duarte.jpg"
+    }
+  ]
+}

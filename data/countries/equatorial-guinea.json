@@ -5,7 +5,7 @@
   "capital": "Malabo",
   "currency": "Central African CFA franc (XAF)",
   "best_time_to_visit": "Drier periods vary by region; check local weather before planning",
-  "hero_image": "/images/equatorial-guinea/malabo-palace.jpg",
+  "hero_image": "/images/equatorial-guinea/malabo-palace-audit.jpg",
   "hero_credit": "Presidential Palace in Malabo · Ventosear · CC BY-SA 4.0",
   "intro": "Equatorial Guinea includes a mainland **continente** (continental region) and islands in the Gulf of Guinea. Spanish is an official language, alongside other languages spoken across its communities.",
   "fun_fact": "Bioko is an **isla** (island) in the Gulf of Guinea; Malabo, the capital, is on its northern coast.",
@@ -79,7 +79,7 @@
       "name": "Presidential Palace",
       "city": "Malabo",
       "caption": "A prominent government building fronts Malabo's palm-lined streets.",
-      "image": "/images/equatorial-guinea/malabo-palace.jpg",
+      "image": "/images/equatorial-guinea/malabo-palace-audit.jpg",
       "credit": "Ventosear · CC BY-SA 4.0",
       "coordinates": [3.7528, 8.7831]
     },
@@ -88,7 +88,7 @@
       "name": "Malabo Waterfront",
       "city": "Malabo",
       "caption": "The **puerto** (port) links the island capital with the Gulf of Guinea.",
-      "image": "/images/equatorial-guinea/malabo-city.jpg",
+      "image": "/images/equatorial-guinea/malabo-city-audit.jpg",
       "credit": "Ben Sutherland · CC BY 2.0",
       "coordinates": [3.7500, 8.7833]
     },
@@ -97,8 +97,8 @@
       "name": "Pico Basilé",
       "city": "Bioko Norte",
       "caption": "A forested **volcán** (volcano) rises above Bioko's island interior.",
-      "image": "/images/equatorial-guinea/malabo-city.jpg",
-      "credit": "Ben Sutherland · CC BY 2.0",
+      "image": null,
+      "credit": null,
       "coordinates": [3.5850, 8.7620]
     },
     {
@@ -106,8 +106,8 @@
       "name": "Monte Alén National Park",
       "city": "Continental Region",
       "caption": "Dense **selva** (rainforest) shelters a rich range of wildlife.",
-      "image": "/images/equatorial-guinea/malabo-city.jpg",
-      "credit": "Ben Sutherland · CC BY 2.0",
+      "image": null,
+      "credit": null,
       "coordinates": [1.6500, 10.3000]
     }
   ],
@@ -125,8 +125,8 @@
       "month": "October 12",
       "town_region": "Nationwide",
       "caption": "The **independencia** (independence) anniversary is marked with public gatherings and **tambor** (drum) music.",
-      "image": "/images/equatorial-guinea/malabo-palace.jpg",
-      "credit": "Ventosear · CC BY-SA 4.0"
+      "image": null,
+      "credit": null
     },
     {
       "id": "semana-santa",
@@ -134,8 +134,8 @@
       "month": "March or April (varies)",
       "town_region": "Nationwide",
       "caption": "Church services and **procesión** (procession) traditions follow the calendar.",
-      "image": "/images/equatorial-guinea/malabo-city.jpg",
-      "credit": "Ben Sutherland · CC BY 2.0"
+      "image": null,
+      "credit": null
     },
     {
       "id": "community-festivities",
@@ -143,8 +143,8 @@
       "month": "Dates vary by locality",
       "town_region": "Across the country",
       "caption": "A local **celebración** (celebration) brings families and **comunidad** (community) together.",
-      "image": "/images/equatorial-guinea/culture-festival.jpg",
-      "credit": "颜邯 · CC BY-SA 4.0"
+      "image": null,
+      "credit": null
     }
   ],
   "fiestas_palabras": [
@@ -160,7 +160,7 @@
       "name_es": "Abalá",
       "caption": "Malanga with red palm **aceite** (oil) and salt.",
       "veg_friendly": true,
-      "image": "/images/equatorial-guinea/abala.jpg",
+      "image": "/images/equatorial-guinea/abala-audit.jpg",
       "credit": "Miguel Obono · CC BY-SA 4.0"
     },
     {
@@ -168,16 +168,16 @@
       "name_es": "Pepesup",
       "caption": "Spiced **pescado** (fish) soup with cassava.",
       "veg_friendly": false,
-      "image": "/images/equatorial-guinea/abala.jpg",
-      "credit": "Miguel Obono · CC BY-SA 4.0"
+      "image": null,
+      "credit": null
     },
     {
       "id": "pollo-cacahuete",
       "name_es": "Pollo con salsa de cacahuete",
       "caption": "Chicken in a savoury **cacahuete** (peanut) sauce.",
       "veg_friendly": false,
-      "image": "/images/equatorial-guinea/abala.jpg",
-      "credit": "Miguel Obono · CC BY-SA 4.0"
+      "image": null,
+      "credit": null
     }
   ],
   "comida_palabras": [
@@ -193,31 +193,31 @@
       "name": "Mvet storytelling",
       "origin": "Fang communities",
       "description": "The **Fang** (a major cultural group) preserve oral histories through performance.\nThe **mvet** (harp-like instrument and epic tradition) accompanies songs and stories.",
-      "image": "/images/equatorial-guinea/culture-festival.jpg",
-      "credit": "颜邯 · CC BY-SA 4.0"
+      "image": null,
+      "credit": null
     },
     {
       "id": "bubi-balele",
       "name": "Balélé dance",
       "origin": "Bubi communities on Bioko",
       "description": "The **Bubi** (Bioko's Indigenous people) preserve dance and percussion traditions.\nThe **balélé** (traditional dance) is performed at community occasions.",
-      "image": "/images/equatorial-guinea/culture-festival.jpg",
-      "credit": "颜邯 · CC BY-SA 4.0"
+      "image": null,
+      "credit": null
     },
     {
       "id": "languages",
       "name": "Many languages, one country",
       "origin": "Across the country",
       "description": "Spanish is an official language, alongside French and Portuguese.\nFang, Bubi, and other local languages also matter in daily life; **idioma** means language.",
-      "image": "/images/equatorial-guinea/malabo-city.jpg",
-      "credit": "Ben Sutherland · CC BY 2.0"
+      "image": null,
+      "credit": null
     },
     {
       "id": "cultural-exchange",
       "name": "Cultural exchange",
       "origin": "Equatorial Guinea and its diaspora",
       "description": "Community displays share food, music, and national symbols with new audiences.\nThis image records an Equatorial Guinea booth at an international university culture festival.",
-      "image": "/images/equatorial-guinea/culture-festival.jpg",
+      "image": "/images/equatorial-guinea/culture-festival-audit.jpg",
       "credit": "颜邯 · CC BY-SA 4.0"
     }
   ],
@@ -242,19 +242,20 @@
     "visa_official_label": "FCDO overview (British passport rules only)",
     "visa_application_note": "Confirm with the mission serving India",
     "visa_timing_note": "Recheck health rules too",
-    "flight_duration": "Usually multiple connections",
+    "flight_duration": null,
     "flight_note": "Compare live routes to Malabo (SSG) or Bata (BSG) from major Indian airports. Allow for multiple connections and verify transit visas, operating days, and onward transport before purchase; check **carretera** (road) conditions for onward travel.",
-    "flight_route": "DEL / BOM ➔ SSG / BSG",
-    "flight_carriers": "Route-dependent; compare schedules",
-    "cost_per_day_inr": "About INR 12,000–25,000 per person for **alojamiento** (lodging), meals, and local travel; carry **efectivo** (cash) and allow for a **propina** (tip). Excludes international flights and visa fees.",
-    "cost_daily_range": "INR 12,000–25,000 / day",
-    "cost_reference_note": "Indicative; services vary",
+    "flight_route": null,
+    "flight_carriers": null,
+    "cost_per_day_inr": null,
+    "cost_daily_range": null,
+    "cost_reference_note": "No comparable, reproducible INR cost source was verified; no estimate supplied.",
     "veg_tips": "Meals often include fish, meat, or palm oil; ask about ingredients and cooking stock. A simple **yuca** (cassava) or **plátano** (plantain) side may be available, but confirm it was not cooked with meat.",
     "key_food_phrase": "Sin carne ni pescado, por favor"
   },
   "verification_notes": [
     "The cited UK FCDO page is written for British passport holders and is not Indian visa advice; verify every entry and health requirement with Equatorial Guinea's authorities.",
-    "INR daily-cost and flight notes are broad planning estimates, exclude international airfare, and should be checked against current availability and exchange rates."
+    "No source was found to support the former INR daily-cost estimate or a specific India-to-Equatorial Guinea route, duration, or carriers; those values were left null.",
+    "The Wikimedia Commons original file endpoints returned HTTP 429 during this audit. Where a previously stored lower-resolution copy is retained, its dimensions are documented in REPORT.md; obtain original files through a compliant download before treating image verification as complete."
   ],
   "research_reflection": "Equatorial Guinea's island and mainland settings, Spanish-language heritage, and distinct community traditions are often overlooked in broad regional summaries. A careful **idioma** (language) and culture guide should reflect that diversity without treating any one community as representative of all.",
   "research_sources": [

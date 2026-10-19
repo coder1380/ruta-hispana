@@ -59,14 +59,22 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
               >
                 {/* Photo Container */}
                 <div className={`relative w-full h-60 sm:h-64 overflow-hidden bg-[#0F1E32] ${tiltClass}`}>
-                  <Image
-                    src={fest.image}
-                    alt={fest.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#152943] via-transparent to-transparent opacity-60" />
+                  {fest.image ? (
+                    <>
+                      <Image
+                        src={fest.image}
+                        alt={fest.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#152943] via-transparent to-transparent opacity-60" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-cream/60">
+                      No verified image available
+                    </div>
+                  )}
 
                   {/* Stamp-Style Month Badge with Scale Bounce */}
                   <div className="animate-stamp absolute top-3 right-3 bg-saffron text-ink px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase font-display shadow-xs flex items-center gap-1.5">
@@ -92,7 +100,7 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-cream/10 flex items-center justify-between text-xs text-cream/60 font-body">
-                    <span className="italic">{fest.credit}</span>
+                    <span className="italic">{fest.credit ?? 'Credit unavailable'}</span>
                     <span className="font-handwriting text-base text-saffron">
                       {fest.month.includes('(') ? fest.month.split('(')[1].replace(')', '') : 'Annual'}
                     </span>

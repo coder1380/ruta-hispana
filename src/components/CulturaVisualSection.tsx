@@ -68,14 +68,22 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
               >
                 {/* Image */}
                 <div className={`relative w-full h-52 overflow-hidden bg-sand ${tiltClass}`}>
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-60" />
+                  {item.image ? (
+                    <>
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-60" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-center text-sm text-ink/60">
+                      No verified image available
+                    </div>
+                  )}
 
                   {/* Origin Tag */}
                   <div className="animate-stamp absolute bottom-3 left-3 bg-cream/95 backdrop-blur-xs px-2.5 py-1 rounded-lg text-xs font-semibold text-ink border border-sand flex items-center gap-1 shadow-xs">
