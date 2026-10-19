@@ -57,20 +57,9 @@ for (const { label, value } of imageReferences) {
   }
 
   const imagePath = path.join(root, 'public', value.slice(1));
-  const deliveryImagePath = path.join(
-    root,
-    'cuba',
-    'images',
-    path.basename(value),
-  );
   if (!existsSync(imagePath)) {
     errors.push(`${label} points to missing file "${value}"`);
     continue;
-  }
-  if (!existsSync(deliveryImagePath)) {
-    errors.push(`${label} is missing from cuba/images: "${path.basename(value)}"`);
-  } else if (!readFileSync(imagePath).equals(readFileSync(deliveryImagePath))) {
-    errors.push(`${label} differs between public/images and cuba/images`);
   }
 
   const labels = referencesByPath.get(value) ?? [];

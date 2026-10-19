@@ -1,0 +1,329 @@
+{
+  "id": "uruguay",
+  "name": "Uruguay",
+  "name_es": "Uruguay",
+  "capital": "Montevideo",
+  "currency": "Uruguayan Peso ($ / UYU)",
+  "best_time_to_visit": "Spring & Summer (October–March) for beaches; Autumn (April–May) for mild city weather",
+  "hero_image": "/images/uruguay/hero-uruguay.jpg",
+  "hero_credit": "Palacio Salvo at dusk over Montevideo Bay (Photo: Unsplash Community)",
+  "daily_phrases": [
+    {
+      "es": "¡Hola! ¿Cómo estás vos?",
+      "en": "Hello! How are you? (Rioplatense voseo)",
+      "pronunciation": "OH-lah, KOH-moh ehs-TAHS bos"
+    },
+    {
+      "es": "¿Me traés la cuenta, por favor?",
+      "en": "Can you bring me the bill, please?",
+      "pronunciation": "meh trah-EHS lah KWEHN-tah por fah-VOR"
+    },
+    {
+      "es": "Soy vegetariano/a. ¿Sin carne ni embutidos?",
+      "en": "I am vegetarian. Without meat or cold cuts?",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh, seen KAR-neh nee em-boo-TEE-dohs"
+    },
+    {
+      "es": "¡Qué bárbaro! Todo estuvo buenísimo.",
+      "en": "How fantastic! Everything was absolutely delicious.",
+      "pronunciation": "keh BAR-bah-roh, TOH-doh ehs-TOO-boh bweh-NEE-see-moh"
+    }
+  ],
+  "regions": [
+    {
+      "id": "montevideo",
+      "name": "Montevideo",
+      "name_es": "Montevideo",
+      "capital": "Montevideo",
+      "coordinates": [-34.9011, -56.1645],
+      "famous_place": "Ciudad Vieja & Mercado del Puerto",
+      "signature_festival": "Carnaval de Montevideo (January–March)",
+      "signature_dish": "Chivito al pan"
+    },
+    {
+      "id": "punta-del-este",
+      "name": "Punta del Este",
+      "name_es": "Punta del Este",
+      "capital": "Punta del Este",
+      "coordinates": [-34.9677, -54.945],
+      "famous_place": "La Mano / Los Dedos (hand sculpture on the beach)",
+      "signature_festival": "Punta del Este Film Festival (March)",
+      "signature_dish": "Parrillada mixta"
+    },
+    {
+      "id": "colonia-sacramento",
+      "name": "Colonia del Sacramento",
+      "name_es": "Colonia del Sacramento",
+      "capital": "Colonia del Sacramento",
+      "coordinates": [-34.4726, -57.8441],
+      "famous_place": "Barrio Histórico (UNESCO World Heritage)",
+      "signature_festival": "Colonia en Flor (Spring)",
+      "signature_dish": "Asado con cuero"
+    },
+    {
+      "id": "tacuarembo",
+      "name": "Tacuarembó Region",
+      "name_es": "Tacuarembó",
+      "capital": "Tacuarembó",
+      "coordinates": [-31.7122, -55.9819],
+      "famous_place": "Valle del Lunarejo & gaucho countryside",
+      "signature_festival": "Festival de Folclore de Tacuarembó (March)",
+      "signature_dish": "Asado de tira gaucho"
+    },
+    {
+      "id": "rocha",
+      "name": "Rocha & The Atlantic Coast",
+      "name_es": "Rocha",
+      "capital": "La Paloma / Cabo Polonio",
+      "coordinates": [-34.4825, -54.1631],
+      "famous_place": "Cabo Polonio & Laguna de Rocha",
+      "signature_festival": "Festival de la Costa (January)",
+      "signature_dish": "Pescado a la plancha con ensalada"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "colonia-barrio-historico",
+      "name": "Barrio Histórico de Colonia",
+      "city": "Colonia del Sacramento",
+      "caption": "Cobblestone Portuguese colonial quarter beside the silver Río de la Plata.",
+      "image": "/images/uruguay/colonia-historica.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.4726, -57.8441]
+    },
+    {
+      "id": "cabo-polonio",
+      "name": "Cabo Polonio",
+      "city": "Rocha, Atlantic Coast",
+      "caption": "Off-grid lighthouse cape where sea lions sprawl on white dunes.",
+      "image": "/images/uruguay/cabo-polonio.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.3996, -53.7797]
+    },
+    {
+      "id": "mercado-puerto",
+      "name": "Mercado del Puerto",
+      "city": "Montevideo",
+      "caption": "Nineteenth-century iron market hall filled with smoking parrillas.",
+      "image": "/images/uruguay/mercado-puerto.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.9087, -56.2073]
+    },
+    {
+      "id": "palacio-salvo",
+      "name": "Palacio Salvo",
+      "city": "Montevideo",
+      "caption": "Art deco tower that once held the title of tallest building in South America.",
+      "image": "/images/uruguay/palacio-salvo.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.9081, -56.1853]
+    },
+    {
+      "id": "la-mano-punta",
+      "name": "La Mano (Los Dedos)",
+      "city": "Punta del Este",
+      "caption": "Giant hand emerging from the sand — Uruguay's most photographed sculpture.",
+      "image": "/images/uruguay/la-mano.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.937, -54.955]
+    },
+    {
+      "id": "lunarejo-valley",
+      "name": "Valle del Lunarejo",
+      "city": "Tacuarembó",
+      "caption": "Misty green ravines and streams in Uruguay's wild interior north.",
+      "image": "/images/uruguay/lunarejo.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-31.6083, -55.8333]
+    },
+    {
+      "id": "ciudad-vieja",
+      "name": "Ciudad Vieja",
+      "city": "Montevideo",
+      "caption": "Spanish colonial old town full of art, murals, and Sunday markets.",
+      "image": "/images/uruguay/ciudad-vieja.jpg",
+      "credit": "Unsplash Community",
+      "coordinates": [-34.9068, -56.2108]
+    }
+  ],
+  "lugares_palabras": [
+    { "word": "el balneario", "meaning": "seaside resort / beach town", "pronunciation": "el bal-neh-AH-ryoh" },
+    { "word": "el rambla", "meaning": "coastal promenade / seaside boardwalk", "pronunciation": "el RAHM-blah" },
+    { "word": "el barrio histórico", "meaning": "historic district / old quarter", "pronunciation": "el BAH-ryoh ees-TOH-ree-koh" },
+    { "word": "el faro", "meaning": "lighthouse / coastal beacon tower", "pronunciation": "el FAH-roh" },
+    { "word": "la playa", "meaning": "beach / sandy coastal shore", "pronunciation": "lah PLAH-yah" }
+  ],
+  "fiestas": [
+    {
+      "id": "carnaval-montevideo",
+      "name": "Carnaval de Montevideo",
+      "month": "January–March",
+      "town_region": "Montevideo",
+      "caption": "World's longest carnival — forty days of murga music and candombe drums.",
+      "image": "/images/uruguay/carnaval-montevideo.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "festival-folclore-tacuarembo",
+      "name": "Festival de Folclore de Tacuarembó",
+      "month": "March",
+      "town_region": "Tacuarembó",
+      "caption": "Uruguay's biggest gaucho and folklore festival in the green interior.",
+      "image": "/images/uruguay/festival-tacuarembo.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "semana-criolla",
+      "name": "Semana Criolla",
+      "month": "Easter Week",
+      "town_region": "Montevideo (Parque Rural)",
+      "caption": "Gaucho horse-breaking, bolas throwing, and folk music in leather saddles.",
+      "image": "/images/uruguay/semana-criolla.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "muestra-de-teatro",
+      "name": "Muestra de Teatro",
+      "month": "November",
+      "town_region": "Montevideo",
+      "caption": "National theatre festival showcasing Uruguay's vibrant performing arts scene.",
+      "image": "/images/uruguay/muestra-teatro.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "candombe-llamadas",
+      "name": "Las Llamadas (Candombe Parade)",
+      "month": "February",
+      "town_region": "Barrio Sur & Palermo, Montevideo",
+      "caption": "Thundering African-Uruguayan candombe drums echo through midnight streets.",
+      "image": "/images/uruguay/llamadas.jpg",
+      "credit": "Unsplash Community"
+    },
+    {
+      "id": "dia-patrimonio",
+      "name": "Día del Patrimonio",
+      "month": "October",
+      "town_region": "Nationwide",
+      "caption": "Historic buildings, farms, and museums open free to the public.",
+      "image": "/images/uruguay/dia-patrimonio.jpg",
+      "credit": "Unsplash Community"
+    }
+  ],
+  "fiestas_palabras": [
+    { "word": "el candombe", "meaning": "Afro-Uruguayan drum music and dance — UNESCO-listed", "pronunciation": "el kahn-DOM-beh" },
+    { "word": "la murga", "meaning": "satirical street choir that performs during Uruguay's carnival", "pronunciation": "lah MOOR-gah" },
+    { "word": "el tablado", "meaning": "open-air carnival stage in a neighbourhood", "pronunciation": "el tah-BLAH-doh" },
+    { "word": "las llamadas", "meaning": "the calls — procession of candombe drum groups", "pronunciation": "lahs yah-MAH-dahs" },
+    { "word": "el gaucho", "meaning": "Uruguayan and Argentine horseman of the Pampas", "pronunciation": "el GOW-choh" }
+  ],
+  "comida": [
+    {
+      "id": "chivito",
+      "name_es": "Chivito al Pan",
+      "caption": "Uruguay's national sandwich — steak, ham, egg, and mozzarella.",
+      "veg_friendly": false,
+      "image": "/images/uruguay/chivito.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "asado-uy",
+      "name_es": "Asado Uruguayo",
+      "caption": "Long wood-fire grilled beef ribs, the pride of every Uruguayan home.",
+      "veg_friendly": false,
+      "image": "/images/uruguay/asado-uy.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "tortas-fritas",
+      "name_es": "Tortas Fritas",
+      "caption": "Fried dough discs eaten with a drizzle of honey on rainy days.",
+      "veg_friendly": true,
+      "image": "/images/uruguay/tortas-fritas.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "alfajores-uy",
+      "name_es": "Alfajores",
+      "caption": "Two biscuits sandwiching dulce de leche, coated in chocolate.",
+      "veg_friendly": true,
+      "image": "/images/uruguay/alfajores.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "mate-uy",
+      "name_es": "Mate Uruguayo",
+      "caption": "Bitter herbal drink carried everywhere in a gourd — the national ritual.",
+      "veg_friendly": true,
+      "image": "/images/uruguay/mate-uy.jpg",
+      "credit": "Unsplash Food"
+    },
+    {
+      "id": "milanesa",
+      "name_es": "Milanesa a la Napolitana",
+      "caption": "Breaded beef schnitzel topped with tomato sauce and melted cheese.",
+      "veg_friendly": false,
+      "image": "/images/uruguay/milanesa.jpg",
+      "credit": "Unsplash Food"
+    }
+  ],
+  "comida_palabras": [
+    { "word": "el chivito", "meaning": "Uruguay's famous steak sandwich — the national dish", "pronunciation": "el chee-BEE-toh" },
+    { "word": "la parrilla", "meaning": "grill / steakhouse restaurant", "pronunciation": "lah pah-REE-yah" },
+    { "word": "el mate", "meaning": "herbal drink in a gourd — central to Uruguayan daily life", "pronunciation": "el MAH-teh" },
+    { "word": "el alfajor", "meaning": "dulce de leche sandwich biscuit, often chocolate-coated", "pronunciation": "el al-fah-HOR" },
+    { "word": "el dulce de leche", "meaning": "creamy caramel spread — used in virtually every Uruguayan dessert", "pronunciation": "el DOOL-seh deh LEH-cheh" }
+  ],
+  "cultura": [
+    {
+      "id": "candombe",
+      "name": "El Candombe",
+      "origin": "Barrio Sur & Palermo, Montevideo",
+      "description": "Afro-Uruguayan drum tradition brought by enslaved West African people in the 18th century.\nUNESCO-listed intangible heritage — its three drums (chico, repique, piano) define carnival.",
+      "image": "/images/uruguay/candombe-culture.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "murga",
+      "name": "La Murga",
+      "origin": "Montevideo",
+      "description": "Satirical theatrical choir that performs social commentary through song during carnival.\nChoirs of up to 20 people in elaborate costumes lampoon politicians and society.",
+      "image": "/images/uruguay/murga-culture.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "gaucho-culture-uy",
+      "name": "La Cultura Criolla",
+      "origin": "Tacuarembó & Pampas",
+      "description": "Uruguay's gaucho tradition blends Spanish, indigenous, and African roots into a rural identity.\nSemana Criolla every Easter showcases horse skills, boleadoras, and folk song.",
+      "image": "/images/uruguay/gaucho-uy.jpg",
+      "credit": "Unsplash Culture"
+    },
+    {
+      "id": "tango-uy",
+      "name": "El Tango Oriental",
+      "origin": "Montevideo",
+      "description": "Tango was born on both banks of the Río de la Plata — Montevideo shares its origins.\nCarlos Gardel, tango's greatest icon, was born in France but raised in Montevideo.",
+      "image": "/images/uruguay/tango-uy.jpg",
+      "credit": "Unsplash Culture"
+    }
+  ],
+  "cultura_palabras": [
+    { "word": "el tamboril", "meaning": "candombe hand drum struck with a stick and bare hand", "pronunciation": "el tahm-boh-REEL" },
+    { "word": "el murguero", "meaning": "performer in a murga carnival choir", "pronunciation": "el moor-GEH-roh" },
+    { "word": "la boleadora", "meaning": "weighted throwing weapon used by gaucho horsemen", "pronunciation": "lah boh-leh-ah-DOH-rah" },
+    { "word": "el oriental", "meaning": "what Uruguayans call themselves (from Banda Oriental)", "pronunciation": "el oh-ree-en-TAHL" },
+    { "word": "el candombe", "meaning": "Afro-Uruguayan drum tradition and music genre", "pronunciation": "el kahn-DOM-beh" }
+  ],
+  "india_traveller": {
+    "visa_note": "Indian passport holders do not require a tourist visa for Uruguay for stays up to 90 days — one of South America's most welcoming countries for Indian travellers. Carry proof of accommodation and return ticket. There is no Indian consulate in Uruguay; the nearest is in Buenos Aires.",
+    "flight_note": "No direct or easy single-stop flights from India to Uruguay. The most practical routes fly to Buenos Aires (EZE) via Dubai, Doha, or Madrid, then take a 45-minute flight or a 3-hour ferry from Buenos Aires to Montevideo. Total journey from India takes 22–28 hours.",
+    "cost_per_day_inr": "Uruguay is moderately priced for South America. Budget travellers can manage on ₹3,500–5,500/day in Montevideo. Punta del Este is premium — expect ₹8,000–14,000/day in peak season. Asados and set-lunch menus (menú del día) offer the best value at around ₹700–1,200.",
+    "veg_tips": "Uruguay is a beef-heavy country, but Montevideo has a growing vegetarian scene. Safe options include tortas fritas (fried dough), cheese empanadas, salads, pasta, and pizza. Ask for 'sin carne' (without meat). Barrio Pocitos in Montevideo has several vegetarian-friendly restaurants. The alfajores (caramel biscuits) are a sweet vegetarian treat nationwide."
+  },
+  "photo_credits": [
+    { "title": "Barrio Histórico de Colonia", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Cabo Polonio", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Palacio Salvo", "photographer": "Unsplash Community", "license": "Unsplash Free License" },
+    { "title": "Carnaval de Montevideo", "photographer": "Unsplash Community", "license": "Unsplash Free License" }
+  ]
+}
