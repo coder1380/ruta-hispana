@@ -3,17 +3,20 @@
 import React from 'react';
 import { AcademicSource } from '@/types/country';
 import { StudentBadge } from './StudentBadge';
-import { BookOpen, AlertCircle, Link as LinkIcon, ExternalLink } from 'lucide-react';
+import { AlertCircle, ExternalLink } from 'lucide-react';
+import { renderBilingualContent } from './SpanishTooltip';
 
 interface SourcesSectionProps {
   sources: AcademicSource[];
   verificationNotes: string[];
+  researchReflection?: string;
   studentName?: string;
 }
 
 export const SourcesSection: React.FC<SourcesSectionProps> = ({
   sources,
   verificationNotes,
+  researchReflection,
   studentName = 'Ruta Hispana Research Team',
 }) => {
   return (
@@ -32,7 +35,7 @@ export const SourcesSection: React.FC<SourcesSectionProps> = ({
               Fuentes y Referencias · Bibliography
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#57524E] max-w-2xl font-body">
-              Verified historical, literary, and linguistic foundations for this university assignment. Links are curated and placeholders left for student library IDs.
+              Sources for the historical, cultural, culinary, and practical travel notes in this guide.
             </p>
           </div>
         </div>
@@ -66,12 +69,15 @@ export const SourcesSection: React.FC<SourcesSectionProps> = ({
               </div>
 
               <div className="pt-3 border-t border-[#E6DCCD] flex items-center justify-between text-xs text-[#57524E]">
-                <span className="font-mono text-[11px] text-[#943A1E] truncate max-w-[280px]">
+                <a
+                  href={src.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 font-mono text-[11px] text-[#943A1E] truncate max-w-[280px] hover:underline"
+                >
                   {src.url}
-                </span>
-                <span className="text-[10px] bg-[#FCFAF6] px-2 py-0.5 rounded border border-[#E6DCCD]">
-                  Academic
-                </span>
+                  <ExternalLink className="w-3 h-3 shrink-0" />
+                </a>
               </div>
             </div>
           ))}
@@ -94,6 +100,16 @@ export const SourcesSection: React.FC<SourcesSectionProps> = ({
                 ))}
               </ul>
             </div>
+          </div>
+        )}
+        {researchReflection && (
+          <div className="mt-8 rounded-2xl border border-[#E6DCCD] bg-[#F9F6F0] p-6">
+            <h3 className="font-display text-xl font-bold text-[#1C1917] mb-2">
+              Reflexión de investigación · Research reflection
+            </h3>
+            <p className="text-sm text-[#57524E] leading-relaxed">
+              {renderBilingualContent(researchReflection)}
+            </p>
           </div>
         )}
       </div>

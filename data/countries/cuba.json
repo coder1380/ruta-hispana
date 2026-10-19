@@ -1,0 +1,528 @@
+{
+  "id": "cuba",
+  "name": "Cuba",
+  "name_es": "Cuba",
+  "capital": "Havana",
+  "currency": "Cuban peso (CUP)",
+  "best_time_to_visit": "Generally November–April; check current weather and hurricane advisories",
+  "hero_image": "/images/cuba/old-havana.jpg",
+  "hero_credit": "Old Havana street · Nick Kenrick · CC BY 2.0",
+  "intro": "Cuba is an island country where historic streets, Afro-Cuban music, and Caribbean landscapes meet. In Havana, a **plaza** (public square) and the **malecón** (seafront promenade) are part of everyday city life.",
+  "fun_fact": "UNESCO notes that Havana was founded around 1519 and retains its original urban layout and **fortaleza** (fortress) network, including five historic plazas.",
+  "daily_phrases": [
+    {
+      "es": "¿Me puede traer la cuenta, por favor?",
+      "en": "Could you bring me the bill, please?",
+      "pronunciation": "meh PWEH-deh trah-EHR lah KWEHN-tah por fah-VOR"
+    },
+    {
+      "es": "¿Dónde está la parada de **guagua** (bus)?",
+      "en": "Where is the bus stop?",
+      "pronunciation": "DOHN-deh ehs-TAH lah pah-RAH-dah deh GWAH-gwah"
+    },
+    {
+      "es": "Soy vegetariano/a; ¿lleva carne o pescado?",
+      "en": "I am vegetarian; does it contain meat or fish?",
+      "pronunciation": "soy veh-heh-tah-RYAH-noh, YEH-bah KAR-neh oh pehs-KAH-doh"
+    },
+    {
+      "es": "¿Aceptan tarjeta o solo **efectivo** (cash)?",
+      "en": "Do you accept cards or only cash?",
+      "pronunciation": "ah-SEHP-tahn tar-HEH-tah oh SOH-loh eh-fehk-TEE-boh"
+    }
+  ],
+  "regions": [
+    {
+      "id": "havana",
+      "name": "Havana",
+      "name_es": "La Habana",
+      "capital": "Havana",
+      "coordinates": [
+        23.1136,
+        -82.3666
+      ],
+      "famous_place": "Old Havana and its fortification system",
+      "signature_festival": "Havana Carnival (dates vary)",
+      "signature_dish": "Moros y cristianos"
+    },
+    {
+      "id": "santiago-de-cuba",
+      "name": "Santiago de Cuba",
+      "name_es": "Santiago de Cuba",
+      "capital": "Santiago de Cuba",
+      "coordinates": [
+        20.0169,
+        -75.8302
+      ],
+      "famous_place": "Castillo de San Pedro de la Roca",
+      "signature_festival": "Carnaval de Santiago (July)",
+      "signature_dish": "Ropa vieja"
+    },
+    {
+      "id": "pinar-del-rio",
+      "name": "Pinar del Río",
+      "name_es": "Pinar del Río",
+      "capital": "Pinar del Río",
+      "coordinates": [
+        22.4075,
+        -83.6967
+      ],
+      "famous_place": "Viñales Valley",
+      "signature_festival": "Festival del Habano (Havana; Vuelta Abajo tobacco from Pinar del Río)",
+      "signature_dish": "Yuca con mojo"
+    },
+    {
+      "id": "trinidad",
+      "name": "Trinidad",
+      "name_es": "Trinidad",
+      "capital": "Trinidad",
+      "coordinates": [
+        21.8024,
+        -79.984
+      ],
+      "famous_place": "Historic town and Valle de los Ingenios",
+      "signature_festival": "Traditional town celebrations",
+      "signature_dish": "Ajiaco"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "old-havana",
+      "name": "Old Havana",
+      "city": "Havana",
+      "caption": "A **plaza** (public square) sits inside the old **muralla** (city wall).",
+      "image": "/images/cuba/old-havana.jpg",
+      "credit": "Nick Kenrick · CC BY 2.0",
+      "coordinates": [
+        23.1353,
+        -82.3596
+      ]
+    },
+    {
+      "id": "havana-capitol",
+      "name": "El Capitolio",
+      "city": "Havana",
+      "caption": "The National Capitol rises above Havana’s central avenues.",
+      "image": "/images/cuba/havana-capitol.jpg",
+      "credit": "Fraganda · CC BY-SA 4.0",
+      "coordinates": [
+        23.1358,
+        -82.359
+      ]
+    },
+    {
+      "id": "vinales-valley",
+      "name": "Viñales Valley",
+      "city": "Pinar del Río",
+      "caption": "Limestone mogotes shape this UNESCO-listed rural landscape.",
+      "image": "/images/cuba/vinales-valley.jpg",
+      "credit": "FranHogan · CC BY-SA 4.0",
+      "coordinates": [
+        22.6185,
+        -83.7069
+      ]
+    },
+    {
+      "id": "santiago-carnival",
+      "name": "Santiago’s Carnival",
+      "city": "Santiago de Cuba",
+      "caption": "A **comparsa** (parading dance group) fills the summer streets.",
+      "image": "/images/cuba/santiago-carnival-poster.jpg",
+      "credit": "Santiago de Cuba Carnaval",
+      "coordinates": [
+        20.0169,
+        -75.8302
+      ]
+    },
+    {
+      "id": "castillo-san-pedro-de-la-roca",
+      "name": "Castillo de San Pedro de la Roca",
+      "city": "Santiago de Cuba",
+      "caption": "A UNESCO-listed fortress guards the entrance to Santiago de Cuba Bay.",
+      "image": "/images/cuba/cuba-malecon.jpg",
+      "credit": "Costas e Históricas Fortificaciones",
+      "coordinates": null
+    },
+    {
+      "id": "valle-de-los-ingenios",
+      "name": "Valle de los Ingenios",
+      "city": "Trinidad",
+      "caption": "The UNESCO-listed Valley of the Sugar Mills preserves the remains of Cuba’s historic sugar industry.",
+      "image": "/images/cuba/trinidad-cuba.jpg",
+      "credit": "Trinidad y Valle de los Ingenios",
+      "coordinates": null
+    },
+    {
+      "id": "historic-centre-remedios",
+      "name": "Historic Centre of Remedios",
+      "city": "Remedios, Villa Clara",
+      "caption": "The historic centre of Remedios; its exact map point has not been verified.",
+      "image": "/images/cuba/old-havana-street.jpg",
+      "credit": "Arquitectura Colonial",
+      "coordinates": null
+    }
+  ],
+  "lugares_palabras": [
+    {
+      "word": "plaza",
+      "meaning": "public square",
+      "pronunciation": "PLAH-sah"
+    },
+    {
+      "word": "muralla",
+      "meaning": "city wall",
+      "pronunciation": "moo-RAH-yah"
+    },
+    {
+      "word": "malecón",
+      "meaning": "seafront promenade",
+      "pronunciation": "mah-leh-KOHN"
+    },
+    {
+      "word": "fortaleza",
+      "meaning": "fortress",
+      "pronunciation": "for-tah-LEH-sah"
+    },
+    {
+      "word": "patrimonio",
+      "meaning": "heritage",
+      "pronunciation": "pah-tree-MOH-nyoh"
+    }
+  ],
+  "fiestas": [
+    {
+      "id": "santiago-carnival",
+      "name": "Carnaval de Santiago",
+      "month": "July (dates vary)",
+      "town_region": "Santiago de Cuba",
+      "caption": "A **carnaval** (carnival) brings drums, dance, and neighbourhood **tradición** (tradition).",
+      "image": "/images/cuba/santiago-carnival-poster.jpg",
+      "credit": "Santiago de Cuba"
+    },
+    {
+      "id": "havana-carnival",
+      "name": "Carnaval de La Habana",
+      "month": "Irregular; confirm current-year schedule",
+      "town_region": "Havana",
+      "caption": "An archival image of Havana’s **carnaval** (carnival) on the Malecón.",
+      "image": "/images/cuba/havana-carnival.jpg",
+      "credit": "Unknown author · Public domain"
+    },
+    {
+      "id": "parrandas-remedios",
+      "name": "Parrandas de Remedios",
+      "month": "December 24",
+      "town_region": "Remedios, Villa Clara",
+      "caption": "Neighbourhoods build illuminated floats for an all-night celebration.",
+      "image": "/images/cuba/cuban-carnival-scene.jpg",
+      "credit": "Celebraciones Tradicionales"
+    },
+    {
+      "id": "festival-caribe",
+      "name": "Festival del Caribe",
+      "month": "July (dates vary)",
+      "town_region": "Santiago de Cuba",
+      "caption": "A street **pregón** (call) and **tambor** (drum) rhythms accompany Caribbean guests.",
+      "image": "/images/cuba/cuban-dancer.jpg",
+      "credit": "Festival del Caribe"
+    }
+  ],
+  "fiestas_palabras": [
+    {
+      "word": "comparsa",
+      "meaning": "parading dance group",
+      "pronunciation": "kom-PAR-sah"
+    },
+    {
+      "word": "carnaval",
+      "meaning": "carnival",
+      "pronunciation": "kar-nah-VAHL"
+    },
+    {
+      "word": "tambor",
+      "meaning": "drum",
+      "pronunciation": "tahm-BOR"
+    },
+    {
+      "word": "pregón",
+      "meaning": "street call or vendor's cry",
+      "pronunciation": "preh-GOHN"
+    },
+    {
+      "word": "tradición",
+      "meaning": "tradition",
+      "pronunciation": "trah-dee-SYOHN"
+    }
+  ],
+  "comida": [
+    {
+      "id": "ropa-vieja",
+      "name_es": "Ropa vieja",
+      "caption": "Tender beef, peppers, and tomato slow-cooked together.",
+      "veg_friendly": false,
+      "image": "/images/cuba/ropa-vieja.jpg",
+      "credit": "SK Sturm Fan · CC BY-SA 4.0"
+    },
+    {
+      "id": "moros-y-cristianos",
+      "name_es": "Moros y cristianos",
+      "caption": "Black beans and rice cooked together; ask whether pork, lard, or meat stock was used.",
+      "veg_friendly": false,
+      "image": "/images/cuba/moros-y-cristianos.jpg",
+      "credit": "Rinaldo Wurglitsch · CC BY 2.0"
+    },
+    {
+      "id": "yuca-con-mojo",
+      "name_es": "Yuca con mojo",
+      "caption": "**Yuca** (cassava) with garlicky **mojo** (sauce).",
+      "veg_friendly": true,
+      "image": "/images/cuba/yuca-mojo.jpg",
+      "credit": "Creative Commons"
+    }
+  ],
+  "comida_palabras": [
+    {
+      "word": "yuca",
+      "meaning": "cassava",
+      "pronunciation": "YOO-kah"
+    },
+    {
+      "word": "mojo",
+      "meaning": "garlic and citrus sauce",
+      "pronunciation": "MOH-hoh"
+    },
+    {
+      "word": "frijoles",
+      "meaning": "beans",
+      "pronunciation": "free-HOH-lehs"
+    },
+    {
+      "word": "arroz",
+      "meaning": "rice",
+      "pronunciation": "ah-RROHS"
+    },
+    {
+      "word": "cerdo",
+      "meaning": "pork",
+      "pronunciation": "SEHR-doh"
+    }
+  ],
+  "cultura": [
+    {
+      "id": "rumba",
+      "name": "Rumba",
+      "origin": "Havana and Matanzas",
+      "description": "A communal music-and-dance tradition shaped by African, Antillean, and Spanish influences.\nThe **guaguancó** (rumba style) and call-and-response carry **rumba** (music and dance) forward.",
+      "image": "/images/cuba/rumba-cuba.jpg",
+      "credit": "Manuel Díaz Reyes · CC BY-SA 4.0"
+    },
+    {
+      "id": "son-cubano",
+      "name": "Son cubano",
+      "origin": "Eastern Cuba",
+      "description": "Guitar, tres, bass, and percussion create a sound that travelled widely.\nThe **son** (Cuban music style) depends on a repeating **clave** (rhythmic pattern).",
+      "image": "/images/cuba/afro-cuban-music.jpg",
+      "credit": "Música Cubana Tradicional"
+    },
+    {
+      "id": "tumba-francesa",
+      "name": "Tumba francesa",
+      "origin": "Eastern Cuba",
+      "description": "Societies preserve a distinctive blend of African and French-Caribbean heritage.\nDrums, singing, and dance sustain this living practice.",
+      "image": "/images/cuba/afro-cuban-dance-one.jpg",
+      "credit": "Danza y Tradición"
+    },
+    {
+      "id": "bolero",
+      "name": "Bolero",
+      "origin": "Santiago de Cuba",
+      "description": "This romantic song form emerged in eastern Cuba in the nineteenth century.\nA **bolero** (slow romantic song) often centres on expressive voice and guitar.",
+      "image": "/images/cuba/cuban-dance-one.jpg",
+      "credit": "Música y Danza"
+    }
+  ],
+  "cultura_palabras": [
+    {
+      "word": "rumba",
+      "meaning": "Cuban music and dance tradition",
+      "pronunciation": "ROOM-bah"
+    },
+    {
+      "word": "son",
+      "meaning": "Cuban music style",
+      "pronunciation": "sohn"
+    },
+    {
+      "word": "clave",
+      "meaning": "repeating rhythmic pattern",
+      "pronunciation": "KLAH-veh"
+    },
+    {
+      "word": "guaguancó",
+      "meaning": "a lively rumba style",
+      "pronunciation": "gwah-gwahn-KOH"
+    },
+    {
+      "word": "bolero",
+      "meaning": "slow romantic song",
+      "pronunciation": "boh-LEH-roh"
+    }
+  ],
+  "viaje_palabras": [
+    {
+      "word": "guagua",
+      "meaning": "bus",
+      "pronunciation": "GWAH-gwah"
+    },
+    {
+      "word": "paladar",
+      "meaning": "privately run restaurant",
+      "pronunciation": "pah-lah-DAR"
+    },
+    {
+      "word": "propina",
+      "meaning": "tip",
+      "pronunciation": "proh-PEE-nah"
+    },
+    {
+      "word": "efectivo",
+      "meaning": "cash",
+      "pronunciation": "eh-fehk-TEE-boh"
+    },
+    {
+      "word": "alojamiento",
+      "meaning": "accommodation",
+      "pronunciation": "ah-loh-hah-MYEHN-toh"
+    }
+  ],
+  "india_traveller": {
+    "visa_label": "Indian passport: verify first",
+    "visa_note": "Entry rules depend on passport and travel purpose. Indian travellers should confirm tourist-visa eligibility, application steps, passport validity, and any required arrival form with the Cuban mission serving India before booking.",
+    "visa_official_url": "https://evisacuba.cu/en/inicio",
+    "visa_official_label": "Cuba's eVisa portal (confirm Indian eligibility)",
+    "visa_application_note": "Confirm with Cuba's consular mission",
+    "visa_timing_note": "Allow time for processing",
+    "flight_duration": null,
+    "flight_note": "Check current airline schedules and transit requirements; no direct service or route duration has been source-verified here.",
+    "flight_route": "DEL / BOM ➔ HAV",
+    "flight_carriers": null,
+    "cost_per_day_inr": null,
+    "cost_daily_range": null,
+    "cost_reference_note": "No current source-backed daily price components were found; no estimate was calculated.",
+    "veg_tips": "Ask whether beans or rice were cooked with lard, stock, **cerdo** (pork), or other meat. A **paladar** (private restaurant) may be able to adapt a dish; confirm ingredients clearly.",
+    "key_food_phrase": "Sin carne ni pescado, por favor"
+  },
+  "verification_notes": [
+    "Visa and arrival requirements for Indian passport holders must be confirmed with Cuban consular authorities; the linked eVisa portal does not itself confirm nationality-specific eligibility.",
+    "No source-verified direct India–Havana service, flight duration, carrier, or daily INR budget is recorded; check current schedules and prices before travel.",
+    "Festival del Habano is Havana-centred; Pinar del Río is connected through Vuelta Abajo tobacco, not as the festival location.",
+    "CUP remains the currency named in this guide; UK FCDO advice says international Visa and Mastercard cards are not accepted and advises cash or Cuban prepaid cards.",
+    "Coordinates for Castillo de San Pedro de la Roca, Valle de los Ingenios, and Remedios were not added because no authoritative point coordinates were verified.",
+    "Ajiaco is mentioned only as Trinidad's regional signature_dish; this file has no Ajiaco comida entry or image slot.",
+    "The requested last_reviewed, image_verified, source_url, and license_url fields are not present in this file's schema and were not added.",
+    "Audit date: 2026-10-19. Image subjects and sources not verified are left without an image."
+  ],
+  "research_reflection": "Havana's **patrimonio** (heritage) is only one part of Cuba's story: music, rural landscapes, and everyday neighbourhood life deserve equal attention in a short travel guide.",
+  "research_sources": [
+    {
+      "title": "Old Havana and its Fortification System",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/204/",
+      "year": "1982",
+      "note": "Historic urban layout, five plazas, and the city's defensive fortifications."
+    },
+    {
+      "title": "Rumba in Cuba",
+      "author_or_institution": "UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en/RL/rumba-in-cuba-a-festive-combination-of-music-and-dances-and-all-the-practices-associated-01185",
+      "year": "2016",
+      "note": "Rumba's musical, dance, and community practices."
+    },
+    {
+      "title": "Santiago de Cuba",
+      "author_or_institution": "Cuban Ministry of Tourism",
+      "url": "https://www.cuba.travel/en/wheretogo/santiagodecuba",
+      "note": "Official destination page identifies Santiago as the birthplace of son and bolero and describes its carnival."
+    },
+    {
+      "title": "Cuba: Entry requirements",
+      "author_or_institution": "UK Foreign, Commonwealth & Development Office",
+      "url": "https://www.gov.uk/foreign-travel-advice/cuba/entry-requirements",
+      "note": "Travel advice explicitly based on British passports; included as background only, not as Indian-passport visa guidance."
+    },
+    {
+      "title": "San Pedro de la Roca Castle, Santiago de Cuba",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/841/",
+      "note": "UNESCO listing and description of the fortress; this page did not provide a coordinate verified for this data file."
+    },
+    {
+      "title": "Viñales Valley",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/840/",
+      "note": "Listing, mogotes, karst landscape, and traditional agriculture."
+    },
+    {
+      "title": "Trinidad and the Valley de los Ingenios",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/460/",
+      "note": "Listing and historic sugar-mill landscape; Spanish spelling in this JSON is Valle de los Ingenios."
+    },
+    {
+      "title": "Cuba payment advice",
+      "author_or_institution": "UK Foreign, Commonwealth & Development Office",
+      "url": "https://www.gov.uk/foreign-travel-advice/cuba/safety-and-security",
+      "note": "Current warning that international Visa/Mastercard cards are not accepted and that cash or Cuban prepaid cards are alternatives."
+    },
+    {
+      "title": "Habanos Festival (2015 edition)",
+      "author_or_institution": "Habanos S.A.",
+      "url": "https://www.habanos.com/en/news/festival-abre-el-telon-en/",
+      "note": "Historical official event coverage places the Festival in Havana and identifies Vuelta Abajo/Pinar del Río tobacco; it does not establish current dates."
+    }
+  ],
+  "photo_credits": [
+    {
+      "title": "Old Havana",
+      "photographer": "Nick Kenrick",
+      "license": "CC BY 2.0",
+      "source_url": "https://www.flickr.com/photos/33363480@N05/14584437716"
+    },
+    {
+      "title": "Viñales, Cuba",
+      "photographer": "FranHogan",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vinales,_Cuba.jpg"
+    },
+    {
+      "title": "National Capitol and classic cars in Havana",
+      "photographer": "Fraganda",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:National-Capitol-and-classic-cars-in-Havana-Cuba-225-031-061A.jpg"
+    },
+    {
+      "title": "Ropa vieja",
+      "photographer": "SK Sturm Fan",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ropa_vieja_%E2%80%93_Dolphin_Mall_%E2%80%93_Sweetwater_bei_Miami_%E2%80%93_April_2019_(2).jpg"
+    },
+    {
+      "title": "Moros y Cristianos, Cuba",
+      "photographer": "Rinaldo Wurglitsch",
+      "license": "CC BY 2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moros_y_Cristianos,_Cuba_(9419810743).jpg"
+    },
+    {
+      "title": "Havana - Malecon during carnival",
+      "photographer": "Unknown author",
+      "license": "Public domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Havana_-_Malecon_during_carnival_01.jpg"
+    },
+    {
+      "title": "Bailarines de rumba cubana en Camagüey",
+      "photographer": "Manuel Díaz Reyes",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bailarines_de_rumba_cubana_en_la_plaza_de_los_trabajadores_de_Camag%C3%BCey,_Cuba.jpg"
+    }
+  ]
+}
