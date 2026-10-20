@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { CultureTraditionItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
 import { MapPin, Sparkles } from 'lucide-react';
 
 interface CulturaVisualSectionProps {
@@ -33,6 +35,9 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-terracotta font-display px-2.5 py-1 rounded-full bg-sand/60 border border-sand mb-2">
               Sección 04 · Heritage & Dance
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Culture research" />
+            </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               Cultura · Living Traditions
             </h2>
@@ -63,14 +68,22 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
               >
                 {/* Image */}
                 <div className={`relative w-full h-52 overflow-hidden bg-sand ${tiltClass}`}>
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-60" />
+                  {item.image ? (
+                    <>
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-60" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-center text-sm text-ink/60">
+                      No verified image available
+                    </div>
+                  )}
 
                   {/* Origin Tag */}
                   <div className="animate-stamp absolute bottom-3 left-3 bg-cream/95 backdrop-blur-xs px-2.5 py-1 rounded-lg text-xs font-semibold text-ink border border-sand flex items-center gap-1 shadow-xs">
@@ -87,7 +100,7 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
                     </h3>
                     <div className="space-y-1 text-xs sm:text-sm text-ink/80 font-body leading-relaxed">
                       {descLines.map((line, lIdx) => (
-                        <p key={lIdx}>{line}</p>
+                        <p key={lIdx}>{renderBilingualContent(line)}</p>
                       ))}
                     </div>
                   </div>

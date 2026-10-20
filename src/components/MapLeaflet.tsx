@@ -24,14 +24,19 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
   const mapInstanceRef = useRef<any>(null);
   const geoJsonLayerRef = useRef<any>(null);
   const markersRef = useRef<{ id: string; marker: any; originalCoords: [number, number] }[]>([]);
+  const otherRegionLayersRef = useRef<{ id: string; layer: any; color: string }[]>([]);
   const [activeRegionName, setActiveRegionName] = useState<string>('');
 
-  const mainlandBounds: [[number, number], [number, number]] = [
+  const isSpain = regions.some(
+    (r) => r.id === 'andalusia' || r.id === 'catalonia' || r.id === 'madrid'
+  );
+
+  const spainMainlandBounds: [[number, number], [number, number]] = [
     [35.8, -9.5], // Southwest Spain (Cadiz / Tarifa)
     [43.9, 4.4],  // Northeast Spain (Girona / Cap de Creus)
   ];
 
-  // Helper to normalize GeoJSON names to match our regions array
+  // Helper to normalize GeoJSON names to match our regions array for Spain
   const normalizeCommunityName = (name: string): string => {
     const n = name
       .toLowerCase()
@@ -65,7 +70,7 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
     }
   };
 
-  // Helper to calculate display coordinates avoiding overlap at low zoom
+  // Helper to calculate display coordinates avoiding overlap at low zoom in dense cities
   const getDisplayCoords = (
     id: string,
     coords: [number, number],
@@ -107,22 +112,30 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
 
         if (!isMounted || !mapContainerRef.current) return;
 
-        // Sensible bounds covering Mainland Spain, Balearics, and Canaries to the southwest
+        // Sensible bounds covering Mainland Spain, Balearics, and Canaries
         const spainMaxBounds = L.latLngBounds([27.0, -18.5], [45.5, 5.5]);
 
+        const validRegionCoords = regions
+          .filter((r) => r.coordinates && r.coordinates.length === 2)
+          .map((r) => r.coordinates);
+
+        const initialCenter: [number, number] = isSpain
+          ? [40.2, -3.7]
+          : validRegionCoords[0] || [0, 0];
+
         const map = L.map(mapContainerRef.current, {
-          center: [40.2, -3.7],
-          zoom: 6,
-          minZoom: 5,
-          maxZoom: 12,
-          maxBounds: spainMaxBounds,
-          maxBoundsViscosity: 0.85,
+          center: initialCenter,
+          zoom: isSpain ? 6 : 7,
+          minZoom: 2,
+          maxZoom: 14,
+          maxBounds: isSpain ? spainMaxBounds : undefined,
+          maxBoundsViscosity: isSpain ? 0.85 : undefined,
           scrollWheelZoom: false,
           zoomControl: true,
           attributionControl: true,
         });
 
-        // OpenStreetMap warm tile layer
+        // OpenStreetMap warm tile layer with attribution
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; OpenStreetMap contributors',
@@ -130,98 +143,169 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
 
         mapInstanceRef.current = map;
 
-        // Fit entire Spain mainland with generous padding so Andalusia is never cut off
-        map.fitBounds(L.latLngBounds(mainlandBounds), {
-          padding: [24, 24],
-          maxZoom: 7,
-        });
-
-        // 1. Fetch & Render Real GeoJSON Outlines of Spain's Autonomous Communities
-        try {
-          const res = await fetch('/data/spain-communities.geojson');
-          if (res.ok) {
-            const geoData = await res.json();
-            if (isMounted) {
-              const geoLayer = L.geoJSON(geoData, {
-                style: (feature: any) => {
-                  const rawName = feature?.properties?.name || '';
-                  const regId = normalizeCommunityName(rawName);
-                  const isFeatured = !!regId;
-                  const isSelected = regId === selectedRegionId;
-                  const color = isFeatured ? getRegionThemeColor(regId) : '#B4A693';
-
-                  return {
-                    fillColor: isFeatured ? color : '#EBDDC0',
-                    fillOpacity: isSelected ? 0.38 : isFeatured ? 0.18 : 0.06,
-                    color: isFeatured ? color : '#8C7A6B',
-                    weight: isSelected ? 3 : isFeatured ? 1.8 : 1,
-                    dashArray: isFeatured ? (isSelected ? undefined : '4, 4') : '2, 3',
-                  };
-                },
-                onEachFeature: (feature: any, layer: any) => {
-                  const rawName = feature?.properties?.name || '';
-                  const regId = normalizeCommunityName(rawName);
-                  const reg = regions.find((r) => r.id === regId);
-
-                  if (reg) {
-                    // Show region name as clean permanent Leaflet tooltip at the center
-                    layer.bindTooltip(reg.name, {
-                      permanent: true,
-                      direction: 'center',
-                      className: 'leaflet-clean-region-label',
-                    });
-
-                    // Interactive popup
-                    const popupContent = `
-                      <div style="font-family: var(--font-karla, sans-serif); color: #231A14; min-width: 220px; padding: 4px;">
-                        <strong style="font-family: var(--font-fraunces, serif); font-size: 15px; color: #C2512B; display: block; margin-bottom: 5px;">${reg.name} (${reg.name_es})</strong>
-                        <div style="font-size: 12px; line-height: 1.45; color: #231A14;">
-                          <div style="margin-bottom: 2px;">🏛️ <strong>Lugar célebre:</strong> ${reg.famous_place}</div>
-                          <div style="margin-bottom: 2px;">🎉 <strong>Fiesta:</strong> ${reg.signature_festival}</div>
-                          <div>🥘 <strong>Plato típico:</strong> ${reg.signature_dish}</div>
-                        </div>
-                      </div>
-                    `;
-                    layer.bindPopup(popupContent);
-
-                    // Hover effects
-                    layer.on('mouseover', () => {
-                      layer.setStyle({ fillOpacity: 0.42, weight: 2.5 });
-                      setActiveRegionName(reg.name);
-                    });
-
-                    layer.on('mouseout', () => {
-                      const isSel = reg.id === selectedRegionId;
-                      layer.setStyle({
-                        fillOpacity: isSel ? 0.38 : 0.18,
-                        weight: isSel ? 3 : 1.8,
-                      });
-                      setActiveRegionName('');
-                    });
-
-                    // Click handler: select region & zoom smoothly to its bounds
-                    layer.on('click', () => {
-                      onSelectRegion(reg);
-                      layer.openPopup();
-                      map.fitBounds(layer.getBounds(), { padding: [40, 40], maxZoom: 8 });
-                    });
-                  }
-                },
-              }).addTo(map);
-
-              geoJsonLayerRef.current = geoLayer;
-            }
+        // Initial view fit
+        if (isSpain) {
+          map.fitBounds(L.latLngBounds(spainMainlandBounds), {
+            padding: [24, 24],
+            maxZoom: 7,
+          });
+        } else {
+          const allCoords = [
+            ...validRegionCoords,
+            ...landmarks
+              .filter((l) => l.coordinates && l.coordinates.length === 2)
+              .map((l) => l.coordinates as [number, number]),
+          ];
+          if (allCoords.length > 0) {
+            map.fitBounds(L.latLngBounds(allCoords), {
+              padding: [35, 35],
+              maxZoom: 8,
+            });
           }
-        } catch (geoErr) {
-          console.warn('[Leaflet Map] GeoJSON load error, falling back gracefully:', geoErr);
         }
 
-        // 2. Render Pin Markers using L.divIcon with TIP exact at [width/2, height]
-        // Pin size: 28 x 36 px. Anchor = [14, 36] (tip point).
+        // 1. Regional boundaries & markers
+        if (isSpain) {
+          // Real GeoJSON Outlines of Spain's Autonomous Communities
+          try {
+            const res = await fetch('/data/spain-communities.geojson');
+            if (res.ok) {
+              const geoData = await res.json();
+              if (isMounted) {
+                const geoLayer = L.geoJSON(geoData, {
+                  style: (feature: any) => {
+                    const rawName = feature?.properties?.name || '';
+                    const regId = normalizeCommunityName(rawName);
+                    const isFeatured = !!regId;
+                    const isSelected = regId === selectedRegionId;
+                    const color = isFeatured ? getRegionThemeColor(regId) : '#B4A693';
+
+                    return {
+                      fillColor: isFeatured ? color : '#EBDDC0',
+                      fillOpacity: isSelected ? 0.38 : isFeatured ? 0.18 : 0.06,
+                      color: isFeatured ? color : '#8C7A6B',
+                      weight: isSelected ? 3 : isFeatured ? 1.8 : 1,
+                      dashArray: isFeatured ? (isSelected ? undefined : '4, 4') : '2, 3',
+                    };
+                  },
+                  onEachFeature: (feature: any, layer: any) => {
+                    const rawName = feature?.properties?.name || '';
+                    const regId = normalizeCommunityName(rawName);
+                    const reg = regions.find((r) => r.id === regId);
+
+                    if (reg) {
+                      layer.bindTooltip(reg.name, {
+                        permanent: true,
+                        direction: 'center',
+                        className: 'leaflet-clean-region-label',
+                      });
+
+                      const popupContent = `
+                        <div style="font-family: var(--font-karla, sans-serif); color: #231A14; min-width: 220px; padding: 4px;">
+                          <strong style="font-family: var(--font-fraunces, serif); font-size: 15px; color: #C2512B; display: block; margin-bottom: 5px;">${reg.name} (${reg.name_es})</strong>
+                          <div style="font-size: 12px; line-height: 1.45; color: #231A14;">
+                            <div style="margin-bottom: 2px;">🏛️ <strong>Lugar célebre:</strong> ${reg.famous_place}</div>
+                            <div style="margin-bottom: 2px;">🎉 <strong>Fiesta:</strong> ${reg.signature_festival}</div>
+                            <div>🥘 <strong>Plato típico:</strong> ${reg.signature_dish}</div>
+                          </div>
+                        </div>
+                      `;
+                      layer.bindPopup(popupContent);
+
+                      layer.on('mouseover', () => {
+                        layer.setStyle({ fillOpacity: 0.42, weight: 2.5 });
+                        setActiveRegionName(reg.name);
+                      });
+
+                      layer.on('mouseout', () => {
+                        const isSel = reg.id === selectedRegionId;
+                        layer.setStyle({
+                          fillOpacity: isSel ? 0.38 : 0.18,
+                          weight: isSel ? 3 : 1.8,
+                        });
+                        setActiveRegionName('');
+                      });
+
+                      layer.on('click', () => {
+                        onSelectRegion(reg);
+                        layer.openPopup();
+                        map.fitBounds(layer.getBounds(), { padding: [40, 40], maxZoom: 8 });
+                      });
+                    }
+                  },
+                }).addTo(map);
+
+                geoJsonLayerRef.current = geoLayer;
+              }
+            }
+          } catch (geoErr) {
+            console.warn('[Leaflet Map] GeoJSON load error, falling back gracefully:', geoErr);
+          }
+        } else {
+          // Non-Spain Countries: Render regional circles and tooltips using each region's coordinates
+          regions.forEach((reg) => {
+            if (!reg.coordinates || reg.coordinates.length < 2) return;
+            const isSelected = reg.id === selectedRegionId;
+            const color = getRegionThemeColor(reg.id);
+
+            const circle = L.circle(reg.coordinates, {
+              radius: 40000,
+              color: color,
+              weight: isSelected ? 3 : 1.5,
+              fillColor: color,
+              fillOpacity: isSelected ? 0.35 : 0.18,
+              dashArray: '4, 4',
+            }).addTo(map);
+
+            circle.bindTooltip(reg.name, {
+              permanent: true,
+              direction: 'center',
+              className: 'leaflet-clean-region-label',
+            });
+
+            const popupContent = `
+              <div style="font-family: var(--font-karla, sans-serif); color: #231A14; min-width: 200px; padding: 4px;">
+                <strong style="font-family: var(--font-fraunces, serif); font-size: 14px; color: #C2512B; display: block; margin-bottom: 4px;">${reg.name}</strong>
+                <div style="font-size: 11px; line-height: 1.4; color: #231A14;">
+                  <div>🏛️ <strong>Lugar:</strong> ${reg.famous_place}</div>
+                  <div>🎉 <strong>Fiesta:</strong> ${reg.signature_festival}</div>
+                  <div>🥘 <strong>Plato:</strong> ${reg.signature_dish}</div>
+                </div>
+              </div>
+            `;
+            circle.bindPopup(popupContent);
+
+            circle.on('mouseover', () => {
+              circle.setStyle({ fillOpacity: 0.45, weight: 2.5 });
+              setActiveRegionName(reg.name);
+            });
+
+            circle.on('mouseout', () => {
+              const isSel = reg.id === selectedRegionId;
+              circle.setStyle({ fillOpacity: isSel ? 0.35 : 0.18, weight: isSel ? 3 : 1.5 });
+              setActiveRegionName('');
+            });
+
+            circle.on('click', () => {
+              onSelectRegion(reg);
+              circle.openPopup();
+              map.flyTo(reg.coordinates, 8, { duration: 0.8 });
+            });
+
+            otherRegionLayersRef.current.push({ id: reg.id, layer: circle, color });
+          });
+        }
+
+        // 2. Render Pin Markers with TIP precisely at [width/2, height]
+        // Size: 28 x 36 px. Anchor = [14, 36] (tip point).
         const currentZoom = map.getZoom();
 
         landmarks.forEach((lm) => {
-          const displayCoords = getDisplayCoords(lm.id, lm.coordinates, currentZoom);
+          if (!lm.coordinates || lm.coordinates.length < 2) return;
+
+          const displayCoords = isSpain
+            ? getDisplayCoords(lm.id, lm.coordinates, currentZoom)
+            : lm.coordinates;
 
           const pinSvg = `
             <div class="custom-pin-container" style="
@@ -242,7 +326,7 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
             className: 'custom-leaflet-landmark-pin',
             html: pinSvg,
             iconSize: [28, 36],
-            iconAnchor: [14, 36],     // The TIP sits exactly on the coordinate!
+            iconAnchor: [14, 36], // The TIP sits exactly on the coordinate!
             popupAnchor: [0, -36],
             tooltipAnchor: [0, -36],
           });
@@ -267,13 +351,15 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
         });
 
         // 3. Update pin positions smoothly on zoomend so close pins separate when zoomed out
-        map.on('zoomend', () => {
-          const z = map.getZoom();
-          markersRef.current.forEach((item) => {
-            const nextCoords = getDisplayCoords(item.id, item.originalCoords, z);
-            item.marker.setLatLng(nextCoords);
+        if (isSpain) {
+          map.on('zoomend', () => {
+            const z = map.getZoom();
+            markersRef.current.forEach((item) => {
+              const nextCoords = getDisplayCoords(item.id, item.originalCoords, z);
+              item.marker.setLatLng(nextCoords);
+            });
           });
-        });
+        }
       } catch (err) {
         console.warn('[Leaflet Map] Init error handled gracefully:', err);
       }
@@ -288,26 +374,39 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
         mapInstanceRef.current = null;
       }
     };
-  }, [regions, landmarks]);
+  }, [regions, landmarks, isSpain]);
 
-  // Update GeoJSON styling when selectedRegionId changes
+  // Update styling when selectedRegionId changes
   useEffect(() => {
-    if (!geoJsonLayerRef.current) return;
-    geoJsonLayerRef.current.eachLayer((layer: any) => {
-      const feature = layer.feature;
-      if (!feature) return;
-      const rawName = feature.properties?.name || '';
-      const regId = normalizeCommunityName(rawName);
-      if (!regId) return;
+    // GeoJSON layer (Spain)
+    if (geoJsonLayerRef.current) {
+      geoJsonLayerRef.current.eachLayer((layer: any) => {
+        const feature = layer.feature;
+        if (!feature) return;
+        const rawName = feature.properties?.name || '';
+        const regId = normalizeCommunityName(rawName);
+        if (!regId) return;
 
-      const isSelected = regId === selectedRegionId;
-      const color = getRegionThemeColor(regId);
+        const isSelected = regId === selectedRegionId;
+        const color = getRegionThemeColor(regId);
+        layer.setStyle({
+          fillColor: color,
+          fillOpacity: isSelected ? 0.38 : 0.18,
+          color: color,
+          weight: isSelected ? 3 : 1.8,
+          dashArray: isSelected ? undefined : '4, 4',
+        });
+      });
+    }
+
+    // Circles (Other Countries)
+    otherRegionLayersRef.current.forEach(({ id, layer, color }) => {
+      const isSelected = id === selectedRegionId;
       layer.setStyle({
         fillColor: color,
         fillOpacity: isSelected ? 0.38 : 0.18,
         color: color,
-        weight: isSelected ? 3 : 1.8,
-        dashArray: isSelected ? undefined : '4, 4',
+        weight: isSelected ? 3 : 1.5,
       });
     });
   }, [selectedRegionId]);
@@ -316,13 +415,23 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
     if (!mapInstanceRef.current) return;
     try {
       const L = (window as any).L;
-      if (L) {
-        mapInstanceRef.current.fitBounds(L.latLngBounds(mainlandBounds), {
+      if (isSpain && L) {
+        mapInstanceRef.current.fitBounds(L.latLngBounds(spainMainlandBounds), {
           padding: [24, 24],
           maxZoom: 7,
         });
       } else {
-        mapInstanceRef.current.setView([40.2, -3.7], 6);
+        const validCoords = regions
+          .filter((r) => r.coordinates && r.coordinates.length === 2)
+          .map((r) => r.coordinates);
+        if (validCoords.length > 0 && L) {
+          mapInstanceRef.current.fitBounds(L.latLngBounds(validCoords), {
+            padding: [35, 35],
+            maxZoom: 8,
+          });
+        } else {
+          mapInstanceRef.current.setView(validCoords[0] || [0, 0], 6);
+        }
       }
     } catch {
       mapInstanceRef.current?.setView([40.2, -3.7], 6);
@@ -331,7 +440,7 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
 
   return (
     <div className="flex flex-col gap-3 w-full">
-      {/* Map Container - Tall enough that Andalusia is fully visible on all devices */}
+      {/* Map Container - Tall enough that Andalusia / all regions are fully visible */}
       <div className="relative w-full h-[520px] sm:h-[600px] md:h-[660px] rounded-2xl overflow-hidden border border-sand shadow-inner bg-sand/30">
         <div ref={mapContainerRef} className="w-full h-full z-10" />
 
@@ -347,10 +456,10 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
           <button
             onClick={handleResetView}
             className="px-3 py-1.5 rounded-lg bg-cream/95 text-ink text-xs font-bold font-display border border-sand hover:border-terracotta/40 shadow-xs backdrop-blur-xs flex items-center gap-1.5 transition-colors"
-            title="Reset to whole Spain view"
+            title="Reset map view"
           >
             <RotateCcw className="w-3.5 h-3.5 text-terracotta" />
-            <span>Whole Spain</span>
+            <span>{isSpain ? 'Whole Spain' : 'Reset View'}</span>
           </button>
         </div>
       </div>
@@ -363,19 +472,21 @@ export const MapLeaflet: React.FC<MapLeafletProps> = ({
               <MapPin className="w-3.5 h-3.5 text-terracotta fill-terracotta/20" />
             </span>
             <span className="font-semibold text-ink">Landmark Pins:</span>
-            <span>Accurate GPS anchors (tip points to exact monument)</span>
+            <span>Accurate GPS anchors (tip points to monument)</span>
           </div>
 
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-xs border border-terracotta/50 bg-terracotta/20" />
-            <span className="font-semibold text-ink">Autonomous Communities:</span>
-            <span>Real GeoJSON boundary outlines</span>
+            <span className="font-semibold text-ink">Regional Highlights:</span>
+            <span>{isSpain ? 'Official autonomous communities GeoJSON' : 'Regional cultural zones'}</span>
           </div>
         </div>
 
-        <div className="text-[11px] text-ink/60 md:text-right">
-          <span>Mainland Spain &amp; Balearic Islands focused. Canary Islands located southwest in the Atlantic.</span>
-        </div>
+        {isSpain && (
+          <div className="text-[11px] text-ink/60 md:text-right">
+            <span>Mainland Spain &amp; Balearic Islands focused. Canary Islands located southwest in the Atlantic.</span>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -2,11 +2,11 @@
 
 **Ruta Hispana** is an interactive, AI-powered travel and cultural guide web application built for our University Spanish coursework: *Creative Exploration of the Hispanic World*.
 
-Currently featuring **Spain (España)** with a fully country-agnostic modular architecture designed so teammates can add additional Spanish-speaking countries (Mexico, Argentina, Colombia, Peru, etc.) simply by adding a single JSON file.
+Featuring **Spain, Puerto Rico, Central America, Cuba, the Dominican Republic, and Equatorial Guinea** with a country-agnostic architecture driven by JSON country guides.
 
 ---
 
-## Key Features (Spain Section)
+## Key Features
 
 1. **Bilingual Design with Interactive Tooltips**:
    - Navigation and headings are bilingual (e.g., *Comida · Food*, *Mapa · Map*, *Cultura · Culture*).
@@ -14,24 +14,24 @@ Currently featuring **Spain (España)** with a fully country-agnostic modular ar
 2. **Hero & Frase del Día**:
    - Bilingual title with quick country stats.
    - Interactive *Frase del Día* (Phrase of the Day) card with phonetic pronunciation and Web Speech API audio playback.
-3. **Interactive Map of Spain**:
-   - SVG map covering the 5 core autonomous communities: **Madrid**, **Catalonia**, **Andalusia**, **Basque Country**, and **Valencia**.
+3. **Interactive Country Maps**:
+   - Country pages show their regions and landmarks with location markers.
    - Clicking a region fetches a grounded, AI-generated cultural blurb via the server.
 4. **Comida · Food (3D Flip Cards)**:
    - Interactive 3D flip cards with Spanish dish names on the front and concise taglines (max 8 words) on the back.
-   - Vegetarian indicator (🌱) highlighting meatless classics like *Tortilla Española* and *Gazpacho Andaluz*.
-   - Featured national drink: *Horchata de Chufa*.
+   - A 🌱 indicator marks dishes that are vegetarian-friendly.
 5. **Cultura · Culture**:
-   - Card showcases for Spain's top *Fiestas* (e.g., La Tomatina, Feria de Abril) and *Monumentos* (e.g., Sagrada Família, La Alhambra).
-   - Filterable by category with month/city tags.
+   - Country-specific *Fiestas*, music, dance, crafts, and landmarks with sourced captions.
 6. **AI Trip Planner (Strict JSON)**:
    - Configurable inputs for trip duration (1–7 days), budget in Indian Rupees (INR), traveler interests, and a strictly vegetarian toggle.
-   - Server-side route calls Gemini and returns a day-by-day itinerary as strict JSON, fully grounded in `spain.json`.
+   - Server-side route calls Gemini and returns a day-by-day itinerary as strict JSON, grounded in the selected country's local data.
 7. **"Habla con tu Guía" Chatbot**:
    - Persona-driven assistant (*Mateo*) with a language mode switch: **English**, **Mixed · Bilingüe**, or **Español (Spanish-heavy)**.
 8. **Indian Traveller's Guide (Consejos para la India)**:
-   - Practical guidance on Schengen visa applications via BLS International, direct and 1-stop flight routes from India, daily INR budget guidelines, and vegetarian food phrases (*"Sin carne, sin jamón, sin pescado"*).
-9. **Academic Attribution Badges**:
+   - Country-specific entry checks, connecting-flight guidance, indicative daily INR budgets, and vegetarian food phrases for Indian travellers.
+9. **Visible Research and Attribution**:
+   - Country guides display source links, verification caveats, research reflections, and photo credits with license/source links.
+10. **Academic Attribution Badges**:
    - Each section features a customizable **"Built by [Student Name]"** badge showcasing individual student contributions.
 
 ---
@@ -42,7 +42,12 @@ Currently featuring **Spain (España)** with a fully country-agnostic modular ar
 ruta-hispana/
 ├── data/
 │   └── countries/
-│       └── spain.json          # Source of truth for Spain (schema reference)
+│       ├── spain.json
+│       ├── puertorico.json
+│       ├── central-america.json
+│       ├── cuba.json
+│       ├── dominican-republic.json
+│       └── equatorial-guinea.json
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -51,7 +56,7 @@ ruta-hispana/
 │   │   │   └── region/route.ts     # Regional cultural blurb endpoint
 │   │   ├── globals.css             # Spanish color tokens, 3D flip card utilities
 │   │   ├── layout.tsx              # SEO metadata, layout wrapper
-│   │   └── page.tsx                # Spain landing page assembling all components
+│   │   └── page.tsx                # Country landing page assembling the selected guide
 │   ├── components/
 │   │   ├── CultureSection.tsx      # Festivals & Landmarks cards
 │   │   ├── FoodSection.tsx         # 3D Flip cards for gastronomy & drinks
@@ -79,9 +84,11 @@ ruta-hispana/
 
 The application supports multiple country datasets:
 1. Add a JSON file to `data/countries/` using the shape of `spain.json` as a reference.
-2. Include an `id`, `name`, and `name_es` that identify the country, along with the sections used by the page (`regions`, `lugares`, `fiestas`, `comida`, and `cultura`).
+2. Include an `id`, `name`, and `name_es`, plus the page sections (`regions`, `lugares`, `fiestas`, `comida`, and `cultura`).
 3. Add any referenced image files under `public/` at the paths in the JSON.
-4. Restart the development server if it was already running, then choose the country from the menu in the page header. Spain remains the default at `/`; other country pages use `/?country=<id>`.
+4. Add five words to each of the four section vocabulary arrays and five more to `viaje_palabras` for 25 terms total. Bold terms in English prose as `**palabra** (meaning)` to activate the hover tooltip.
+5. Provide visible `research_sources`, `india_traveller` notes where relevant, photo credits with source URLs, and verification notes for estimates or changing rules.
+6. Restart the development server if it was already running, then choose the country from the menu in the page header. Spain remains the default at `/`; other country pages use `/?country=<id>`.
 
 ---
 
@@ -97,7 +104,7 @@ The application supports multiple country datasets:
    ```env
    GEMINI_API_KEY=your_gemini_api_key_here
    ```
-   *(Note: If no API key is provided, the application runs in offline fallback mode using verified local knowledge from `spain.json`.)*
+   *(Note: If no API key is provided, the application runs in offline fallback mode using local country-guide data.)*
 
 3. **Run the development server**:
    ```bash

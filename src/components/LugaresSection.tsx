@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { LandmarkItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
 import { MapPin } from 'lucide-react';
 
 interface LugaresSectionProps {
@@ -47,6 +49,9 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-terracotta font-display px-2.5 py-1 rounded-full bg-sand/60 border border-sand mb-2">
               Sección 01 · Landmarks
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Landmark research" />
+            </div>
 
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               {title}
@@ -102,15 +107,22 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
                 <div
                   className={`relative w-full ${heightClass} overflow-hidden bg-sand ${tiltClass}`}
                 >
-                  <Image
-                    src={place.image}
-                    alt={place.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                  {place.image ? (
+                    <>
+                      <Image
+                        src={place.image}
+                        alt={place.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-center text-sm text-ink/60">
+                      No verified image available
+                    </div>
+                  )}
 
                   {/* City Tag */}
                   <div className="animate-stamp absolute top-3 left-3 bg-cream/95 backdrop-blur-xs px-3 py-1 rounded-full text-xs font-bold text-ink border border-sand flex items-center gap-1 shadow-xs">
@@ -127,12 +139,12 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
                     </h3>
 
                     <p className="text-xs sm:text-sm text-ink/80 font-body leading-relaxed">
-                      {place.caption}
+                      {renderBilingualContent(place.caption)}
                     </p>
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-sand flex items-center justify-between text-xs text-ink/60 font-body">
-                    <span className="italic">{place.credit}</span>
+                    <span className="italic">{place.credit ?? 'Credit unavailable'}</span>
                     <span className="font-mono text-terracotta font-semibold">
                       #{index + 1}
                     </span>

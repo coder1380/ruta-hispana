@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { FestivalItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
 import { Calendar } from 'lucide-react';
 
 interface FiestasVisualSectionProps {
@@ -26,11 +28,14 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-saffron font-display px-2.5 py-1 rounded-full bg-cream/10 border border-cream/20 mb-2">
               Sección 02 · Celebrations
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Festival research" />
+            </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-cream mt-1">
               Fiestas · Street Festivals
             </h2>
             <p className="mt-2 text-sm sm:text-base text-cream/80 max-w-2xl font-body">
-              Six festivals that bring towns into the street. Bonfires, costumed parades, and community celebration.
+              {fiestas.length} celebrations bring music, dance, and community traditions into public spaces.
             </p>
           </div>
 
@@ -54,14 +59,22 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
               >
                 {/* Photo Container */}
                 <div className={`relative w-full h-60 sm:h-64 overflow-hidden bg-[#0F1E32] ${tiltClass}`}>
-                  <Image
-                    src={fest.image}
-                    alt={fest.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#152943] via-transparent to-transparent opacity-60" />
+                  {fest.image ? (
+                    <>
+                      <Image
+                        src={fest.image}
+                        alt={fest.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#152943] via-transparent to-transparent opacity-60" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-cream/60">
+                      No verified image available
+                    </div>
+                  )}
 
                   {/* Stamp-Style Month Badge with Scale Bounce */}
                   <div className="animate-stamp absolute top-3 right-3 bg-saffron text-ink px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase font-display shadow-xs flex items-center gap-1.5">
@@ -82,12 +95,12 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
                       {fest.name}
                     </h3>
                     <p className="text-xs sm:text-sm text-cream/80 font-body leading-relaxed">
-                      {fest.caption}
+                      {renderBilingualContent(fest.caption)}
                     </p>
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-cream/10 flex items-center justify-between text-xs text-cream/60 font-body">
-                    <span className="italic">{fest.credit}</span>
+                    <span className="italic">{fest.credit ?? 'Credit unavailable'}</span>
                     <span className="font-handwriting text-base text-saffron">
                       {fest.month.includes('(') ? fest.month.split('(')[1].replace(')', '') : 'Annual'}
                     </span>

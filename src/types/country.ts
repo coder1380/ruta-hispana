@@ -9,9 +9,9 @@ export interface LandmarkItem {
   name: string;
   city: string;
   caption: string; // Max 12 words
-  image: string;
-  credit: string;
-  coordinates: [number, number];
+  image: string | null;
+  credit: string | null;
+  coordinates: [number, number] | null;
   tagline?: string;
 }
 
@@ -21,8 +21,8 @@ export interface FestivalItem {
   month: string;
   town_region: string;
   caption: string; // Max 12 words
-  image: string;
-  credit: string;
+  image: string | null;
+  credit: string | null;
 }
 
 export interface FoodTileItem {
@@ -31,8 +31,8 @@ export interface FoodTileItem {
   caption: string; // Max 8 words
   veg_friendly: boolean;
   diet?: 'veg' | 'non-veg' | 'egg';
-  image: string;
-  credit: string;
+  image: string | null;
+  credit: string | null;
   alt?: string;
   source_url?: string;
   license?: string;
@@ -43,8 +43,8 @@ export interface CultureTraditionItem {
   name: string;
   origin: string;
   description: string; // 2 lines
-  image: string;
-  credit: string;
+  image: string | null;
+  credit: string | null;
 }
 
 export interface RegionSummary {
@@ -84,7 +84,20 @@ export interface CountryVisualData {
   comida_palabras: SpanishWordItem[];
   cultura: CultureTraditionItem[];
   cultura_palabras: SpanishWordItem[];
-  photo_credits: { title: string; photographer: string; license: string; url?: string }[];
+  photo_credits: {
+    title: string;
+    photographer: string;
+    license: string;
+    url?: string;
+    source_url?: string;
+  }[];
+  intro?: string;
+  fun_fact?: string;
+  viaje_palabras?: SpanishWordItem[];
+  india_traveller?: IndiaTravellerGuide;
+  research_sources?: AcademicSource[];
+  verification_notes?: string[];
+  research_reflection?: string;
   [key: string]: any;
 }
 
@@ -120,11 +133,29 @@ export interface TimelineEvent {
 }
 
 export interface IndiaTravellerGuide {
-  [key: string]: any;
+  visa_note: string;
+  flight_note: string;
+  cost_per_day_inr: string | null;
+  veg_tips: string;
+  visa_label?: string;
+  visa_official_url?: string;
+  visa_official_label?: string;
+  visa_application_note?: string;
+  visa_timing_note?: string;
+  flight_duration?: string | null;
+  flight_route?: string | null;
+  flight_carriers?: string | null;
+  cost_daily_range?: string | null;
+  cost_reference_note?: string | null;
+  key_food_phrase?: string;
 }
 
 export interface AcademicSource {
-  [key: string]: any;
+  title: string;
+  author_or_institution: string;
+  url: string;
+  year?: string;
+  note?: string;
 }
 
 export interface SpanishComparisonItem {

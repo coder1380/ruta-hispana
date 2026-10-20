@@ -63,10 +63,18 @@ export function formatCountryContext(country: CountryData): string {
     name: country.name,
     name_es: country.name_es,
     capital: country.capital,
+    intro: country.intro,
+    fun_fact: country.fun_fact,
     regions,
     lugares: (country.lugares || []).map((l) => `${l.name} (${l.city}): ${l.caption}`),
     fiestas: (country.fiestas || []).map((f) => `${f.name} (${f.month}): ${f.caption}`),
     comida: (country.comida || []).map((c) => `${c.name_es}: ${c.caption} (Veg: ${c.veg_friendly})`),
     cultura: (country.cultura || []).map((t) => `${t.name} (${t.origin}): ${t.description}`),
+    research_sources: (country.research_sources || []).map((source) => ({
+      title: source.title,
+      institution: source.author_or_institution,
+      url: source.url,
+      note: source.note,
+    })),
   });
 }

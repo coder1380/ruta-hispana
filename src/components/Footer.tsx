@@ -2,7 +2,13 @@ import React from 'react';
 import { Compass, Heart, Code2, Camera } from 'lucide-react';
 
 interface FooterProps {
-  photoCredits?: { title: string; photographer: string; license: string; url?: string }[];
+  photoCredits?: {
+    title: string;
+    photographer: string;
+    license: string;
+    url?: string;
+    source_url?: string;
+  }[];
 }
 
 export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
@@ -35,23 +41,29 @@ export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
               Map Tiles: © OpenStreetMap contributors.
             </p>
             <div className="text-[11px] text-cream/60 space-y-1 max-h-56 overflow-y-auto pr-2">
-              {photoCredits.map((c, i) => (
-                <div key={i} className="leading-tight">
-                  • <span className="text-cream/90 font-medium">{c.title}</span>: {c.url ? (
-                    <a
-                      href={c.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-cream/80 hover:text-saffron underline decoration-dotted"
-                    >
-                      {c.photographer}
-                    </a>
-                  ) : (
-                    <span className="text-cream/80">{c.photographer}</span>
-                  )}{' '}
-                  <span className="text-cream/40">({c.license})</span>
-                </div>
-              ))}
+              {photoCredits.map((c, i) => {
+                const linkUrl = c.url || c.source_url;
+                return (
+                  <div key={i} className="leading-tight">
+                    • <span className="text-cream/90 font-medium">
+                      {linkUrl ? (
+                        <a
+                          href={linkUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-cream/80 hover:text-saffron underline decoration-dotted"
+                        >
+                          {c.title}
+                        </a>
+                      ) : (
+                        c.title
+                      )}
+                    </span>
+                    : <span className="text-cream/80">{c.photographer}</span>{' '}
+                    <span className="text-cream/40">({c.license})</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

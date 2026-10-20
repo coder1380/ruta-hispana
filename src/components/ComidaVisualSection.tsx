@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FoodTileItem, SpanishWordItem } from '@/types/country';
 import { PalabrasStrip } from './PalabrasStrip';
-import { Sparkles, RotateCw, Info } from 'lucide-react';
+import { renderBilingualContent } from './SpanishTooltip';
+import { StudentBadge } from './StudentBadge';
+import { Sparkles, RotateCw, Info, Leaf } from 'lucide-react';
 
 interface ComidaVisualSectionProps {
   comida: FoodTileItem[];
@@ -107,6 +109,9 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
             <span className="animate-stamp inline-block text-xs font-bold tracking-widest uppercase text-terracotta font-display px-2.5 py-1 rounded-full bg-cream border border-terracotta/20 mb-2">
               Sección 03 · Gastronomy
             </span>
+            <div className="mb-2">
+              <StudentBadge studentName={studentName} role="Food research" />
+            </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               Comida · Culinary Craft
             </h2>
@@ -233,14 +238,22 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
                   {/* FRONT FACE */}
                   <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl overflow-hidden border border-sand bg-cream flex flex-col justify-between">
                     <div className="relative w-full h-full overflow-hidden">
-                      <Image
-                        src={dish.image}
-                        alt={dish.alt || dish.name_es}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 via-40% to-black/20" />
+                      {dish.image ? (
+                        <>
+                          <Image
+                            src={dish.image}
+                            alt={dish.alt || dish.name_es}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 via-40% to-black/20" />
+                        </>
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center text-xs text-ink/60 bg-sand/30 p-4 text-center">
+                          No verified image available
+                        </div>
+                      )}
 
                       {/* Standard Indian Food Mark Badge */}
                       <div className="absolute top-3 right-3 z-10">
@@ -280,7 +293,7 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
 
                       {/* Max 8 words caption */}
                       <p className="font-body text-sm sm:text-base italic text-ink/90 mt-2 leading-snug">
-                        &ldquo;{dish.caption}&rdquo;
+                        &ldquo;{renderBilingualContent(dish.caption)}&rdquo;
                       </p>
 
                       {/* Single short phrase with inline translation */}

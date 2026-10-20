@@ -5,6 +5,7 @@ import { RegionSummary, LandmarkItem } from '@/types/country';
 import { MapLeaflet } from './MapLeaflet';
 import { MapPin, X } from 'lucide-react';
 import Image from 'next/image';
+import { renderBilingualContent } from './SpanishTooltip';
 
 interface MapSectionProps {
   countryName: string;
@@ -155,21 +156,27 @@ export const MapSection: React.FC<MapSectionProps> = ({
                 </div>
 
                 <div className="relative h-48 w-full rounded-xl overflow-hidden border border-sand">
-                  <Image
-                    src={activeLandmark.image}
-                    alt={activeLandmark.name}
-                    fill
-                    className="object-cover photo-hover-tilt"
-                    sizes="(max-width: 768px) 100vw, 400px"
-                  />
+                  {activeLandmark.image ? (
+                    <Image
+                      src={activeLandmark.image}
+                      alt={activeLandmark.name}
+                      fill
+                      className="object-cover photo-hover-tilt"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-ink/60">
+                      No verified image available
+                    </div>
+                  )}
                 </div>
 
                 <p className="text-sm text-ink font-body leading-relaxed">
-                  {activeLandmark.caption}
+                  {renderBilingualContent(activeLandmark.caption)}
                 </p>
 
                 <p className="text-[10px] text-ink/50 pt-2 border-t border-sand">
-                  Photo: {activeLandmark.credit}
+                  Photo: {activeLandmark.credit ?? 'Credit unavailable'}
                 </p>
               </div>
             ) : (
