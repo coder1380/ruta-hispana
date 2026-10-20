@@ -2,7 +2,7 @@ import React from 'react';
 import { Compass, Heart, Code2, Camera } from 'lucide-react';
 
 interface FooterProps {
-  photoCredits?: { title: string; photographer: string; license: string }[];
+  photoCredits?: { title: string; photographer: string; license: string; url?: string }[];
 }
 
 export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
@@ -29,15 +29,27 @@ export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
           <div className="space-y-2">
             <h4 className="font-display text-xs font-bold uppercase tracking-wider text-saffron flex items-center gap-1.5">
               <Camera className="w-3.5 h-3.5" />
-              Photography & Map Attribution
+              Photo credits & Attribution
             </h4>
             <p className="text-xs text-cream/70 leading-relaxed">
               Map Tiles: © OpenStreetMap contributors.
             </p>
-            <div className="text-[11px] text-cream/50 space-y-0.5">
-              {photoCredits.slice(0, 4).map((c, i) => (
-                <div key={i}>
-                  • {c.title}: <span className="text-cream/80">{c.photographer}</span> ({c.license})
+            <div className="text-[11px] text-cream/60 space-y-1 max-h-56 overflow-y-auto pr-2">
+              {photoCredits.map((c, i) => (
+                <div key={i} className="leading-tight">
+                  • <span className="text-cream/90 font-medium">{c.title}</span>: {c.url ? (
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cream/80 hover:text-saffron underline decoration-dotted"
+                    >
+                      {c.photographer}
+                    </a>
+                  ) : (
+                    <span className="text-cream/80">{c.photographer}</span>
+                  )}{' '}
+                  <span className="text-cream/40">({c.license})</span>
                 </div>
               ))}
             </div>

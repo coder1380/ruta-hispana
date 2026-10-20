@@ -55,7 +55,7 @@
       "name": "Andalusia",
       "name_es": "Andalucía",
       "capital": "Seville",
-      "coordinates": [37.3891, -5.9845],
+      "coordinates": [37.3862, -5.9926],
       "famous_place": "La Alhambra (Granada) & Mezquita (Córdoba)",
       "signature_festival": "Feria de Abril & Semana Santa (Seville)",
       "signature_dish": "Gazpacho andaluz (chilled tomato soup)"
@@ -75,7 +75,7 @@
       "name": "Valencia",
       "name_es": "Comunidad Valenciana",
       "capital": "Valencia",
-      "coordinates": [39.4699, -0.3763],
+      "coordinates": [39.4540, -0.3500],
       "famous_place": "Ciudad de las Artes y las Ciencias",
       "signature_festival": "Las Fallas (March 15–19 bonfires)",
       "signature_dish": "Paella valenciana tradicional"
@@ -85,7 +85,7 @@
       "name": "Galicia",
       "name_es": "Galicia",
       "capital": "Santiago de Compostela",
-      "coordinates": [42.8782, -8.5448],
+      "coordinates": [42.8806, -8.5446],
       "famous_place": "Catedral de Santiago de Compostela",
       "signature_festival": "Fiesta del Apóstol Santiago (July 25)",
       "signature_dish": "Pimientos de Padrón & Pulpo á feira"
@@ -108,7 +108,7 @@
       "caption": "Intricate Moorish palaces and reflective pools crowning Granada's hills.",
       "image": "/images/spain/alhambra.jpg",
       "credit": "Jorge Fernández Salas / Unsplash",
-      "coordinates": [37.1773, -3.5986]
+      "coordinates": [37.1761, -3.5881]
     },
     {
       "id": "park-guell",
@@ -153,7 +153,16 @@
       "caption": "Frank Gehry's titanium curves revitalizing the Basque industrial riverfront.",
       "image": "/images/spain/guggenheim.jpg",
       "credit": "Spencer Davis / Unsplash",
-      "coordinates": [43.2686, -2.934]
+      "coordinates": [43.2687, -2.9340]
+    },
+    {
+      "id": "santiago-cathedral",
+      "name": "Catedral de Santiago",
+      "city": "Santiago de Compostela",
+      "caption": "Grand Romanesque pilgrimage sanctuary culminating centuries of the Camino trail.",
+      "image": "/images/spain/santiago-cathedral.jpg",
+      "credit": "Luis Miguel Bugallo Sánchez (Lmbuga) / Wikimedia Commons",
+      "coordinates": [42.8806, -8.5446]
     }
   ],
   "lugares_palabras": [
@@ -231,49 +240,97 @@
       "id": "paella",
       "name_es": "Paella Valenciana",
       "caption": "Saffron rice simmered with chicken and beans.",
+      "diet": "non-veg",
       "veg_friendly": false,
-      "image": "/images/spain/paella.jpg",
-      "credit": "Annie Spratt / Unsplash"
+      "image": "/images/spain/food/paella-valenciana.jpg",
+      "alt": "Authentic Paella Valenciana cooked in a wide paellera pan with saffron rice, chicken, flat green beans, and white garrofó beans",
+      "credit": "Jan Harenburg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:01_Paella_Valenciana_original.jpg",
+      "license": "CC BY-SA 4.0"
     },
     {
       "id": "tortilla",
       "name_es": "Tortilla de Patatas",
       "caption": "Golden potato omelet with caramelized onions.",
+      "diet": "egg",
       "veg_friendly": true,
-      "image": "/images/spain/tortilla.jpg",
-      "credit": "Unsplash Food"
+      "image": "/images/spain/food/tortilla-de-patatas.jpg",
+      "alt": "Thick golden slice of Spanish tortilla de patatas showing layered sliced potatoes and egg on a ceramic plate",
+      "credit": "Tamorlan",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tortilla_de_Patatas_(Corte_transversal).jpg",
+      "license": "CC BY-SA 3.0"
     },
     {
       "id": "gazpacho",
       "name_es": "Gazpacho Andaluz",
       "caption": "Chilled raw tomato, pepper, and garlic soup.",
+      "diet": "veg",
       "veg_friendly": true,
-      "image": "/images/spain/gazpacho.jpg",
-      "credit": "Unsplash Food"
+      "image": "/images/spain/food/gazpacho-andaluz.jpg",
+      "alt": "Chilled crimson Gazpacho Andaluz soup served in a traditional brown earthenware cazuela de barro with wooden spoon",
+      "credit": "Bocadorada",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gazpacho_Cazuela_Barro.jpg",
+      "license": "CC BY-SA 2.0"
     },
     {
       "id": "padron",
       "name_es": "Pimientos de Padrón",
       "caption": "Blistered Galician peppers; a few are spicy.",
+      "diet": "veg",
       "veg_friendly": true,
-      "image": "/images/spain/padron.jpg",
-      "credit": "Unsplash Food"
+      "image": "/images/spain/food/pimientos-de-padron.jpg",
+      "alt": "Plate of green Padrón peppers blistered and charred in olive oil and sprinkled with coarse sea salt",
+      "credit": "Gordito1869",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gebratene_Pimientos_de_Padr%C3%B3n.jpg",
+      "license": "CC BY-SA 4.0"
     },
     {
       "id": "pan-tomate",
       "name_es": "Pan con Tomate",
       "caption": "Toasted crusty bread rubbed with garlic and tomato.",
+      "diet": "veg",
       "veg_friendly": true,
-      "image": "/images/spain/pan-tomate.jpg",
-      "credit": "Unsplash Food"
+      "image": "/images/spain/food/pan-con-tomate.jpg",
+      "alt": "Rustic toasted bread slices rubbed with fresh ripe tomato pulp, garlic, and drizzled with Spanish olive oil",
+      "credit": "Mutari",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pa_amb_tom%C3%A0quet_-_001.jpg",
+      "license": "Public Domain"
     },
     {
       "id": "churros",
       "name_es": "Churros con Chocolate",
       "caption": "Crispy fried dough with thick hot chocolate.",
+      "diet": "veg",
       "veg_friendly": true,
-      "image": "/images/spain/churros.jpg",
-      "credit": "Unsplash Food"
+      "image": "/images/spain/food/churros-con-chocolate.jpg",
+      "alt": "Golden looped churros de lazo served with a cup of thick dark Spanish dipping chocolate on a white plate",
+      "credit": "LWY",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chocolate_con_churros_de_lazo.jpg",
+      "license": "CC BY 2.0"
+    },
+    {
+      "id": "pulpo",
+      "name_es": "Pulpo a la Gallega",
+      "caption": "Tender sliced octopus with paprika and olive oil.",
+      "diet": "non-veg",
+      "veg_friendly": false,
+      "image": "/images/spain/food/pulpo-a-la-gallega.jpg",
+      "alt": "Tender sliced octopus tentacles dusted with red pimentón paprika, sea salt, and olive oil over potatoes on a traditional platter",
+      "credit": "Juan Emilio Prades Bel",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Plato_de_pulpo_a_la_gallega.jpg",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "gambas",
+      "name_es": "Gambas al Ajillo",
+      "caption": "Sizzling prawns in garlic olive oil and chili.",
+      "diet": "non-veg",
+      "veg_friendly": false,
+      "image": "/images/spain/food/gambas-al-ajillo.jpg",
+      "alt": "Sizzling pink prawns bathed in hot garlic olive oil with chili and fresh parsley in an earthenware cazuela",
+      "credit": "Javier Lastras",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gambas_al_ajillo.jpg",
+      "license": "CC BY 2.0"
     }
   ],
   "comida_palabras": [
@@ -330,7 +387,16 @@
     { "title": "La Alhambra", "photographer": "Jorge Fernández Salas", "license": "Unsplash Free License" },
     { "title": "Park Güell", "photographer": "Moritz Kindler", "license": "Unsplash Free License" },
     { "title": "Plaza Mayor", "photographer": "Florian Wehde", "license": "Unsplash Free License" },
-    { "title": "Paella Valenciana", "photographer": "Annie Spratt", "license": "Unsplash Free License" },
-    { "title": "Guggenheim Bilbao", "photographer": "Spencer Davis", "license": "Unsplash Free License" }
+    { "title": "Guggenheim Bilbao", "photographer": "Spencer Davis", "license": "Unsplash Free License" },
+    { "title": "Paella Valenciana", "photographer": "Jan Harenburg", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:01_Paella_Valenciana_original.jpg" },
+    { "title": "Tortilla de Patatas", "photographer": "Tamorlan", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Tortilla_de_Patatas_(Corte_transversal).jpg" },
+    { "title": "Gazpacho Andaluz", "photographer": "Bocadorada", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Gazpacho_Cazuela_Barro.jpg" },
+    { "title": "Pimientos de Padrón", "photographer": "Gordito1869", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Gebratene_Pimientos_de_Padr%C3%B3n.jpg" },
+    { "title": "Pan con Tomate", "photographer": "Mutari", "license": "Public Domain", "url": "https://commons.wikimedia.org/wiki/File:Pa_amb_tom%C3%A0quet_-_001.jpg" },
+    { "title": "Churros con Chocolate", "photographer": "LWY", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Chocolate_con_churros_de_lazo.jpg" },
+    { "title": "Pulpo a la Gallega", "photographer": "Juan Emilio Prades Bel", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Plato_de_pulpo_a_la_gallega.jpg" },
+    { "title": "Gambas al Ajillo", "photographer": "Javier Lastras", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Gambas_al_ajillo.jpg" },
+    { "title": "Catedral de Santiago de Compostela", "photographer": "Luis Miguel Bugallo Sánchez (Lmbuga)", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Catedral_de_Santiago_de_Compostela.Fachada_do_Obradoiro.jpg" },
+    { "title": "Spain Autonomous Communities GeoJSON", "photographer": "Code for Germany / Click That Hood (IGN & OpenStreetMap)", "license": "ODbL / MIT", "url": "https://github.com/codeforgermany/click_that_hood" }
   ]
 }

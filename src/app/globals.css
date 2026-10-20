@@ -195,6 +195,26 @@ h1, h2, h3, h4, .font-display {
   filter: sepia(0.35) saturate(0.8);
 }
 
+/* Clean borderless Leaflet Region Tooltip */
+.leaflet-clean-region-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-family: var(--font-fraunces, serif) !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #231A14 !important;
+  text-shadow: 0 0 4px #F5ECD9, 0 0 6px #F5ECD9, 0 0 8px #F5ECD9 !important;
+  pointer-events: none !important;
+}
+
+.leaflet-clean-region-label::before {
+  display: none !important;
+}
+
 /* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 7px;

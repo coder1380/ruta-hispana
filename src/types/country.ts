@@ -30,8 +30,12 @@ export interface FoodTileItem {
   name_es: string;
   caption: string; // Max 8 words
   veg_friendly: boolean;
+  diet?: 'veg' | 'non-veg' | 'egg';
   image: string;
   credit: string;
+  alt?: string;
+  source_url?: string;
+  license?: string;
 }
 
 export interface CultureTraditionItem {
@@ -80,7 +84,7 @@ export interface CountryVisualData {
   comida_palabras: SpanishWordItem[];
   cultura: CultureTraditionItem[];
   cultura_palabras: SpanishWordItem[];
-  photo_credits: { title: string; photographer: string; license: string }[];
+  photo_credits: { title: string; photographer: string; license: string; url?: string }[];
   [key: string]: any;
 }
 
