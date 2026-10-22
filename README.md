@@ -131,3 +131,30 @@ The application supports multiple country datasets:
 | **AI Trip Planner** | Strict JSON schema, prompt engineering, INR budgets | Priya Sharma |
 | **Habla con tu Guía** | Conversational guide persona, language mode toggles | Elena Gomez |
 | **Consejos para la India** | Cross-cultural logistics, visa, and flight research | Rohan Verma |
+
+---
+
+## Deploy to Cloudflare Workers
+
+This project uses OpenNext to run the full Next.js app, including its API routes, on Cloudflare Workers. Country data is bundled at build time, and Next.js image optimization is disabled so the deployment does not require a paid Cloudflare Images binding.
+
+### Test the Cloudflare build locally
+
+```bash
+npm install
+npm run preview:cloudflare
+```
+
+The preview runs in the Workers runtime. Check the country selector and the chat and trip-planner tools before deploying.
+
+### Connect the repository to Cloudflare
+
+1. Push this repository and its `package-lock.json` to GitHub.
+2. In Cloudflare, open **Workers & Pages** → **Create application** → **GitHub**, authorize access, and select this repository.
+3. Set the Worker name to `mundo-hispano` to match `wrangler.jsonc`.
+4. Configure the build command as `npm run build:cloudflare` and the deploy command as `npm run deploy:cloudflare`. Set the root directory to `/` if Cloudflare asks.
+5. Save and deploy. Cloudflare will rebuild and deploy the Worker whenever you push to the configured production branch.
+6. In the Worker’s **Settings** → **Variables and Secrets**, add `GEMINI_API_KEY` as a secret if you want live Gemini responses. It is optional; the app has offline fallback responses. Do not add the key as a build variable or commit it.
+7. Add a custom domain from the Worker’s **Settings** when you are ready to use one.
+
+The checked-in `.dev.vars.example` is a safe template for local Worker secrets. Copy it to `.dev.vars` and add your key there for local testing; `.dev.vars` is ignored by Git.

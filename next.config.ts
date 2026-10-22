@@ -1,9 +1,15 @@
 import type { NextConfig } from "next";
 
+import('@opennextjs/cloudflare').then((adapter) =>
+  adapter.initOpenNextCloudflareForDev()
+);
+
 const nextConfig: NextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     rules: {
       "*.css": {
