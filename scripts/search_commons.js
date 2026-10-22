@@ -2,9 +2,9 @@ const https = require('https');
 
 async function searchCommons(query) {
   const url = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch=' + encodeURIComponent(query) + '&gsrlimit=5&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1200&format=json';
-  
+
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'RutaHispanaApp/1.0 (educational research; samagata17)' } }, (res) => {
+    https.get(url, { headers: { 'User-Agent': 'MundoHispanoApp/1.0 (educational research; samagata17)' } }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
@@ -48,7 +48,7 @@ async function main() {
     console.log('=== ' + q + ' ===');
     const res = await searchCommons(q);
     res.forEach((r, i) => {
-      console.log(`[${i+1}] ${r.title}`);
+      console.log(`[${i + 1}] ${r.title}`);
       console.log(`    URL: ${r.url}`);
       console.log(`    Original URL: ${r.originalUrl}`);
       console.log(`    Description URL: ${r.descriptionurl}`);

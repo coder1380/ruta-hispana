@@ -29,7 +29,7 @@ export const FiestasVisualSection: React.FC<FiestasVisualSectionProps> = ({
               Sección 02 · Celebrations
             </span>
             <div className="mb-2">
-              <StudentBadge studentName={studentName} role="Festival research" />
+
             </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-cream mt-1">
               Fiestas · Street Festivals

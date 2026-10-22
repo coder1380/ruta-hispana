@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
                 <Compass className="w-5 h-5 text-cream" />
               </div>
               <span className="font-display text-2xl font-bold tracking-tight text-cream">
-                Ruta <span className="text-saffron">Hispana</span>
+                Mundo <span className="text-saffron">Hispano</span>
               </span>
             </div>
             <p className="text-xs text-cream/70 max-w-sm leading-relaxed">
@@ -81,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({ photoCredits = [] }) => {
 
         {/* Bottom Credits */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream/50">
-          <p>© 2026 Ruta Hispana · University Spanish Language & Culture Project.</p>
+          <p>© 2026 Mundo Hispano · University Spanish Language & Culture Project.</p>
           <p className="flex items-center gap-1">
             Built with <Heart className="w-3.5 h-3.5 text-terracotta fill-current" /> for Spanish coursework.
           </p>

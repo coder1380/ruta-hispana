@@ -201,7 +201,7 @@ async function searchCommons(term) {
     {
       headers: {
         'User-Agent':
-          'RutaHispanaImageSetup/1.1 (educational website image setup)'
+          'MundoHispanoImageSetup/1.1 (educational website image setup)'
       }
     }
   );
@@ -228,7 +228,7 @@ async function downloadImage(url, destination) {
   const response = await fetchWithRetry(url, {
     headers: {
       'User-Agent':
-        'RutaHispanaImageSetup/1.1 (educational website image setup)'
+        'MundoHispanoImageSetup/1.1 (educational website image setup)'
     }
   });
 
@@ -381,8 +381,8 @@ async function main() {
     await fs.writeFile(
       creditsPath,
       oldCredits +
-        (oldCredits && !oldCredits.endsWith('\n\n') ? '\n' : '') +
-        credits.join('\n'),
+      (oldCredits && !oldCredits.endsWith('\n\n') ? '\n' : '') +
+      credits.join('\n'),
       'utf8'
     );
   }

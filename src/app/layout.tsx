@@ -21,11 +21,11 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: 'Ruta Hispana · Travel & Cultural Journal',
+  title: 'Mundo Hispano · Travel & Cultural Journal',
   description:
     'An interactive, visually rich cultural journal exploring Hispanic countries, landmarks, festivals, regional gastronomy, and living traditions.',
   keywords: [
-    'Ruta Hispana',
+    'Mundo Hispano',
     'Hispanic Culture',
     'Spanish Language',
     'Comida Española',

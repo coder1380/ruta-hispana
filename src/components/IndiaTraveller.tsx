@@ -30,7 +30,7 @@ export const IndiaTraveller: React.FC<IndiaTravellerProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Consejos Prácticos · Cross-Cultural Travel Guide
               </span>
-              <StudentBadge studentName={studentName} role="Logistics & International Research" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Consejos para Viajeros de la India · Indian Traveller&apos;s Guide

@@ -35,7 +35,7 @@ export const CultureSection: React.FC<CultureSectionProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Calendario Festivo · Celebrations
               </span>
-              <StudentBadge studentName={studentName} role="Festivals & Regional Calendar" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Fiestas del Año · Festival Calendar

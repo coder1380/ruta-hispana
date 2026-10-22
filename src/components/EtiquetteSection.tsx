@@ -25,7 +25,7 @@ export const EtiquetteSection: React.FC<EtiquetteSectionProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Normas Sociales y Ritmos · Social Codes
               </span>
-              <StudentBadge studentName={studentName} role="Ethnography & Social Customs" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Etiqueta y Costumbres · The Daily Rhythm

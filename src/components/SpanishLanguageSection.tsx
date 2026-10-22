@@ -46,7 +46,7 @@ export const SpanishLanguageSection: React.FC<SpanishLanguageSectionProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Lingüística Comparada y Léxico · Spanish in Context
               </span>
-              <StudentBadge studentName={studentName} role="Linguistics & Comparative Dialectology" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               El Español: España vs. América Latina
@@ -141,11 +141,10 @@ export const SpanishLanguageSection: React.FC<SpanishLanguageSectionProps> = ({
                   <button
                     key={item.word}
                     onClick={() => setActiveWordIndex(idx)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-                      isSelected
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${isSelected
                         ? 'bg-[#943A1E] text-white shadow-xs font-semibold'
                         : 'bg-[#F9F6F0] border border-[#E6DCCD] text-[#1C1917] hover:border-[#C25B38]'
-                    }`}
+                      }`}
                   >
                     <span>{item.word}</span>
                     <span className="text-[10px] opacity-70">({item.part_of_speech.split(' ')[0]})</span>

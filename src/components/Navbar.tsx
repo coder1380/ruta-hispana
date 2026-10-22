@@ -28,12 +28,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-cream/95 border-b border-sand shadow-2xs text-ink font-body">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <a
             href={countryHref(currentCountry.id)}
-            className="flex items-center gap-3 group"
+            className="flex shrink-0 items-center gap-3 group"
           >
             <div className="w-9 h-9 rounded-xl bg-terracotta flex items-center justify-center text-cream shadow-xs">
               <Compass className="w-5 h-5 text-cream" />
@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display text-xl sm:text-2xl font-bold tracking-tight text-ink">
-                  Ruta <span className="text-terracotta">Hispana</span>
+                  Mundo <span className="text-terracotta">Hispano</span>
                 </span>
 
                 <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-terracotta/10 text-terracotta border border-terracotta/20">
@@ -57,12 +57,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden 2xl:flex shrink-0 items-center gap-1">
             {navLinks.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="px-3 py-1.5 rounded-lg text-xs font-bold text-ink/80 hover:text-terracotta hover:bg-sand/50 transition-colors font-body"
+                className="whitespace-nowrap px-2 py-1.5 rounded-lg text-xs font-bold text-ink/80 hover:text-terracotta hover:bg-sand/50 transition-colors font-body"
               >
                 {item.label}
               </a>
@@ -70,15 +70,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
           </nav>
 
           {/* Chapter Information Dropdown */}
-          <div className="relative">
+          <div className="relative hidden shrink-0 sm:block">
             <button
               onClick={() => setInfoOpen(!infoOpen)}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-sand bg-sand/30 text-xs font-semibold text-ink hover:border-terracotta transition-colors shadow-2xs cursor-pointer"
+              className="flex items-center gap-2 whitespace-nowrap px-3 py-1.5 rounded-xl border border-sand bg-sand/30 text-xs font-semibold text-ink hover:border-terracotta transition-colors shadow-2xs cursor-pointer"
               aria-label="Chapter information"
               aria-expanded={infoOpen}
             >
               <Globe className="w-3.5 h-3.5 text-terracotta" />
-              <span>{currentCountry.name_es} · {currentCountry.name}</span>
+              <span>
+                {currentCountry.name_es}
+                <span className="hidden md:inline"> · {currentCountry.name}</span>
+              </span>
               <ChevronDown className="w-3 h-3 text-ink/60" />
             </button>
 
@@ -112,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex lg:hidden items-center ml-2">
+          <div className="flex 2xl:hidden items-center ml-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-lg text-ink hover:bg-sand/60 cursor-pointer"
@@ -131,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCountry, countries }) => 
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-sand bg-cream px-4 pt-2 pb-4 space-y-1">
+        <div className="2xl:hidden border-t border-sand bg-cream px-4 pt-2 pb-4 space-y-1">
           {navLinks.map((item) => (
             <a
               key={item.href}

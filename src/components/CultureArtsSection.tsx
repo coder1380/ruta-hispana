@@ -29,7 +29,7 @@ export const CultureArtsSection: React.FC<CultureArtsSectionProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Expresión y Creatividad · Arts, Rhythm & Passion
               </span>
-              <StudentBadge studentName={studentName} role="Arts, Music & Sporting Traditions" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Arte, Música y Fútbol · Cultural Expressions

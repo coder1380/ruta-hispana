@@ -43,7 +43,7 @@ function getOfflineGuideResponse(message: string, country: CountryData): string 
   }
 
   if (lower.includes('hello') || lower.includes('hi') || lower.includes('hola')) {
-    return `Welcome to **Ruta Hispana**! I am your cultural **guía** (guide) for discovering ${country.name}. Ask about its **regiones** (regions), **fiestas** (festivals), or **comida** (food), and I can help you explore the local highlights.`;
+    return `Welcome to **Mundo Hispano**! I am your cultural **guía** (guide) for discovering ${country.name}. Ask about its **regiones** (regions), **fiestas** (festivals), or **comida** (food), and I can help you explore the local highlights.`;
   }
 
   const regionalHighlight = firstRegion
@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(resData);
     }
 
-    const prompt = `You are "Mateo", the knowledgeable and friendly local guide for "Ruta Hispana", an educational travel exploration of ${country.name}.
+    const prompt = `You are "Mateo", the knowledgeable and friendly local guide for "Mundo Hispano", an educational travel exploration of ${country.name}.
 
 VERIFIED GROUND TRUTH CONTEXT FOR ${country.name}:
 ${formatCountryContext(country)}

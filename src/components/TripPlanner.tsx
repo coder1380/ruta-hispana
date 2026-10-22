@@ -97,14 +97,13 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({
 
   const copyItinerary = () => {
     if (!itinerary) return;
-    const text = `${itinerary.title}\n\nBudget: ${itinerary.estimated_cost_inr}\nDiet: ${
-      itinerary.is_vegetarian ? 'Strictly Vegetarian' : 'Standard'
-    }\n\n${itinerary.days
-      .map(
-        (d) =>
-          `Day ${d.day_number}: ${d.title} (${d.location})\n- Morning: ${d.morning}\n- Afternoon: ${d.afternoon}\n- Evening: ${d.evening}\n- Food: ${d.food_recommendation.dish} - ${d.food_recommendation.description}`
-      )
-      .join('\n\n')}`;
+    const text = `${itinerary.title}\n\nBudget: ${itinerary.estimated_cost_inr}\nDiet: ${itinerary.is_vegetarian ? 'Strictly Vegetarian' : 'Standard'
+      }\n\n${itinerary.days
+        .map(
+          (d) =>
+            `Day ${d.day_number}: ${d.title} (${d.location})\n- Morning: ${d.morning}\n- Afternoon: ${d.afternoon}\n- Evening: ${d.evening}\n- Food: ${d.food_recommendation.dish} - ${d.food_recommendation.description}`
+        )
+        .join('\n\n')}`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -121,7 +120,7 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Cuaderno de Itinerario · Study Travel Notebook
               </span>
-              <StudentBadge studentName={studentName} role="Itinerary Modeling & Schema" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Planificador de Ruta · Custom Itinerary
@@ -157,11 +156,10 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({
                     key={num}
                     type="button"
                     onClick={() => setDays(num)}
-                    className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                      days === num
+                    className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${days === num
                         ? 'bg-terracotta text-cream shadow-xs'
                         : 'bg-sand/40 border border-sand text-ink hover:border-terracotta'
-                    }`}
+                      }`}
                   >
                     {num}d
                   </button>
@@ -212,11 +210,10 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({
               <button
                 type="button"
                 onClick={() => setIsVegetarian(!isVegetarian)}
-                className={`w-full py-1.5 px-3 rounded-lg text-xs font-bold flex items-center justify-between border transition-all ${
-                  isVegetarian
+                className={`w-full py-1.5 px-3 rounded-lg text-xs font-bold flex items-center justify-between border transition-all ${isVegetarian
                     ? 'bg-[#EEF3E6] border-[#4A582F]/30 text-[#354020]'
                     : 'bg-[#FCFAF6] border-[#E6DCCD] text-[#57524E]'
-                }`}
+                  }`}
               >
                 <span className="flex items-center gap-1.5">
                   <Leaf className="w-3.5 h-3.5" />
@@ -263,11 +260,10 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({
                     key={item}
                     type="button"
                     onClick={() => toggleInterest(item)}
-                    className={`px-3 py-1 rounded-full text-xs font-body transition-all ${
-                      selected
+                    className={`px-3 py-1 rounded-full text-xs font-body transition-all ${selected
                         ? 'bg-[#F4E8E2] border border-[#C25B38] text-[#943A1E] font-semibold'
                         : 'bg-[#FCFAF6] border border-[#E6DCCD] text-[#57524E] hover:border-[#C25B38]'
-                    }`}
+                      }`}
                   >
                     {item}
                   </button>

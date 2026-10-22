@@ -47,7 +47,7 @@ export const FoodSection: React.FC<FoodSectionProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Gastronomía Tradicional · Authentic Flavors
               </span>
-              <StudentBadge studentName={studentName} role="Gastronomy & 3D Interactive Cards" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Comida · Culinary Heritage
@@ -83,9 +83,8 @@ export const FoodSection: React.FC<FoodSectionProps> = ({
                 aria-label={`Flip card for ${food.name_es}`}
               >
                 <div
-                  className={`relative w-full h-full rounded-2xl transition-transform duration-500 transform-style-3d shadow-xs hover:shadow-md ${
-                    isFlipped ? 'rotate-y-180' : ''
-                  }`}
+                  className={`relative w-full h-full rounded-2xl transition-transform duration-500 transform-style-3d shadow-xs hover:shadow-md ${isFlipped ? 'rotate-y-180' : ''
+                    }`}
                 >
                   {/* FRONT SIDE */}
                   <div className="absolute inset-0 backface-hidden bg-[#F9F6F0] rounded-2xl p-6 border border-[#E6DCCD] flex flex-col justify-between">
@@ -155,7 +154,7 @@ export const FoodSection: React.FC<FoodSectionProps> = ({
                       <span className="flex items-center gap-1">
                         <RotateCw className="w-3 h-3" /> Click to return
                       </span>
-                      <span className="font-handwriting text-sm text-[#D99B26]">Ruta Hispana</span>
+                      <span className="font-handwriting text-sm text-[#D99B26]">Mundo Hispano</span>
                     </div>
                   </div>
                 </div>

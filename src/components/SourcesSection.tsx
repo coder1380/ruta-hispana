@@ -17,7 +17,7 @@ export const SourcesSection: React.FC<SourcesSectionProps> = ({
   sources,
   verificationNotes,
   researchReflection,
-  studentName = 'Ruta Hispana Research Team',
+  studentName = 'Mundo Hispano Research Team',
 }) => {
   return (
     <section id="fuentes" className="py-16 sm:py-24 bg-[#FCFAF6] border-t border-[#E6DCCD] scroll-mt-16">
@@ -29,7 +29,7 @@ export const SourcesSection: React.FC<SourcesSectionProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Rigor Académico y Bibliografía · Scholarly Citations
               </span>
-              <StudentBadge studentName={studentName} role="Research & Academic Grounding" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Fuentes y Referencias · Bibliography

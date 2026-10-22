@@ -42,7 +42,7 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
       id="lugares"
       className="py-16 sm:py-24 bg-cream text-ink scroll-mt-16"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b border-sand">
           <div>
@@ -50,7 +50,7 @@ export const LugaresSection: React.FC<LugaresSectionProps> = ({
               Sección 01 · Landmarks
             </span>
             <div className="mb-2">
-              <StudentBadge studentName={studentName} role="Landmark research" />
+
             </div>
 
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">

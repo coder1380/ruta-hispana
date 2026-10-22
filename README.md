@@ -1,6 +1,6 @@
-# Ruta Hispana · Exploración Creativa del Mundo Hispano
+# Mundo Hispano · Exploración Creativa del Mundo Hispano
 
-**Ruta Hispana** is an interactive, AI-powered travel and cultural guide web application built for our University Spanish coursework: *Creative Exploration of the Hispanic World*.
+**Mundo Hispano** is an interactive, AI-powered travel and cultural guide web application built for our University Spanish coursework: *Creative Exploration of the Hispanic World*.
 
 Featuring **Spain, Puerto Rico, Central America, Cuba, the Dominican Republic, and Equatorial Guinea** with a country-agnostic architecture driven by JSON country guides.
 

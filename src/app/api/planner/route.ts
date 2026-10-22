@@ -86,15 +86,15 @@ function buildFallbackItinerary(
     const selectedFood = foodChoices.length ? foodChoices[i % foodChoices.length] : undefined;
     const food = selectedFood
       ? {
-          dish: selectedFood.name_es,
-          description: selectedFood.caption,
-          veg_friendly: selectedFood.veg_friendly,
-        }
+        dish: selectedFood.name_es,
+        description: selectedFood.caption,
+        veg_friendly: selectedFood.veg_friendly,
+      }
       : {
-          dish: 'Ask locally about available options',
-          description: 'Check that the dish contains no meat, seafood, or animal broth.',
-          veg_friendly: false,
-        };
+        dish: 'Ask locally about available options',
+        description: 'Check that the dish contains no meat, seafood, or animal broth.',
+        veg_friendly: false,
+      };
     const phrases = country.daily_phrases ?? [];
     const phrase = phrases.length
       ? phrases[i % phrases.length]
@@ -159,7 +159,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(fallback);
     }
 
-    const prompt = `You are an expert travel planner for "Ruta Hispana".
+    const prompt = `You are an expert travel planner for "Mundo Hispano".
 GROUNDING CONTEXT (Use strictly these facts from ${country.name}):
 ${formatCountryContext(country)}
 

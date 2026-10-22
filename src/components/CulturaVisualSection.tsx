@@ -36,7 +36,7 @@ export const CulturaVisualSection: React.FC<CulturaVisualSectionProps> = ({
               Sección 04 · Heritage & Dance
             </span>
             <div className="mb-2">
-              <StudentBadge studentName={studentName} role="Culture research" />
+
             </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               Cultura · Living Traditions

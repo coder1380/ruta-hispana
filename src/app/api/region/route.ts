@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(fallbackResult);
     }
 
-    const prompt = `You are a student travel writer for "Ruta Hispana".
+    const prompt = `You are a student travel writer for "Mundo Hispano".
 VERIFIED REGIONAL DATA:
 Region: ${region.name} (${region.name_es})
 Capital: ${region.capital}

@@ -25,7 +25,7 @@ export const HistoriaSection: React.FC<HistoriaSectionProps> = ({
               <span className="text-xs font-bold tracking-widest uppercase text-[#C25B38]">
                 Cronología Histórica · Historical Timeline
               </span>
-              <StudentBadge studentName={studentName} role="Historical Research & Archival Sources" />
+
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
               Historia en Breve · Key Turning Points

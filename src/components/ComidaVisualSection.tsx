@@ -110,7 +110,7 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
               Sección 03 · Gastronomy
             </span>
             <div className="mb-2">
-              <StudentBadge studentName={studentName} role="Food research" />
+
             </div>
             <h2 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-ink mt-1">
               Comida · Culinary Craft
@@ -131,11 +131,10 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
             {/* ALL */}
             <button
               onClick={() => setActiveFilter('all')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 border ${
-                activeFilter === 'all'
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 border ${activeFilter === 'all'
                   ? 'bg-terracotta text-cream border-terracotta shadow-xs'
                   : 'bg-cream text-ink border-sand hover:border-terracotta/40'
-              }`}
+                }`}
             >
               <span>All</span>
               <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${activeFilter === 'all' ? 'bg-cream/20 text-cream' : 'bg-sand/60 text-ink/70'}`}>
@@ -146,11 +145,10 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
             {/* VEG */}
             <button
               onClick={() => setActiveFilter('veg')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 border ${
-                activeFilter === 'veg'
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 border ${activeFilter === 'veg'
                   ? 'bg-emerald-800 text-cream border-emerald-800 shadow-xs'
                   : 'bg-cream text-ink border-sand hover:border-emerald-600/40'
-              }`}
+                }`}
             >
               <span className="w-3.5 h-3.5 border-2 border-emerald-600 flex items-center justify-center p-[1px] rounded-[2px] bg-white">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 block" />
@@ -164,11 +162,10 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
             {/* NON-VEG */}
             <button
               onClick={() => setActiveFilter('non-veg')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 border ${
-                activeFilter === 'non-veg'
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 border ${activeFilter === 'non-veg'
                   ? 'bg-red-800 text-cream border-red-800 shadow-xs'
                   : 'bg-cream text-ink border-sand hover:border-red-700/40'
-              }`}
+                }`}
             >
               <span className="w-3.5 h-3.5 border-2 border-red-700 flex items-center justify-center p-[1px] rounded-[2px] bg-white">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-700 block" />
@@ -182,11 +179,10 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
             {/* EGG */}
             <button
               onClick={() => setActiveFilter('egg')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 border ${
-                activeFilter === 'egg'
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 border ${activeFilter === 'egg'
                   ? 'bg-amber-700 text-cream border-amber-700 shadow-xs'
                   : 'bg-cream text-ink border-sand hover:border-amber-600/40'
-              }`}
+                }`}
             >
               <span className="w-3.5 h-3.5 border-2 border-amber-600 flex items-center justify-center p-[1px] rounded-[2px] bg-white">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-600 block" />
@@ -231,9 +227,8 @@ export const ComidaVisualSection: React.FC<ComidaVisualSectionProps> = ({
               >
                 {/* Flipping Container */}
                 <div
-                  className={`relative w-full h-full duration-500 transform-style-3d transition-transform rounded-2xl shadow-xs group-hover:[transform:rotateY(180deg)] ${
-                    isFlipped ? '[transform:rotateY(180deg)]' : ''
-                  }`}
+                  className={`relative w-full h-full duration-500 transform-style-3d transition-transform rounded-2xl shadow-xs group-hover:[transform:rotateY(180deg)] ${isFlipped ? '[transform:rotateY(180deg)]' : ''
+                    }`}
                 >
                   {/* FRONT FACE */}
                   <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl overflow-hidden border border-sand bg-cream flex flex-col justify-between">
